@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overscroll-behavior: none;
+    font-family: "Inter", "Plus Jakarta Sans", "Noto Sans Sinhala", sans-serif;
+  }
+
+  .dark body {
+    font-family: "Plus Jakarta Sans", "Inter", "Noto Sans Sinhala", sans-serif;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.font-display-jakarta {
+  font-family: "Plus Jakarta Sans", "Noto Sans Sinhala", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", "Noto Sans Sinhala", sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#041847", "secondary-fixed-dim": "#b5c5fd", "inverse-on-surface": "#eef0ff", "surface-container-high": "#e1e7ff", "on-primary-container": "#fefcff", "secondary": "#4d5c8e", "on-primary": "#ffffff", "inverse-primary": "#abc7ff", "surface-bright": "#faf8ff", "on-error-container": "#93000a", "on-tertiary-container": "#fffbff", "secondary-container": "#b5c5fd", "surface-dim": "#cfd9fb", "on-tertiary": "#ffffff", "surface-container": "#eaedff", "secondary-fixed": "#dbe1ff", "tertiary-fixed-dim": "#ffb952", "on-primary-fixed": "#001b3f", "on-tertiary-fixed-variant": "#633f00", "outline": "#717785", "primary-fixed-dim": "#abc7ff", "surface-container-low": "#f2f3ff", "on-background": "#101b34", "surface-container-lowest": "#ffffff", "primary": "#005ab6", "surface-container-highest": "#d9e2ff", "surface": "#faf8ff", "error-container": "#ffdad6", "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-fixed": "#d7e3ff", "on-primary-fixed-variant": "#00458f", "tertiary-container": "#a06900", "surface-tint": "#005cba", "primary-container": "#0072e4", "on-surface-variant": "#414754", "on-surface": "#101b34", "on-secondary-fixed-variant": "#354575", "background": "#faf8ff", "on-error": "#ffffff", "tertiary": "#7f5300", "on-tertiary-fixed": "#291800", "tertiary-fixed": "#ffddb4", "inverse-surface": "#25304a", "surface-variant": "#d9e2ff", "outline-variant": "#c1c6d6", "on-secondary-container": "#405081" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin": "2rem", "gutter-mobile": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-md": ["Inter"], "title": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; background-color: #faf8ff; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title text-title text-on-surface leading-tight">MindBridge</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider leading-none">Onboarding</span></div></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[14px]">lock</span><span class="font-label-sm text-label-sm">256-bit SSL</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="px-gutter-mobile pb-space-sm flex items-center justify-between sm:hidden"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Institutional Profile</h1><div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[12px]">verified_user</span><span class="font-label-sm text-label-sm">SSL Encrypted</span></div></div></header><main class="flex-1 flex flex-col relative w-full px-gutter-mobile pt-16 pb-space-xl bg-surface"><div class="flex flex-col w-full pb-28 space-y-4">
+<!-- 1. Regional Compliance Banner & Application Reference Pill -->
+<div class="w-full bg-surface-container-high rounded-xl p-3.5 shadow-sm space-y-2.5">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full text-on-surface">
+<span class="material-symbols-outlined text-primary text-[15px]">public</span>
+<span class="font-label-sm text-label-sm font-semibold">LK-WP • Sri Lanka</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-on-surface-variant">
+<span class="font-label-sm text-label-sm tracking-wide">ID: <strong class="text-on-surface font-semibold">LK-TEN-2025-0894B</strong></span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full text-primary font-medium">
+<span class="material-symbols-outlined text-[13px]">verified</span> Sinhala Unicode
+      </span>
+<span class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full text-primary font-medium">
+<span class="material-symbols-outlined text-[13px]">policy</span> MoE Verified
+      </span>
+<span class="flex items-center gap-1 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[13px]">shield</span> Isolation Guard
+      </span>
+<span class="ml-auto text-on-surface-variant font-medium">v4.8</span>
+</div>
+</div>
+<!-- 2. Header & Progress Stepper -->
+<div class="space-y-3">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-1.5">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+        Institutional Setup
+      </div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-snug">
+        Apply to Launch Your Branded Academy
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Join hundreds of Sri Lankan educators with your own isolated portal, custom domain, and direct bank slip verification engine.
+      </p>
+</div>
+<!-- Horizontal Scrollable 5-Step Indicator -->
+<div class="w-full overflow-x-auto pb-1 -mx-gutter-mobile px-gutter-mobile no-scrollbar">
+<div class="flex items-center gap-2 min-w-[560px]">
+<!-- Step 1: Validated -->
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-xl">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">done</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Step 1: Auth</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">✓ Validated</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-3 py-2 rounded-xl shadow-sm">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+            2
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold">Step 2: Model</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">In Progress</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 3 -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-2 rounded-xl text-on-surface-variant shadow-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-bold">
+            3
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Step 3: Identity</span>
+<span class="font-body-sm text-body-sm">Subdomain URL</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 4 -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-2 rounded-xl text-on-surface-variant shadow-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-bold">
+            4
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Step 4: NIC &amp; Docs</span>
+<span class="font-body-sm text-body-sm">Accreditation</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 5 -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-2 rounded-xl text-on-surface-variant shadow-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-bold">
+            5
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Step 5: Review</span>
+<span class="font-body-sm text-body-sm">Queue #28</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Architecture Scope Selector (Step 2) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Educational Model Tier</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full">Step 2 of 5</span>
+</div>
+<!-- Option A: Selected Individual Teacher -->
+<div class="relative bg-surface-container-lowest rounded-xl p-4 shadow-sm bg-gradient-to-br from-primary-fixed/20 to-transparent">
+<div class="flex items-start justify-between gap-3 mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<h4 class="font-title text-title text-on-surface leading-tight">Individual Teacher / Master</h4>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Selected Scope</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+        Ideal for solo tuition masters, individual subject lecturers, and localized tutoring clusters across Sri Lanka.
+      </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">group</span> Up to 2 Staff / Assistants
+        </span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">receipt_long</span> Direct LKR Manual Slip &amp; Online Billing
+        </span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">smart_display</span> Secure unlisted YouTube / Vimeo streams
+        </span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg font-mono">
+          maths.mindbridge.lk
+        </span>
+</div>
+</div>
+<!-- Option B: Full Campus Tier (Unselected) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm opacity-90">
+<div class="flex items-start justify-between gap-3 mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+<div>
+<h4 class="font-title text-title text-on-surface leading-tight">Educational Institute / Academy</h4>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full font-semibold">Full Campus Tier</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+        Tailored for multi-hall tuition institutes, international schools, and enterprise academies with massive student cohorts.
+      </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg">Multi-instructor delegation</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg">Branch streams &amp; multi-batch</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg">Custom domain mapping</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-lg">Dedicated S3 &amp; Isolated DB</span>
+</div>
+</div>
+</section>
+<!-- 4. Step 3: Academy Identity & Subdomain Configuration -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-4">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Academy Identity &amp; Subdomain</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full">Step 3</span>
+</div>
+<!-- Academy Name -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span>Proposed Academy Name</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Official Brand</span>
+</label>
+<div class="bg-surface-container-low rounded-lg p-3 text-on-surface font-title text-title flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<span>Apex Combined Mathematics Academy</span>
+</div>
+</div>
+<!-- Permanent Subdomain Address Input with live validation pill -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span>Permanent Subdomain Address</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Available
+        </span>
+</label>
+<div class="flex items-center rounded-lg bg-surface-container-low px-3 py-2 text-on-surface">
+<span class="font-mono font-label-md text-label-md text-on-surface-variant mr-1">https://</span>
+<input class="bg-transparent font-title text-title font-mono text-primary font-bold focus:outline-none w-32" readonly="" type="text" value="apex-maths"/>
+<span class="font-mono font-label-md text-label-md text-on-surface-variant">.mindbridge.lk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 pt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">info</span>
+        Custom domains (e.g. portal.apexacademy.lk) can be mapped later in Settings.
+      </p>
+</div>
+<!-- Primary Academic Curriculum & Subject Chips -->
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface">Primary Academic Curriculum &amp; Subjects</label>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-lg flex items-center gap-1 font-semibold">
+          A/L Combined Maths <span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-lg flex items-center gap-1 font-semibold">
+          A/L Physics <span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-lg flex items-center gap-1">
+          A/L Chemistry <span class="material-symbols-outlined text-[14px]">add</span>
+</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-lg flex items-center gap-1">
+          O/L English Medium <span class="material-symbols-outlined text-[14px]">add</span>
+</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-lg flex items-center gap-1">
+          O/L Science <span class="material-symbols-outlined text-[14px]">add</span>
+</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-lg flex items-center gap-1">
+          ICT &amp; Computer Science <span class="material-symbols-outlined text-[14px]">add</span>
+</span>
+</div>
+</div>
+<!-- Contact Person -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Official Contact Person / Master Teacher</label>
+<div class="bg-surface-container-low rounded-lg p-3 text-on-surface font-body-md text-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">person_check</span>
+<span class="font-semibold">Eng. Kusal Senaratne</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm ml-auto">BSc. Eng Hons</span>
+</div>
+</div>
+<!-- NIC / BR -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">National ID (NIC) or Business Registration (BR)</label>
+<div class="bg-surface-container-low rounded-lg p-3 text-on-surface font-body-md text-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">fingerprint</span>
+<span class="font-mono font-semibold">198714203981 / PV0029810</span>
+</div>
+</div>
+<!-- WhatsApp Alerts line with Sri Lanka Flag -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Official WhatsApp Support &amp; Alerts Line</label>
+<div class="bg-surface-container-low rounded-lg p-3 text-on-surface font-body-md text-body-md flex items-center gap-2">
+<span class="text-[18px]">🇱🇰</span>
+<span class="font-mono font-semibold">+94 71 987 6543</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-md ml-auto">2FA SMS Ready</span>
+</div>
+</div>
+</section>
+<!-- 5. Step 4: Institutional Trust & Credentials Upload -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Teacher Credentials &amp; Documents</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> Encrypted
+      </span>
+</div>
+<!-- Mobile-adapted file upload dropzone -->
+<div class="bg-surface-container-low rounded-xl p-4 text-center space-y-2 cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<div class="space-y-0.5">
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Tap to browse or upload compliance documents</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PDF, JPG, PNG up to 10 MB per file</p>
+</div>
+</div>
+<!-- Attached pre-verified files -->
+<div class="space-y-2">
+<!-- File 1: NIC -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface font-semibold truncate">National_Identity_Card_Verification_Kusal.pdf</p>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>2.4 MB</span>
+<span>•</span>
+<span class="text-primary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check</span> Pre-scanned Clean
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="View document" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button aria-label="Remove document" class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- File 2: Degree -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface font-semibold truncate">University_Engineering_Degree_Certificate.pdf</p>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>4.1 MB</span>
+<span>•</span>
+<span class="text-primary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">school</span> Verified MoE / UoM
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="View document" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button aria-label="Remove document" class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Step 5 & Mandatory Review Policy Callout -->
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<h4 class="font-title text-title font-semibold">Mandatory Super Admin Review Policy (Strict Protocol)</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      In order to protect student data, prevent fraudulent bank slip submissions, and uphold educational integrity across Sri Lanka, all tenant applications undergo manual review by the MindBridge Super Admin team within 12–24 hours. Your tenant workspace, PostgreSQL database instance, and dedicated URL will be activated upon formal clearance.
+    </p>
+</div>
+<!-- 7. Stacked Mobile Rail Modules -->
+<section class="space-y-3">
+<!-- Subdomain Live Routing Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Live Routing Preview</span>
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">45% Complete</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-xl">
+<div class="w-11 h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center font-display-mobile text-display-mobile font-bold">
+          A
+        </div>
+<div class="min-w-0">
+<h4 class="font-title text-title text-on-surface truncate">Apex Combined Mathematics</h4>
+<p class="font-body-sm text-body-sm font-mono text-primary truncate">apex-maths.mindbridge.lk</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-0.5">
+<span class="text-on-surface-variant">Infrastructure Status</span>
+<p class="font-semibold text-tertiary">Awaiting Clearance</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-0.5">
+<span class="text-on-surface-variant">Target Region</span>
+<p class="font-semibold text-on-surface">Colombo (LK-1)</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-0.5 col-span-2 flex items-center justify-between">
+<span class="text-on-surface-variant">Direct Slip Verification</span>
+<span class="font-semibold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Enabled
+          </span>
+</div>
+</div>
+</div>
+<!-- Lifecycle Workflow Card (Post-Submission Blueprint) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3">
+<div class="flex items-center gap-2 text-on-surface font-title text-title">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<span>Post-Submission Lifecycle Blueprint</span>
+</div>
+<div class="space-y-3 relative pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Blueprint Step 1 -->
+<div class="relative pl-3 space-y-0.5">
+<div class="absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">1. Verification Queue</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Super Admin manual due diligence (12–24h SL-ST).</p>
+</div>
+<!-- Blueprint Step 2 -->
+<div class="relative pl-3 space-y-0.5">
+<div class="absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full bg-surface-container flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">2. Tenant Provisioning</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated PostgreSQL schema, custom DNS, CDN buckets.</p>
+</div>
+<!-- Blueprint Step 3 -->
+<div class="relative pl-3 space-y-0.5">
+<div class="absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full bg-surface-container flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">3. Welcome SMS &amp; Handover</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Master owner credentials + 2-staff assistant allocation.</p>
+</div>
+</div>
+</div>
+<!-- Islandwide Performance Metrics Card -->
+<div class="bg-surface-container-high rounded-xl p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">MindBridge Islandwide Network</span>
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-lowest p-3 rounded-lg space-y-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">420+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tuition masters &amp; academies across 9 provinces</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg space-y-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Rs. 48M+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monthly manual slip and online fee volume</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>Classroom Stream Uptime</span>
+<span class="font-semibold text-primary">99.98% High Availability</span>
+</div>
+</div>
+<!-- Urgent Support Contact Box -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Urgent Onboarding Desk</span>
+<span class="font-title text-title text-on-surface font-semibold">+94 11 234 5678</span>
+</div>
+</div>
+<a class="bg-surface-container text-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-surface-container-high transition-colors" href="tel:+94112345678">
+<span class="material-symbols-outlined text-[16px]">call</span> Call Desk
+      </a>
+</div>
+</section>
+<!-- 8. Sticky Bottom Action Controls with MoE Compliance Footer -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-md px-gutter-mobile py-3 shadow-[0_-4px_16px_rgba(7,27,74,0.06)] space-y-2">
+<div class="flex items-center gap-2 w-full max-w-md mx-auto">
+<button class="w-1/3 h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors text-center" type="button">
+        Save Draft
+      </button>
+<button class="w-2/3 h-11 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container shadow-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span>Submit Application</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">
+        Dual Compliance: Sinhala Unicode &amp; MoE Verified • SL-CERT ISO/IEC 27001
+      </p>
+</div>
+</div>
+</div></main></body></html>

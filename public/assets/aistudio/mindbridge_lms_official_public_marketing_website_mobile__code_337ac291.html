@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#abc7ff", "tertiary": "#7f5300", "on-surface-variant": "#414754", "surface-container-high": "#e1e7ff", "on-tertiary-fixed": "#291800", "on-secondary-fixed": "#041847", "surface-tint": "#005cba", "on-primary": "#ffffff", "on-primary-fixed-variant": "#00458f", "inverse-on-surface": "#eef0ff", "background": "#faf8ff", "secondary-container": "#b5c5fd", "on-tertiary": "#ffffff", "tertiary-container": "#a06900", "surface-container-highest": "#d9e2ff", "on-error": "#ffffff", "primary-container": "#0072e4", "surface-container-low": "#f2f3ff", "primary": "#005ab6", "on-secondary-container": "#405081", "on-tertiary-container": "#fffbff", "error-container": "#ffdad6", "outline": "#717785", "secondary": "#4d5c8e", "surface": "#faf8ff", "primary-fixed": "#d7e3ff", "on-background": "#101b34", "surface-variant": "#d9e2ff", "surface-bright": "#faf8ff", "inverse-primary": "#abc7ff", "on-surface": "#101b34", "inverse-surface": "#25304a", "secondary-fixed": "#dbe1ff", "on-secondary-fixed-variant": "#354575", "on-primary-container": "#fefcff", "surface-dim": "#cfd9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ffb952", "on-tertiary-fixed-variant": "#633f00", "error": "#ba1a1a", "surface-container": "#eaedff", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#b5c5fd", "tertiary-fixed": "#ffddb4", "outline-variant": "#c1c6d6", "on-secondary": "#ffffff", "on-primary-fixed": "#001b3f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-xl": "2rem", "gutter": "1.5rem" }, fontFamily: { "label-lg": ["Inter"], "display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title text-title text-on-surface tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">LMS Portal</span></div></div><div class="flex items-center gap-space-xs"><button class="h-11 px-space-xs flex items-center gap-1 rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="font-label-sm text-label-sm uppercase">EN</span><span class="text-outline-variant font-body-sm text-body-sm">/</span><span class="font-label-sm text-label-sm">සිං</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary rounded-lg transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full px-gutter-mobile pt-space-md pb-space-lg overflow-hidden">
+<!-- Geometric Arch Graphic Backdrop -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -left-16 w-52 h-52 bg-tertiary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Top Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full shadow-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-tertiary">Sri Lanka's #1 Multi-Academy EdTech Engine</span>
+</div>
+<!-- Headline & Supporting Text -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-sm">
+      Empower Your Institute. <br/>
+<span class="text-primary">Elevate Every Student.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+      The authoritative cloud multi-tenant ecosystem built for tuition masters, collegiate institutes, and over 140,000+ island-wide A/L & O/L learners.
+    </p>
+<!-- Hero Actions -->
+<div class="flex flex-col gap-space-sm w-full">
+<button class="h-11 w-full px-space-lg flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-md hover:bg-primary-container transition-all active:scale-[0.99]">
+<span>Request Academy Demo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="h-11 w-full px-space-lg flex items-center justify-center gap-space-xs bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">storefront</span>
+<span>Explore Storefronts</span>
+</button>
+</div>
+<!-- Quick Multilingual Micro-Notice -->
+<div class="flex items-center gap-space-xs mt-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">translate</span>
+<span>සිංහල සහ ඉංග්‍රීසි මාධ්‍ය ඒකාබද්ධ පද්ධතිය</span>
+</div>
+</div>
+<!-- Trust & Scale Metrics (2x2 Grid) -->
+<section class="px-gutter-mobile py-space-sm w-full">
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight block">140K+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Students</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight block">99.98%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stream Uptime</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-space-sm text-tertiary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight block">350+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Master Lecturers</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight block">0%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Exam Fraud Rate</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Architectural Pillars -->
+<section class="px-gutter-mobile pt-space-lg pb-space-md w-full">
+<div class="mb-space-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Engine Architecture</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Designed for Sri Lankan Education Scale</h2>
+</div>
+<!-- Interactive Pillar Accordion Cards -->
+<div class="flex flex-col gap-space-sm" id="pillarContainer">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm cursor-pointer pillar-item transition-all" onclick="togglePillar(0)">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Multi-Tenant Academy Isolation</h3>
+<span class="font-label-sm text-label-sm text-primary font-medium">apex-maths.mindbridge.lk</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant pillar-chevron transition-transform duration-200">expand_more</span>
+</div>
+<div class="pillar-content mt-space-sm pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+          Independent white-labeled portal subdomains, custom automated student barcode IDs, role-restricted faculty portals, and separate financial ledgers for each master educator.
+        </div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm cursor-pointer pillar-item transition-all" onclick="togglePillar(1)">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Ultra-Low Latency DRM Stream</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dynamic Student Watermarking</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant pillar-chevron transition-transform duration-200">expand_more</span>
+</div>
+<div class="pillar-content hidden mt-space-sm pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+          Military-grade encrypted video delivery preventing screen captures and rip tools. Dynamic animated overlays display the viewer's NIC and mobile number across all frames.
+        </div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm cursor-pointer pillar-item transition-all" onclick="togglePillar(2)">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Anti-Cheat Timed Exams</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cryptographic QR Receipts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant pillar-chevron transition-transform duration-200">expand_more</span>
+</div>
+<div class="pillar-content hidden mt-space-sm pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+          Strict question timers with randomized answer pools, focus-loss tab detection, and verifiable cryptographic digital certificates generated upon submission.
+        </div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm cursor-pointer pillar-item transition-all" onclick="togglePillar(3)">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Dual-Staff Slip Auditing</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AI Bank Slip OCR & WhatsApp Alerts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant pillar-chevron transition-transform duration-200">expand_more</span>
+</div>
+<div class="pillar-content hidden mt-space-sm pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+          Instant bank deposit slip verification with duplicate detection, two-tier assistant approval workflows, and automated WhatsApp payment receipts to parents.
+        </div>
+</div>
+</div>
+</section>
+<!-- Featured Master Tuition Academies (Horizontal Snap Carousel) -->
+<section class="pt-space-lg pb-space-sm w-full">
+<div class="px-gutter-mobile flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider">Top Institutions</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Master Academies on MindBridge</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Swipe →</span>
+</div>
+<!-- Scroll Container -->
+<div class="flex gap-space-md overflow-x-auto px-gutter-mobile pb-space-sm snap-x snap-mandatory scroll-smooth" style="scrollbar-width: none;">
+<!-- Card 1: Apex -->
+<div class="snap-start shrink-0 w-[275px] bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="relative w-full h-32 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Eng Kusal Senaratne conducting a large-scale advanced combined mathematics lecture at an amphitheater in Colombo with architectural blueprints displayed on high-res digital monitors and students actively taking notes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXOjcWEzKZhkGG1le2S5vuehs5TQWD0HglZhCjv9inlVsCllEi3BZ_QbCCVVjKrDHsnTKU3fuv4JkrCkyJnFNL5walhG2IuR0sqHNOE-nEvsKPy12ff5T3QpduUr1iALt-3soai8ysREnsKZ6j6v9lxjalxwaZOKEJQxzpnEPKda14pxcBsxAKrngUvXwJCy7sj-Be35kKzcUDuKDL4sXGlQmivjU0r_DI9N3rcso"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-on-secondary-fixed text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+            A/L Maths
+          </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title text-title text-on-surface leading-snug">Apex Combined Mathematics</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Eng. Kusal Senaratne</p>
+<span class="font-label-sm text-label-sm text-secondary block mt-1">Moratuwa Engineering Alumni</span>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">28,400+ Enrolled</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">apex.mindbridge.lk</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Synergy -->
+<div class="snap-start shrink-0 w-[275px] bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="relative w-full h-32 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Prof Dayananda lecturing physics with an electronic whiteboard showing electromagnetic induction wave charts and modern laboratory apparatus in a high-tech auditorium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPh3CFtquT4bh53GlQ_bW0dwWTLnT_onqmaOAwVWC62LNd12YLrcaTGCrIvmnrxKknkPSGhKG_gl9dpTi5wf7ASiAbr0AiHPnLA9abgSd6Rha3JitfR7BFJBCP3hTyNVdbmeK8oCI6TeIH0GGEtYz4Hp1yKeH6Coqw7FYDqT2nuDLw2NpR7Ey-DPYTpFulNouMjNAptx_E8eRbIBqpo39RGxc4mo_yII00axr-w6Y"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-on-secondary-fixed text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+            A/L Physics
+          </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title text-title text-on-surface leading-snug">Synergy Physics Academy</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Prof. Dayananda</p>
+<span class="font-label-sm text-label-sm text-secondary block mt-1">Senior University Fellow</span>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">19,200+ Enrolled</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">synergy.mindbridge.lk</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Rotary Hall -->
+<div class="snap-start shrink-0 w-[275px] bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="relative w-full h-32 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Dr Asela Perera explaining organic chemistry reaction mechanisms using 3D molecular models to an engaged classroom in Nugegoda Colombo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMtLHax-3ROUM-gB_Xco8ZW0dmYJiDbx0BztLFz8tKVTOxBO-H2AadJ4_syf6VJGP8QslSWzZjx4pNyDa_uhxhkFuZ0dN3wcAIe_IeUyjbVVrdYVBmXKymDsrEMFQAbBmcPUPSd5DjCww6zHVGNSEv2aLwCfjvtnOKxROVLepeYaf0PW9SCRllfKS8N0da7LZlytAzgBJszXFhtipE4w-_Hozu6rpIKxZ1XLJX-fQ"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-on-secondary-fixed text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+            A/L Chemistry
+          </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title text-title text-on-surface leading-snug">Rotary Hall Chemistry</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Dr. Asela Perera</p>
+<span class="font-label-sm text-label-sm text-secondary block mt-1">MBBS, Chemistry Consultant</span>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">22,100+ Enrolled</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">rotary.mindbridge.lk</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Pricing Preview (Starter vs Growth) -->
+<section class="px-gutter-mobile pt-space-lg pb-space-sm w-full">
+<div class="text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Transparent Scale</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Institutional Pricing Plans</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Affordable monthly tiers tailored for Sri Lankan educators.</p>
+</div>
+<!-- Toggle Selector -->
+<div class="flex bg-surface-container p-1 rounded-lg mb-space-md">
+<button class="flex-1 py-1.5 font-label-md text-label-md text-primary font-semibold bg-surface-container-lowest rounded shadow-sm transition-all" id="planStarterBtn" onclick="switchPlan('starter')">Starter Tier</button>
+<button class="flex-1 py-1.5 font-label-md text-label-md text-on-surface-variant transition-all" id="planGrowthBtn" onclick="switchPlan('growth')">Growth Engine</button>
+</div>
+<!-- Starter Plan Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm relative" id="planStarterCard">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-full text-secondary font-medium">Solo Lecturer</span>
+<span class="font-title text-title text-primary font-bold">LKR 15,000<span class="text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Starter Academy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">Ideal for individual masters migrating from generic video tools.</p>
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Up to 1,500 Active Registered Students</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Automated Bank Slip OCR Scanning</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Full HD Dynamic DRM Video Shield</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>island-wide Dialog / Mobitel SMS Gateway</span>
+</div>
+</div>
+<button class="w-full h-11 bg-surface-container text-on-surface font-label-lg text-label-lg rounded-lg hover:bg-surface-container-high transition-colors">
+        Choose Starter Plan
+      </button>
+</div>
+<!-- Growth Plan Card (Hidden initially) -->
+<div class="hidden bg-surface-container-lowest p-space-md rounded-lg shadow-md relative" id="planGrowthCard">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-bold rounded-full">Most Popular</span>
+<span class="font-title text-title text-primary font-bold">LKR 35,000<span class="text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Growth Enterprise</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">Powerhouse infrastructure for high-volume island institutes.</p>
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified</span>
+<span>Unlimited Students & Multiple Lecturers</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Custom Domain (e.g., student.yourbrand.lk)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Advanced Live Exam Telemetry & Cheating AI</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Dedicated Colombo Account Manager & 24/7 SLA</span>
+</div>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-primary-container shadow-md transition-all">
+        Deploy Growth Engine
+      </button>
+</div>
+</section>
+<!-- Dual Testimonial Showcase -->
+<section class="px-gutter-mobile pt-space-lg pb-space-lg w-full">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of an experienced Sri Lankan senior mathematics master lecturer wearing glasses and an open-collar shirt smiling warmly inside a modern university classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2OJJM3mpeGCBlBQVp6Psl7rBy1RF9rkskbEvwGCW6cIXYZg5jFGOGlZZvQrsdd_vRsw3a2zFwhIVVCv2N2aMJZTlYuSzti2FPfghsjiKUvtY4QW3Pto6ib3TPze3RkkYi20dwlpi0H7eK_vgBQyZ7elBzzAIkrxqWt7Yakbz7NbyAMr6T4utF__1oa99JwFLBjGCG4jl6MUlO0z2jksLnSdtbZ5oSCu8SSBRLF4I"/>
+</div>
+<div>
+<h4 class="font-title text-title text-on-surface">Eng. Kusal Senaratne</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Apex Combined Maths Founder</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mb-space-md">
+        “Before MindBridge, verifying 5,000 monthly bank deposit slips took our assistants 6 days. Today it happens in 30 seconds with zero fraud, and our live streams run without a stutter across rural towers.”
+      </p>
+<!-- Royal College Student Testimonial Insert -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Devinda Wickramasinghe (Island Rank 4 - 2024)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Royal College, Colombo · Exam QR Certificate Verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Launch Call-to-Action Bar -->
+<div class="sticky bottom-0 z-40 w-full px-gutter-mobile py-space-sm bg-surface-container-lowest/95 backdrop-blur-md shadow-lg flex items-center justify-between gap-space-md">
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Launch in 48 Hours</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] truncate block">Full white-labeled onboarding</span>
+</div>
+<button class="h-10 px-space-md shrink-0 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm flex items-center gap-1 hover:bg-primary-container active:scale-95 transition-all">
+<span>Get Started</span>
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+</button>
+</div>
+</div>
+<script>
+  function togglePillar(index) {
+    const items = document.querySelectorAll('.pillar-item');
+    items.forEach((item, i) => {
+      const content = item.querySelector('.pillar-content');
+      const chevron = item.querySelector('.pillar-chevron');
+      if (i === index) {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          chevron.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          chevron.style.transform = 'rotate(0deg)';
+        }
+      } else {
+        content.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    });
+  }
+
+  function switchPlan(type) {
+    const starterBtn = document.getElementById('planStarterBtn');
+    const growthBtn = document.getElementById('planGrowthBtn');
+    const starterCard = document.getElementById('planStarterCard');
+    const growthCard = document.getElementById('planGrowthCard');
+
+    if (type === 'starter') {
+      starterBtn.className = 'flex-1 py-1.5 font-label-md text-label-md text-primary font-semibold bg-surface-container-lowest rounded shadow-sm transition-all';
+      growthBtn.className = 'flex-1 py-1.5 font-label-md text-label-md text-on-surface-variant transition-all';
+      starterCard.classList.remove('hidden');
+      growthCard.classList.add('hidden');
+    } else {
+      growthBtn.className = 'flex-1 py-1.5 font-label-md text-label-md text-primary font-semibold bg-surface-container-lowest rounded shadow-sm transition-all';
+      starterBtn.className = 'flex-1 py-1.5 font-label-md text-label-md text-on-surface-variant transition-all';
+      growthCard.classList.remove('hidden');
+      starterCard.classList.add('hidden');
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,27,74,0.06)]" data-active-classes="text-primary font-bold"><div class="px-gutter-mobile pt-space-xs pb-space-sm flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs"><a aria-current="page" class="w-11 h-11 flex flex-col items-center justify-center transition-colors text-primary font-bold" data-path="storefront-explore" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span class="font-label-sm text-label-sm">Browse</span></a><a class="w-11 h-11 flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" data-path="enterprise-solutions" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-label-sm text-label-sm">Corporate</span></a></div><div class="flex-1 flex justify-end"><a class="h-11 px-space-lg flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-[0_4px_12px_rgba(0,92,186,0.25)] hover:bg-primary-container transition-all active:scale-[0.98]" data-path="student-onboarding" href="#"><span>Enroll Now</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></div></nav></body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#cfd9fb", "on-primary-fixed-variant": "#00458f", "surface-container-high": "#e1e7ff", "surface-container-low": "#f2f3ff", "on-surface-variant": "#414754", "primary-fixed": "#d7e3ff", "inverse-on-surface": "#eef0ff", "secondary": "#4d5c8e", "on-tertiary": "#ffffff", "outline": "#717785", "tertiary-container": "#a06900", "secondary-fixed": "#dbe1ff", "surface": "#faf8ff", "on-primary-fixed": "#001b3f", "secondary-fixed-dim": "#b5c5fd", "on-background": "#101b34", "on-error-container": "#93000a", "on-tertiary-container": "#fffbff", "tertiary-fixed": "#ffddb4", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#633f00", "primary-fixed-dim": "#abc7ff", "on-secondary-fixed-variant": "#354575", "on-surface": "#101b34", "tertiary-fixed-dim": "#ffb952", "surface-container": "#eaedff", "on-primary": "#ffffff", "secondary-container": "#b5c5fd", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-secondary-container": "#405081", "surface-container-highest": "#d9e2ff", "surface-bright": "#faf8ff", "on-secondary-fixed": "#041847", "background": "#faf8ff", "inverse-primary": "#abc7ff", "surface-tint": "#005cba", "on-error": "#ffffff", "outline-variant": "#c1c6d6", "tertiary": "#7f5300", "inverse-surface": "#25304a", "primary": "#005ab6", "on-primary-container": "#fefcff", "on-tertiary-fixed": "#291800", "surface-variant": "#d9e2ff", "on-secondary": "#ffffff", "primary-container": "#0072e4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "2rem" }, "fontFamily": { "display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"] }, "fontSize": { "display": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "display-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "title": ["16px", {"lineHeight": "24px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0 pl-space-xs"><h1 class="font-title text-title text-on-surface truncate">Access Permission Error</h1><span class="font-label-sm text-label-sm text-secondary truncate">Enterprise LMS • System Verification</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface px-gutter-mobile pb-safe flex-1"><div class="flex flex-col w-full pb-10">
+<!-- System Diagnostic Route Exception Tag -->
+<div class="w-full pt-3 pb-2 px-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-semibold text-secondary">GATEWAY ROUTE EXCEPTION</span>
+<span class="text-outline-variant">•</span>
+<span class="font-bold text-error">HTTP 404</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant truncate">RESOURCE RELOCATED</span>
+</div>
+</div>
+<!-- Hero Visual / 404 Emblem Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden mt-2">
+<!-- Subtle bridge architectural arch backdrop -->
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-surface-container-low pointer-events-none opacity-60"></div>
+<div class="absolute right-12 top-6 w-24 h-24 rounded-full bg-primary-fixed-dim/30 pointer-events-none blur-xl"></div>
+<div class="flex flex-col items-center text-center relative z-10">
+<!-- Stylized 404 with Emblem Composition -->
+<div class="flex items-center justify-center my-1 select-none">
+<span class="font-display text-[68px] leading-none tracking-tighter font-extrabold text-secondary">4</span>
+<!-- Central Educational Emblem / Graduation Bridge Compass -->
+<div class="relative w-20 h-20 mx-1 flex items-center justify-center">
+<div class="absolute inset-0 rounded-2xl bg-surface-container-high rotate-6 transition-transform"></div>
+<div class="absolute inset-0 rounded-2xl bg-primary-container shadow-md flex items-center justify-center text-on-primary">
+<!-- Stylized Graduation Cap & Book Node Graphic -->
+<svg class="w-12 h-12 text-on-primary" fill="none" viewbox="0 0 48 48">
+<!-- Golden Academic Ribbon Arc -->
+<path d="M6 34C10 18 36 12 42 22" stroke="#FFB952" stroke-linecap="round" stroke-width="3"></path>
+<path d="M42 16C38 32 12 36 6 26" opacity="0.6" stroke="#FFB952" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Mortarboard Cap -->
+<path d="M24 8L6 17L24 26L42 17L24 8Z" fill="currentColor"></path>
+<path d="M15 21.5V30C15 32.5 19 35 24 35C29 35 33 32.5 33 30V21.5" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="39" cy="24" fill="#FFB952" r="2.5"></circle>
+<path d="M39 24V31" stroke="#FFB952" stroke-linecap="round" stroke-width="1.8"></path>
+<!-- Open Book Base / Bridge of Knowledge -->
+<path d="M24 28V40M24 40C20 37 12 37 8 39V29C12 27 20 27 24 30C28 27 36 27 40 29V39C36 37 28 37 24 40Z" stroke="white" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+</div>
+<span class="font-display text-[68px] leading-none tracking-tighter font-extrabold text-secondary">4</span>
+</div>
+<!-- Main Headline -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mt-2 font-bold tracking-tight">
+        Lesson or Academy Not Found
+      </h2>
+<!-- English Microcopy -->
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 px-2 max-w-sm">
+        The course, lecture note, or academy subdomain you are attempting to reach does not exist or may have been renamed.
+      </p>
+<!-- Bilingual Sinhala Verification Badge -->
+<div class="mt-3.5 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface max-w-full">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">translate</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">
+          ඔබ සොයන පාඨමාලාව හෝ අධ්‍යාපන ආයතනය සොයාගත නොහැක.
+        </span>
+</div>
+</div>
+</div>
+<!-- Reverse Proxy Edge Gateway Inspection Diagnostic Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mt-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[19px] text-secondary">lan</span>
+<span class="font-title text-title text-on-surface text-sm">Reverse Proxy Edge Gateway Inspection</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">
+        UNRESOLVED
+      </span>
+</div>
+<!-- Target Host Box with Technical Details -->
+<div class="bg-surface-container rounded-lg p-3 flex flex-col gap-1.5 font-label-md text-label-md">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Host Boundary:</span>
+<span class="font-mono text-primary font-semibold text-xs tracking-tight">math-revision.mindbridge.lk</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Routing Port / Protocol:</span>
+<span class="font-mono text-on-surface text-xs">Port 443 (TLS/1.3)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Cluster Gateway ID:</span>
+<span class="font-mono text-secondary text-xs">LK-CMB-EDGE-NODE-07</span>
+</div>
+</div>
+<!-- Warning / Explanation Note -->
+<div class="flex items-start gap-2 bg-surface-container-low rounded-lg p-3">
+<span class="material-symbols-outlined text-[20px] text-tertiary-container shrink-0 mt-0.5">warning</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Subdomain <span class="font-semibold text-on-surface">math-revision</span> is not bound to an active tenant or institute license. If you are a student, please verify your class link with your tuition master or search our central index below.
+      </p>
+</div>
+<!-- Diagnostic Route Copy Button -->
+<button class="w-full h-11 bg-surface-container-high hover:bg-surface-variant active:scale-[0.99] text-on-surface font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-2 transition-all" id="copyLogBtn" onclick="copyDiagnosticLog()">
+<span class="material-symbols-outlined text-[18px] text-secondary">content_copy</span>
+<span>Copy Diagnostic Route Log</span>
+</button>
+</div>
+<!-- Search Registered Institutes & Syllabi Module -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mt-3 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">manage_search</span>
+<h3 class="font-title text-title text-on-surface">Search Registered Institutes &amp; Syllabi</h3>
+</div>
+<!-- Search Input Group -->
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined text-[20px] text-outline absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest" id="syllabusSearch" placeholder="Search all verified Sri Lankan academies..." type="text"/>
+</div>
+<button class="h-11 px-4 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-primary-container active:scale-95 transition-all shrink-0 flex items-center justify-center">
+        Search
+      </button>
+</div>
+<!-- Trending Syllabi Filter Pills -->
+<div class="flex flex-col gap-1.5 pt-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Frequent Search Portals:</span>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors">
+          A/L Combined Maths
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors">
+          A/L Physics
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors">
+          A/L Chemistry
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors">
+          O/L Maths
+        </button>
+</div>
+</div>
+</div>
+<!-- Verified Academy Switcher Selector -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mt-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[19px] text-primary">domain</span>
+<span class="font-title text-title text-on-surface text-sm">Verified Academy Switcher</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+        ACTIVE MESH
+      </span>
+</div>
+<div class="relative w-full">
+<select class="w-full h-11 px-3 pr-10 bg-surface-container rounded-lg font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:bg-surface-container-lowest">
+<option selected="">Apex Combined Mathematics (Nugegoda)</option>
+<option>Rotary Hall Academy (Nugegoda)</option>
+<option>Siyatha Education Institute (Matara)</option>
+<option>Sakya Higher Education Centre (Kohuwala)</option>
+<option>Syzygy Educational Institute (Gampaha)</option>
+</select>
+<span class="material-symbols-outlined text-[20px] text-outline absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-primary-container active:scale-[0.99] transition-all flex items-center justify-center gap-1.5">
+<span>Open Portal</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Safe Harbor Gateways Shortcut Cards List -->
+<div class="w-full mt-4 flex flex-col gap-2.5">
+<div class="px-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider">Safe Harbor Gateways</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Central Directory</span>
+</div>
+<!-- Shortcut Card 1: Universal Student Hub -->
+<a class="w-full bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition-colors active:scale-[0.99]" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title text-title text-on-surface text-sm truncate">Universal Student Hub</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Jump straight to your authorized student dashboard.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline shrink-0 ml-2">chevron_right</span>
+</a>
+<!-- Shortcut Card 2: MindBridge Public Directory -->
+<a class="w-full bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition-colors active:scale-[0.99]" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title text-title text-on-surface text-sm truncate">MindBridge Public Directory</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Browse approved tuition institutes in Colombo, Kandy, Galle.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline shrink-0 ml-2">chevron_right</span>
+</a>
+<!-- Shortcut Card 3: Student Helpdesk & WhatsApp -->
+<a class="w-full bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between hover:bg-surface-container-low transition-colors active:scale-[0.99]" href="tel:+94719876543">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-title text-title text-on-surface text-sm truncate">Student Helpdesk &amp; WhatsApp</h4>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px]">HOTLINE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Direct Sri Lankan technical helpline: +94 71 987 6543</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline shrink-0 ml-2">call</span>
+</a>
+</div>
+<!-- Reference & Regulatory Footer Details -->
+<div class="w-full mt-6 px-2 text-center flex flex-col items-center gap-1.5">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">SL-CERT &amp; PDPA Certified Secure Failure Recovery</span>
+</div>
+<p class="font-body-sm text-[11px] text-outline leading-tight font-mono">
+      Ref: ERR_TENANT_ROUTE_404_NOT_FOUND • Sri Lanka National Backbone
+    </p>
+<p class="font-label-sm text-[10px] text-on-surface-variant mt-1">
+      MindBridge LMS Educational Multi-Tenant Network • All systems operational.
+    </p>
+</div>
+</div>
+<script>
+  function copyDiagnosticLog() {
+    const logData = "STATUS=404\nERROR=ERR_TENANT_ROUTE_404_NOT_FOUND\nHOST=math-revision.mindbridge.lk\nPORT=443\nNODE=LK-CMB-EDGE-NODE-07\nTIMESTAMP=" + new Date().toISOString();
+    navigator.clipboard.writeText(logData).then(() => {
+      const btn = document.getElementById('copyLogBtn');
+      if (btn) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span><span>Copied to Clipboard!</span>';
+        setTimeout(() => {
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary">content_copy</span><span>Copy Diagnostic Route Log</span>';
+        }, 2200);
+      }
+    }).catch(() => {
+      alert("Diagnostic log copied.");
+    });
+  }
+</script></main></body></html>

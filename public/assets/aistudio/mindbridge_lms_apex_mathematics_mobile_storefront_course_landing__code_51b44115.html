@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#abc7ff", "tertiary": "#7f5300", "on-surface-variant": "#414754", "surface-container-high": "#e1e7ff", "on-tertiary-fixed": "#291800", "on-secondary-fixed": "#041847", "surface-tint": "#005cba", "on-primary": "#ffffff", "on-primary-fixed-variant": "#00458f", "inverse-on-surface": "#eef0ff", "background": "#faf8ff", "secondary-container": "#b5c5fd", "on-tertiary": "#ffffff", "tertiary-container": "#a06900", "surface-container-highest": "#d9e2ff", "on-error": "#ffffff", "primary-container": "#0072e4", "surface-container-low": "#f2f3ff", "primary": "#005ab6", "on-secondary-container": "#405081", "on-tertiary-container": "#fffbff", "error-container": "#ffdad6", "outline": "#717785", "secondary": "#4d5c8e", "surface": "#faf8ff", "primary-fixed": "#d7e3ff", "on-background": "#101b34", "surface-variant": "#d9e2ff", "surface-bright": "#faf8ff", "inverse-primary": "#abc7ff", "on-surface": "#101b34", "inverse-surface": "#25304a", "secondary-fixed": "#dbe1ff", "on-secondary-fixed-variant": "#354575", "on-primary-container": "#fefcff", "surface-dim": "#cfd9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ffb952", "on-tertiary-fixed-variant": "#633f00", "error": "#ba1a1a", "surface-container": "#eaedff", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#b5c5fd", "tertiary-fixed": "#ffddb4", "outline-variant": "#c1c6d6", "on-secondary": "#ffffff", "on-primary-fixed": "#001b3f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-xl": "2rem", "gutter": "1.5rem" }, fontFamily: { "label-lg": ["Inter"], "display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title text-title text-on-surface tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">LMS Portal</span></div></div><div class="flex items-center gap-space-xs"><button class="h-11 px-space-xs flex items-center gap-1 rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="font-label-sm text-label-sm uppercase">EN</span><span class="text-outline-variant font-body-sm text-body-sm">/</span><span class="font-label-sm text-label-sm">සිං</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary rounded-lg transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Subdomain Institutional Ribbon -->
+<div class="px-gutter-mobile pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">apex-maths.mindbridge.lk</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold">සිංහල මාධ්‍ය</span>
+<span class="bg-surface-container text-on-surface-variant px-space-sm py-0.5 rounded-full font-label-sm text-label-sm">A/L 2025/26</span>
+</div>
+</div>
+</div>
+<!-- Master Tutor Hero Card (Bridge Architecture Top-Right Radiused) -->
+<div class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl rounded-tr-[28px] p-space-md shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient bridge structural gradient -->
+<div class="absolute -right-8 -top-8 w-36 h-36 bg-primary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-space-md z-10">
+<div class="relative shrink-0">
+<img class="w-20 h-24 object-cover rounded-xl shadow-sm" data-alt="Professional studio portrait of Eng. Kusal Senaratne, a distinguished Sri Lankan male mathematics lecturer in his early 40s wearing a sharp crisp navy tailored blazer with open-collar white shirt, warm intellectual smile, academic lecture amphitheater softly blurred in deep blue tones behind him." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxzlblR598VHoVs2Dh5Vgo_O5gOfSmHURyuoQyRItWXUdEM0ENp5poFx0b0tL89B9BQTor0Bab1tN8wB0aGc9CqvqeEh6JEBy6R5BNFp6uxHg1MHIUx6UWFKUrDC6T2V87UTNST8F363yvlUOIljLXo-YrcCsFwJogPd-BIU_2YQpttY_OrZtQqEiZPib5VlmqSpjcis7JhU_LJ2VMTVrlVmDtoE8mNppgs0HvxUU"/>
+<div class="absolute -bottom-2 -right-1 bg-tertiary text-on-tertiary px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-label-sm text-[10px] leading-tight font-bold">UoM</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Apex Academy</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Head of Faculty</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mt-0.5">Eng. Kusal Senaratne</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug mt-1">B.Sc. Eng (Hons), University of Moratuwa</p>
+<p class="font-label-sm text-label-sm text-secondary font-medium">Combined Maths Specialist • 14+ Years</p>
+</div>
+</div>
+<!-- Cohort Achievement Ribbon (Horizontal Snap-Scrollable) -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-0.5 no-scrollbar -mx-space-xs px-space-xs">
+<div class="shrink-0 flex items-center gap-1.5 bg-surface-container px-space-sm py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] font-bold text-on-surface leading-none">1,420 Active</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant leading-none">Islandwide Enrolled</span>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 bg-primary-fixed text-on-primary-fixed px-space-sm py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] font-bold text-on-primary-fixed leading-none">48 Selections</span>
+<span class="font-label-sm text-[9px] text-on-secondary-fixed leading-none">Moratuwa Eng 2024</span>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 bg-tertiary-fixed text-on-tertiary-fixed px-space-sm py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] font-bold text-on-tertiary-fixed leading-none">Island #3 & #7</span>
+<span class="font-label-sm text-[9px] text-on-tertiary-fixed-variant leading-none">Bio & Maths Merit</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Announcement Ticker -->
+<div class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-high rounded-lg p-space-sm flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 animate-pulse">campaign</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight flex-1">
+<span class="font-bold text-primary">May Intake Open:</span> Unit 04 Differential Equations live classes commence this Saturday 8:00 AM.
+      </p>
+</div>
+</div>
+<!-- Section Title: Available Cohorts -->
+<div class="px-gutter-mobile pt-space-md pb-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold tracking-wider">Select Cohort</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">2025 / 2026 Academic Batches</h2>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-xs py-1 rounded">2 Batches</span>
+</div>
+<!-- Cohort Card 1: 2025 Theory + Revision (Featured) -->
+<div class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Status Chip & Badge -->
+<div class="flex items-center justify-between">
+<span class="bg-primary text-on-primary text-label-sm font-label-lg px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> High Demand
+        </span>
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold px-space-sm py-0.5 rounded-full">G.C.E. A/L 2025</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title text-title text-on-surface font-bold">2025 Combined Maths Theory + Revision</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Comprehensive paper class, complete pure & applied syllabus coverage, past paper breakdowns.</p>
+</div>
+<!-- Feature Bullet Grid -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">sensors</span>
+<span class="font-body-sm text-body-sm font-medium">Weekly 2 Live Streams (SLT PeoTV Low Latency CDN)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">video_library</span>
+<span class="font-body-sm text-body-sm font-medium">500+ Video Archive with Bookmark Search</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">local_shipping</span>
+<span class="font-body-sm text-body-sm font-medium">Monthly Physical Printed Tute Courier Delivery</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">timer</span>
+<span class="font-body-sm text-body-sm font-medium">Monthly Real-time Proctored Model Exams</span>
+</div>
+</div>
+<!-- Pricing & Actions -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Monthly Investment</span>
+<div class="flex items-baseline gap-1">
+<span class="font-title text-title text-on-surface font-bold text-primary">Rs. 4,500</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">/ Month</span>
+</div>
+</div>
+<button class="h-10 px-space-md bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-bold flex items-center gap-1.5 shadow-[0_4px_12px_rgba(0,92,186,0.25)] active:scale-[0.98] transition-transform" onclick="toggleSlipModal('2025 A/L Theory + Revision', '4,500')">
+<span>Enroll Batch</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Direct Transfer Pill Button -->
+<button class="w-full py-2 bg-surface-container hover:bg-surface-container-high rounded-lg flex items-center justify-center gap-1 text-on-surface-variant font-label-sm text-label-sm transition-colors" onclick="scrollToBankDetails()">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>View Bank Transfer Details & Upload Slip</span>
+</button>
+</div>
+</div>
+<!-- Cohort Card 2: 2026 Foundation -->
+<div class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-lg px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Foundation First
+        </span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold px-space-sm py-0.5 rounded-full">G.C.E. A/L 2026</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title text-title text-on-surface font-bold">2026 Pure Mathematics Foundation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Calculus, Polynomials, Matrix, Coordinate Geometry from absolute basics to advanced standards.</p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">functions</span>
+<span class="font-body-sm text-body-sm font-medium">Complex Numbers & Coordinate Geometry Mastery</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">forum</span>
+<span class="font-body-sm text-body-sm font-medium">Weekly Direct Doubt-Clearing Zoom with Eng. Kusal</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">auto_stories</span>
+<span class="font-body-sm text-body-sm font-medium">Digital Annotated Formula Handbooks & Summaries</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Monthly Investment</span>
+<div class="flex items-baseline gap-1">
+<span class="font-title text-title text-on-surface font-bold text-secondary">Rs. 4,000</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">/ Month</span>
+</div>
+</div>
+<button class="h-10 px-space-md bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded-lg font-label-lg text-label-lg font-bold flex items-center gap-1.5 transition-colors" onclick="toggleSlipModal('2026 Pure Maths Foundation', '4,000')">
+<span>Enroll Batch</span>
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Platform Superiority / Institutional Guarantee Grid -->
+<div class="px-gutter-mobile pt-space-lg pb-space-xs">
+<div class="flex flex-col mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold tracking-wider">Apex Quality Standard</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Why Island Top Scorers Choose MindBridge</h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title text-title text-on-surface font-bold">1080p DRM Protected Stream</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Adaptive bitrate anti-buffering engine with student-watermarked security. No screen recordings, crystal-clear whiteboard legibility on SLT Mobitel / Dialog 4G.
+          </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">qr_code_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title text-title text-on-surface font-bold">Physical Class Smart Pass</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Seamless hybrid pass integration for Colombo Rotary Hall & Nugegoda Synergy physical hall entrance. Switch between physical & online anytime.
+          </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">fact_check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title text-title text-on-surface font-bold">48-Hour Marked PDF Feedback</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Every submission is individually evaluated by University of Moratuwa Engineering alumni marking panel with step-by-step constructive margin corrections.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Student Success Spotlight (Social Proof Card) -->
+<div class="px-gutter-mobile py-space-md">
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Close-up headshot of Kavindu Nirmal, a young Sri Lankan male student with smart glasses and neat haircut, wearing a casual polo shirt, smiling proudly in front of a modern high school study area." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEtYbxZQpyLzSnXl2By6nnQAbk5X1UcE7vfgi0pT7UvJ_KxihxM6_dRGL9i0vNAUeW848kh11FlHzWFmjLCR2PDTPJeG8HCaghhzkNZyVBCOsjsY7iMsFo0-A5XEe_j5nOhRtx5KSsIUz_4EHQbaeVj3esiHrPBCtrqKN3rFJmzTZHIlCkMuChVHPvhC5fgoiVXdngD0i0CkN-JhU3Ddnhm3ycWa4tacuPrkHWgCM"/>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface font-bold">Kavindu Nirmal</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Rank #14 Colombo District (2024)</span>
+</div>
+</div>
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-[36px] absolute -top-2 -left-2 pointer-events-none">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic pl-5 leading-relaxed">
+          "The methodical approach to Applied Mechanics and Coordinate Geometry by Kusal Sir made difficult 25-mark structure problems effortless. The 48-hour paper return with individual marks allowed me to rectify silly mistakes before the national exam."
+        </p>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>Ananda College, Colombo</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-medium">A* Grade in Maths</span>
+</div>
+</div>
+</div>
+<!-- Bank Transfer & Manual Slip Guide (Accordion Section) -->
+<div class="px-gutter-mobile py-space-xs scroll-mt-20" id="bank-payment-section">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Payment Options</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Direct Bank Transfer Accounts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pay via CDM, Online Banking, or Counter Slip and upload photo.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">payments</span>
+</div>
+<!-- Bank Card 1: Commercial Bank -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+<span class="font-title text-title text-on-surface font-bold">Commercial Bank of Ceylon</span>
+</div>
+<button class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="copyToClipboard('8010045231', this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Account Number:</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface font-mono">8010045231</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Branch:</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Moratuwa (089)</span>
+</div>
+</div>
+<div class="flex flex-col pt-0.5">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Account Name:</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">MindBridge LMS - Apex Education Ltd</span>
+</div>
+</div>
+<!-- Bank Card 2: People's Bank -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">account_balance</span>
+<span class="font-title text-title text-on-surface font-bold">People's Bank</span>
+</div>
+<button class="bg-surface-container text-tertiary hover:bg-tertiary hover:text-on-tertiary px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="copyToClipboard('045200189445210', this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Account Number:</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface font-mono">045200189445210</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Branch:</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Nugegoda City (184)</span>
+</div>
+</div>
+<div class="flex flex-col pt-0.5">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Account Name:</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Apex Academy Combined Maths</span>
+</div>
+</div>
+<!-- Slip Upload Trigger Box -->
+<div class="bg-surface-container-high rounded-lg p-space-md flex flex-col items-center text-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+</div>
+<span class="font-title text-title text-on-surface font-bold">Already Deposited the Fee?</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+          Take a clear photo or screenshot of the receipt and submit your index details for automatic account activation within 2 hours.
+        </p>
+<button class="mt-space-xs h-10 px-space-lg bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-bold flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" onclick="toggleSlipModal('2025 A/L Theory + Revision', '4,500')">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Upload Bank Deposit Slip</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Delivery / Study Pack Logistics Info -->
+<div class="px-gutter-mobile py-space-sm mb-space-lg">
+<div class="bg-surface-container rounded-xl p-space-md flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[32px] shrink-0">markunread_mailbox</span>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface font-bold">Islandwide Printed Tute Logistics</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dispatched via Prompt Xpress & Domex on the 25th of each month directly to your doorstep.</p>
+</div>
+</div>
+</div>
+<!-- Enrollment Slip Upload Slide-over / Modal (Hidden by default, controlled via JS) -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex flex-col justify-end" id="slipModal">
+<div class="bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-space-md max-h-[751px] overflow-y-auto shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">Quick Student Registration</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modalCourseTitle">Enroll in Batch</h3>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleSlipModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Student Full Name</label>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:ring-2 focus:ring-primary" placeholder="e.g. Nirmal Bandara" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">WhatsApp Mobile Number</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg shadow-sm px-space-sm">
+<span class="font-body-md text-body-md text-on-surface-variant font-medium pr-2">+94</span>
+<input class="h-11 flex-1 bg-transparent text-on-surface font-body-md text-body-md outline-none" placeholder="77 123 4567" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">NIC or School Student ID</label>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:ring-2 focus:ring-primary" placeholder="200612345678 / School ID" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Postal Address (For Printed Monthly Tutes)</label>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:ring-2 focus:ring-primary" placeholder="No, Street, City (Domex delivery)" type="text"/>
+</div>
+<!-- File Upload Drag Zone -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Attach Bank Slip / Screenshot</label>
+<div class="rounded-lg p-space-md flex flex-col items-center justify-center bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">photo_camera</span>
+<span class="font-label-md text-label-md text-on-surface font-bold mt-1">Tap to snap slip or choose file</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PNG, JPG, or PDF up to 10MB</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Payable:</span>
+<span class="font-title text-title text-primary font-bold" id="modalFeeText">Rs. 4,500</span>
+</div>
+<button class="h-11 px-space-lg bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-bold flex items-center gap-1 shadow-md active:scale-95 transition-transform" onclick="submitSlip()">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Submit for Verification</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Callout / WhatsApp Bar (Fixed above global shell tab) -->
+<div class="sticky bottom-16 w-full z-40 px-gutter-mobile py-space-xs bg-surface/90 backdrop-blur-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] text-on-surface-variant font-semibold uppercase leading-none">Monthly Admission</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-[17px] text-on-surface font-bold">LKR 4,500</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="w-11 h-11 rounded-lg bg-surface-container text-tertiary flex items-center justify-center shrink-0 hover:bg-tertiary hover:text-on-tertiary transition-colors" href="https://wa.me/94719876543?text=Hi%20Apex%20Maths,%20I%20would%20like%20to%20enroll%20in%20Combined%20Maths" rel="noopener" target="_blank" title="Chat on WhatsApp">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+</a>
+<button class="h-11 px-space-md bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-bold flex items-center gap-1.5 shadow-[0_4px_12px_rgba(0,92,186,0.3)] active:scale-95 transition-transform" onclick="toggleSlipModal('2025 A/L Combined Maths', '4,500')">
+<span>Join Apex Batch</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleSlipModal(courseTitle, fee) {
+    const modal = document.getElementById('slipModal');
+    if (!modal) return;
+    if (courseTitle) {
+      document.getElementById('modalCourseTitle').innerText = 'Enroll: ' + courseTitle;
+      document.getElementById('modalFeeText').innerText = 'Rs. ' + fee;
+    }
+    modal.classList.toggle('hidden');
+  }
+
+  function scrollToBankDetails() {
+    const el = document.getElementById('bank-payment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function copyToClipboard(text, btnElement) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalHTML = btnElement.innerHTML;
+      btnElement.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>Copied</span>';
+      setTimeout(() => {
+        btnElement.innerHTML = originalHTML;
+      }, 2000);
+    });
+  }
+
+  function submitSlip() {
+    const modal = document.getElementById('slipModal');
+    alert('Thank you! Your slip has been submitted for instant verification. Your portal access credentials will be delivered to your WhatsApp within 2 hours.');
+    modal.classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,27,74,0.06)]" data-active-classes="text-primary font-bold"><div class="px-gutter-mobile pt-space-xs pb-space-sm flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs"><a aria-current="page" class="w-11 h-11 flex flex-col items-center justify-center transition-colors text-primary font-bold" data-path="storefront-explore" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span class="font-label-sm text-label-sm">Browse</span></a><a class="w-11 h-11 flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" data-path="enterprise-solutions" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-label-sm text-label-sm">Corporate</span></a></div><div class="flex-1 flex justify-end"><a class="h-11 px-space-lg flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-[0_4px_12px_rgba(0,92,186,0.25)] hover:bg-primary-container transition-all active:scale-[0.98]" data-path="student-onboarding" href="#"><span>Enroll Now</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></div></nav></body></html>

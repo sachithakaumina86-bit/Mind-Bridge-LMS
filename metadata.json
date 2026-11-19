@@ -1,0 +1,6 @@
+{
+  "name": "MindBridge LMS — Official Public Marketing Website",
+  "description": "Next-Generation Multi-Tenant EdTech Platform for Sri Lanka & Beyond. Create, brand, and scale your independent digital academy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

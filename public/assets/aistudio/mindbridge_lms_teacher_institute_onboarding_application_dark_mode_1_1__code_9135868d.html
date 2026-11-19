@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#004784",
+          "on-tertiary-fixed-variant": "#005236",
+          "inverse-primary": "#005fad",
+          "on-tertiary": "#003824",
+          "on-background": "#dde2f8",
+          "surface-container-high": "#242a3a",
+          "surface-container": "#191f2f",
+          "secondary-container": "#ee9800",
+          "on-error-container": "#ffdad6",
+          "secondary-fixed-dim": "#ffb95f",
+          "tertiary-container": "#00ab76",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-surface-variant": "#94a3b8",
+          "secondary-fixed": "#ffddb8",
+          "primary-container": "#3898ff",
+          "surface": "#0d1322",
+          "surface-container-low": "#151b2b",
+          "tertiary-fixed": "#6ffbbe",
+          "primary-fixed-dim": "#a4c8ff",
+          "surface-dim": "#0d1322",
+          "on-primary": "#002042",
+          "on-primary-container": "#ffffff",
+          "outline": "#334155",
+          "primary": "#3898ff",
+          "on-tertiary-container": "#003623",
+          "outline-variant": "#1e293b",
+          "on-secondary-container": "#5b3800",
+          "primary-fixed": "#d4e3ff",
+          "error-container": "#450a0a",
+          "on-secondary": "#472a00",
+          "surface-bright": "#33394a",
+          "error": "#f87171",
+          "secondary": "#ffb95f",
+          "surface-container-lowest": "#080e1d",
+          "on-error": "#690005",
+          "surface-tint": "#3898ff",
+          "on-surface": "#ffffff",
+          "on-secondary-fixed": "#2a1700",
+          "inverse-surface": "#dde2f8",
+          "inverse-on-surface": "#2a3040",
+          "on-primary-fixed": "#001c3a",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-tertiary-fixed": "#002113",
+          "background": "#080e1d",
+          "surface-variant": "#1e2638",
+          "surface-container-highest": "#1e2638",
+          "tertiary": "#4edea3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "2rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-2xs": "0.125rem",
+          "space-3xl": "4rem",
+          "space-2xl": "3rem",
+          "margin-mobile": "1rem",
+          "space-xl": "2rem",
+          "gutter": "1.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "body-md": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "title": ["Plus Jakarta Sans", "sans-serif"],
+          "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "display": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+          "body-lg": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "body-sm": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "label-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "display-mobile": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        "fontSize": {
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "title": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600"}],
+          "body-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "body-md": ["14px", {"lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400"}],
+          "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+          "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+          "body-lg": ["16px", {"lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400"}],
+          "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "headline-sm": ["18px", {"lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600"}]
+        }
+      }
+    }
+  }
+</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-[#cbd5e1] min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white"><header class="fixed top-0 left-0 w-full z-50 bg-[#0d1322]/90 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72xm3_O2sRW414bxarvK00xhvzO4sE8CqGdgTpO_QIRev-OEe_nQfCrl1ceSX6QhElczwbF9F4clBTjQB-Dqm7_1yLdJB0EXZmkoLYX4h9mlhI7NDF1itOavzr_LF22OCMlzW3CH_vuKWMs9PYJe2RGGpkZg7AHHA4XusFNQM9t-OQLNLIKpOu1rDAYAxRGs87aXneqit6cVd4gTvXu_VeRiiwZUekqjhTkJ7XsVtEpRbbNLN6vzr"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title text-title text-white tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm bg-primary/20 border border-primary/30 text-primary px-space-xs py-0.5 rounded">LMS</span></div><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wide hidden sm:inline">Learn • Manage • Achieve</span></div></div><div class="flex items-center gap-space-md"><div class="inline-flex items-center bg-surface-container rounded-full p-0.5 border border-[#1e293b]"><button class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-primary text-white font-semibold shadow-sm transition-all" type="button">EN</button><button class="font-label-sm text-label-sm px-space-sm py-1 rounded-full text-on-surface-variant hover:text-white transition-all" type="button">සිංහල</button></div><button class="w-9 h-9 rounded-full flex items-center justify-center bg-surface-container border border-[#1e293b] text-on-surface-variant hover:bg-surface-container-high hover:text-white transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><nav class="flex items-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-white transition-colors" data-path="help-center" href="#">Help &amp; Support</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-white transition-colors hidden sm:inline-block" data-path="sign-in" href="#">Sign In</a></nav><div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 flex flex-col bg-surface-container-lowest"><div class="flex flex-col w-full">
+<!-- Top Bridge Architecture Accent Ribbon -->
+<div class="w-full bg-[#0d1322] border-b border-[#1e293b] py-space-sm px-margin">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#3898ff]"></span>
+<span>Institutional Registry System</span>
+<span class="text-[#334155]">•</span>
+<span class="font-semibold text-white">Regional Zone: Sri Lanka (LK-WP)</span>
+<span class="text-[#334155]">•</span>
+<span class="text-tertiary font-medium">Tenant Protocol v4.8</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dual Compliance: Sinhala Unicode &amp; MoE Verified</span>
+<div class="flex items-center gap-1.5 bg-[#151b2b] border border-[#1e293b] px-2.5 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold text-white">Data Isolation Guard</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Body Content -->
+<div class="max-w-7xl mx-auto px-margin py-space-xl w-full">
+<!-- Stepper Block -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl p-space-lg shadow-lg mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Registration Pipeline</span>
+<h2 class="font-headline-sm text-headline-sm text-white">Academy Onboarding &amp; Identity Provisioning</h2>
+</div>
+<div class="inline-flex items-center gap-space-sm bg-[#151b2b] border border-[#1e293b] px-space-md py-1.5 rounded-full">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Application ID:</span>
+<span class="font-label-sm text-label-sm font-bold text-primary font-mono">LK-TEN-2025-0894B</span>
+</div>
+</div>
+<!-- Linear Stepper Grid -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-sm pt-space-xs">
+<!-- Step 1 (Done) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm font-bold">Step 1</span>
+</div>
+<div class="h-1.5 w-full bg-primary rounded-full shadow-[0_0_6px_rgba(56,152,255,0.4)]"></div>
+<span class="font-body-sm text-body-sm font-semibold text-white">Account &amp; Auth</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated ✓</span>
+</div>
+<!-- Step 2 (Active) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-space-xs text-primary">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-[10px] text-[#002042] font-bold">2</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">Step 2 (Active)</span>
+</div>
+<div class="h-1.5 w-full bg-primary rounded-full shadow-[0_0_6px_rgba(56,152,255,0.4)]"></div>
+<span class="font-body-sm text-body-sm font-bold text-primary">Educational Model</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">In Progress</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-1.5 opacity-60">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<div class="w-4 h-4 rounded-full bg-[#1e2638] flex items-center justify-center text-[10px] text-on-surface-variant font-semibold">3</div>
+<span class="font-label-sm text-label-sm font-medium">Step 3</span>
+</div>
+<div class="h-1.5 w-full bg-[#1e2638] rounded-full"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Academy Details</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Subdomain URL</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col gap-1.5 opacity-60">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<div class="w-4 h-4 rounded-full bg-[#1e2638] flex items-center justify-center text-[10px] text-on-surface-variant font-semibold">4</div>
+<span class="font-label-sm text-label-sm font-medium">Step 4</span>
+</div>
+<div class="h-1.5 w-full bg-[#1e2638] rounded-full"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">NIC &amp; Documents</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accreditation</span>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col gap-1.5 opacity-60">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<div class="w-4 h-4 rounded-full bg-[#1e2638] flex items-center justify-center text-[10px] text-on-surface-variant font-semibold">5</div>
+<span class="font-label-sm text-label-sm font-medium">Step 5</span>
+</div>
+<div class="h-1.5 w-full bg-[#1e2638] rounded-full"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Admin Approval</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Queue #28</span>
+</div>
+</div>
+</div>
+<!-- 2-Column Content Grid: Form (8-Col) + Status Sidebar (4-Col) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Primary Application Form (Left 8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- Header Arc Card (Bridge-of-Knowledge Motif: Rounded Top Right 24px) -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl rounded-tr-[24px] p-space-xl shadow-lg relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-secondary/10 pointer-events-none blur-2xl"></div>
+<div class="relative z-10">
+<div class="inline-flex items-center gap-space-xs bg-primary/15 border border-primary/30 text-primary px-space-sm py-1 rounded-full mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">Multi-Tenant Academy Onboarding</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-white mb-space-xs tracking-tight">Apply to Launch Your Branded Academy</h1>
+<p class="font-body-lg text-body-lg text-[#94a3b8] max-w-2xl leading-relaxed">
+              Join hundreds of Sri Lankan educators with your own isolated portal, custom domain, and direct bank slip verification engine. Build, teach, and scale securely.
+            </p>
+</div>
+</div>
+<!-- Section 1: Tenant Type Selector -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl p-space-xl shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 2: Architecture Model</span>
+<h3 class="font-headline-sm text-headline-sm text-white">Select Tenant Deployment Scope</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-[#151b2b] border border-[#1e293b] text-on-surface-variant px-space-sm py-1 rounded-full">Required</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="tenant-selector-group">
+<!-- Individual Master Card -->
+<label class="cursor-pointer relative flex flex-col p-space-lg rounded-xl bg-[#151b2b] hover:bg-[#1e2638] border-2 border-primary transition-all group shadow-sm">
+<input checked="" class="sr-only" name="tenant_type" type="radio" value="tutor"/>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<div class="inline-flex items-center gap-1 bg-primary/20 border border-primary/30 text-primary px-space-xs py-0.5 rounded-full text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                  Selected
+                </div>
+</div>
+<h4 class="font-title text-title text-white mb-1">Individual Teacher / Master</h4>
+<p class="font-body-sm text-body-sm text-[#94a3b8] mb-space-md">
+                Ideal for solo tuition masters, individual subject lecturers, and localized tutoring clusters.
+              </p>
+<div class="mt-auto space-y-2 pt-space-sm bg-[#0d1322]/80 border border-[#1e293b]/60 rounded-lg p-2.5">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+<span>Up to 2 Staff / Assistants</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-tertiary">payments</span>
+<span>Direct LKR Manual Slip &amp; Online Billing</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-primary">videocam</span>
+<span>Secure unlisted YouTube / Vimeo stream integration</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span>maths.mindbridge.lk</span>
+</div>
+</div>
+</label>
+<!-- Scaled Institute Card -->
+<label class="cursor-pointer relative flex flex-col p-space-lg rounded-xl bg-[#151b2b] hover:bg-[#1e2638] border border-[#1e293b] transition-all group">
+<input class="sr-only" name="tenant_type" type="radio" value="institute"/>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary/15 border border-secondary/30 flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+</div>
+<span class="inline-flex items-center bg-secondary/20 border border-secondary/30 text-secondary px-space-xs py-0.5 rounded-full text-label-sm font-semibold">
+                  Full Campus Tier
+                </span>
+</div>
+<h4 class="font-title text-title text-white mb-1">Educational Institute / Academy</h4>
+<p class="font-body-sm text-body-sm text-[#94a3b8] mb-space-md">
+                Tailored for multi-hall tuition institutes, international schools, and enterprise academies.
+              </p>
+<div class="mt-auto space-y-2 pt-space-sm bg-[#0d1322]/80 border border-[#1e293b]/60 rounded-lg p-2.5">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-primary">supervisor_account</span>
+<span>Multi-instructor delegation &amp; roles</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-tertiary">hub</span>
+<span>Branch streams &amp; multi-batch schedules</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-primary">domain</span>
+<span>Custom domain mapping (e.g. apex.lk)</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm font-semibold text-secondary">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span>Dedicated S3 Bucket &amp; Isolated DB</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+<!-- Section 2: Academy Branding Details -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl p-space-xl shadow-lg">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 3: Academy Identity &amp; Subdomain</span>
+<h3 class="font-headline-sm text-headline-sm text-white">Institutional Configuration</h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Establish your academic presence and choose your high-availability subdomain.</p>
+</div>
+<div class="space-y-space-md">
+<!-- Proposed Academy Name -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-white flex items-center justify-between">
+<span>Proposed Academy Name <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Official Brand Title</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-2.5 text-on-surface-variant text-[20px]">badge</span>
+<input class="w-full h-[42px] pl-11 pr-4 rounded-lg bg-[#111827] border border-[#1e293b] text-white font-body-md text-body-md focus:bg-[#151b2b] focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" type="text" value="Apex Combined Mathematics Academy"/>
+</div>
+</div>
+<!-- Desired Free Subdomain with live status -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-white flex items-center justify-between">
+<span>Permanent Subdomain Address <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SSL Encrypted Automated Routing</span>
+</label>
+<div class="flex items-center rounded-lg bg-[#111827] border border-[#1e293b] px-3 py-1 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+<span class="font-mono text-body-sm text-on-surface-variant select-none">https://</span>
+<input class="h-8 px-2 bg-transparent text-primary font-title text-title focus:outline-none w-44 font-semibold" type="text" value="apex-maths"/>
+<span class="font-title text-title text-[#cbd5e1] font-medium select-none">.mindbridge.lk</span>
+<div class="ml-auto flex items-center gap-1.5 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]"></span>
+<span class="font-label-sm text-label-sm font-bold text-emerald-400">✓ Available</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Custom domain mapping (e.g. <span class="font-mono text-primary font-semibold">portal.apexacademy.lk</span>) can be configured later in Tenant Settings.</p>
+</div>
+<!-- Academic Subject Pills Selection -->
+<div class="space-y-2 pt-space-xs">
+<label class="font-label-lg text-label-lg text-white block">Primary Academic Curriculum &amp; Subjects <span class="text-error">*</span></label>
+<div class="flex flex-wrap gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-[#002042] font-label-md text-label-md font-semibold shadow-sm" type="button">
+<span>A/L Combined Maths</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-[#002042] font-label-md text-label-md font-semibold shadow-sm" type="button">
+<span>A/L Physics</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#151b2b] border border-[#1e293b] text-[#cbd5e1] font-label-md text-label-md hover:bg-[#1e2638] hover:text-white transition-colors" type="button">
+<span>A/L Chemistry</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#151b2b] border border-[#1e293b] text-[#cbd5e1] font-label-md text-label-md hover:bg-[#1e2638] hover:text-white transition-colors" type="button">
+<span>O/L English Medium</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#151b2b] border border-[#1e293b] text-[#cbd5e1] font-label-md text-label-md hover:bg-[#1e2638] hover:text-white transition-colors" type="button">
+<span>O/L Science</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#151b2b] border border-[#1e293b] text-[#cbd5e1] font-label-md text-label-md hover:bg-[#1e2638] hover:text-white transition-colors" type="button">
+<span>ICT &amp; Computer Science</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<!-- Two Column Credentials -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-white">Official Contact Person / Master Teacher <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-2.5 text-on-surface-variant text-[20px]">person</span>
+<input class="w-full h-[42px] pl-11 pr-4 rounded-lg bg-[#111827] border border-[#1e293b] text-white font-body-md text-body-md focus:bg-[#151b2b] focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" type="text" value="Eng. Kusal Senaratne (BSc. Eng Hons)"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-white">National ID (NIC) or Business Reg (BR) <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-2.5 text-on-surface-variant text-[20px]">id_card</span>
+<input class="w-full h-[42px] pl-11 pr-4 rounded-lg bg-[#111827] border border-[#1e293b] text-white font-body-md text-body-md focus:bg-[#151b2b] focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all font-mono" type="text" value="198714203981 / PV0029810"/>
+</div>
+</div>
+</div>
+<!-- Contact Line with LK Flag / WhatsApp Focus -->
+<div class="space-y-1.5">
+<label class="font-label-lg text-label-lg text-white">Official WhatsApp Support &amp; Alerts Line <span class="text-error">*</span></label>
+<div class="flex items-center rounded-lg bg-[#111827] border border-[#1e293b] px-3 py-1 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+<div class="flex items-center gap-1.5 pr-2 mr-2 text-on-surface-variant font-label-md border-r border-[#1e293b]">
+<span class="text-[16px]">🇱🇰</span>
+<span class="font-semibold text-white">+94</span>
+</div>
+<input class="h-8 bg-transparent text-white font-body-md text-body-md focus:outline-none w-full font-mono" type="text" value="71 987 6543"/>
+<span class="material-symbols-outlined text-emerald-400 text-[20px]" title="WhatsApp Verified">chat</span>
+</div>
+<span class="font-body-sm text-body-sm text-[#94a3b8]">Used for automated student SMS notices and urgent Super Admin verification queries.</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Verification Document Upload -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl p-space-xl shadow-lg">
+<div class="flex items-start justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 4: Institutional Trust</span>
+<h3 class="font-headline-sm text-headline-sm text-white">Teacher Credentials &amp; Verification Documents</h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Upload Government NIC, Degree Certificates, or Institutional Business Registration proof.</p>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-tertiary font-label-sm text-label-sm bg-tertiary/15 border border-tertiary/30 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Encrypted Storage</span>
+</div>
+</div>
+<!-- Drag and Drop Box -->
+<div class="bg-[#151b2b] border border-dashed border-[#2a374a] rounded-xl p-space-lg flex flex-col items-center justify-center text-center cursor-pointer hover:bg-[#1e2638] hover:border-primary/50 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<div class="space-y-1 mb-space-sm">
+<p class="font-title text-title text-white">Click to browse or drag &amp; drop compliance documents</p>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Supported formats: PDF, JPG, PNG (Max file size: 10 MB per document)</p>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-[#0d1322] border border-[#1e293b] text-primary font-label-md text-label-md font-semibold shadow-sm hover:bg-[#151b2b] hover:border-primary/40 transition-colors" type="button">
+              Select Verification File
+            </button>
+</div>
+<!-- Pre-Uploaded Document Ribbon -->
+<div class="mt-space-md space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant">Attached Files (Ready for Submission)</span>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-[#151b2b] border border-[#1e293b]">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-red-950/60 border border-red-500/30 text-red-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-white">National_Identity_Card_Verification_Kusal.pdf</span>
+<div class="flex items-center gap-2 text-label-sm text-label-sm text-[#94a3b8]">
+<span>2.4 MB</span>
+<span>•</span>
+<span class="text-emerald-400 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> SHA-256 Validated
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-white hover:bg-[#1e2638] transition-colors" title="View Document" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-red-400 hover:bg-red-950/60 transition-colors" title="Remove File" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-[#151b2b] border border-[#1e293b]">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/20 border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-white">University_Engineering_Degree_Certificate.pdf</span>
+<div class="flex items-center gap-2 text-label-sm text-label-sm text-[#94a3b8]">
+<span>4.1 MB</span>
+<span>•</span>
+<span class="text-emerald-400 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Pre-Scanned Clean
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-white hover:bg-[#1e2638] transition-colors" title="View Document" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-red-400 hover:bg-red-950/60 transition-colors" title="Remove File" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Operational Confirmation & Super Admin Review Notice -->
+<div class="bg-[#151b2b] border border-[#1e293b] rounded-2xl p-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary/20 border border-secondary/30 text-secondary flex-shrink-0 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h4 class="font-title text-title text-white font-bold">Mandatory Super Admin Review Policy</h4>
+<span class="bg-secondary/20 border border-secondary/30 text-secondary text-label-sm font-semibold px-2 py-0.5 rounded">Strict Protocol</span>
+</div>
+<p class="font-body-md text-body-md text-[#94a3b8] leading-relaxed">
+                In order to protect student data, prevent fraudulent bank slip submissions, and uphold educational integrity across Sri Lanka, <span class="font-semibold text-white">all tenant applications undergo manual review by the MindBridge Super Admin team</span> within 12–24 hours. Your tenant workspace, PostgreSQL database instance, and dedicated URL will be activated upon formal clearance.
+              </p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs pb-space-lg">
+<button class="w-full sm:w-auto px-space-lg h-11 rounded-lg bg-[#151b2b] hover:bg-[#1e2638] border border-[#1e293b] text-white font-label-lg text-label-lg font-semibold transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Save Draft Application</span>
+</button>
+<button class="w-full sm:w-auto px-space-xl h-11 rounded-lg bg-primary hover:bg-[#2582ec] text-white font-label-lg text-label-lg font-bold shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2" type="button">
+<span>Submit Application for Super Admin Review</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Sidebar: Live Status & Workflow Tracker (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Live Preview / What Happens After Submission -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl p-space-lg shadow-lg">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div>
+<h3 class="font-title text-title text-white leading-tight">Lifecycle Workflow</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Post-Submission Blueprint</span>
+</div>
+</div>
+<div class="space-y-space-md relative before:absolute before:top-3 before:bottom-3 before:left-3.5 before:w-0.5 before:bg-[#1e2638]">
+<!-- Step Timeline 1 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-primary text-[#002042] flex items-center justify-center text-label-sm font-bold flex-shrink-0 z-10 shadow-sm">
+                1
+              </div>
+<div class="space-y-0.5 pt-0.5">
+<h5 class="font-label-lg text-label-lg font-bold text-white">Verification Queue</h5>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">
+                  Super Admin verifies NIC, national teacher credentials, and academic standing within 12–24h.
+                </p>
+<span class="inline-block mt-1 text-[11px] font-semibold text-primary bg-primary/15 border border-primary/30 px-2 py-0.5 rounded">Manual Due Diligence</span>
+</div>
+</div>
+<!-- Step Timeline 2 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#1e2638] border border-[#2a374a] text-on-surface-variant flex items-center justify-center text-label-sm font-bold flex-shrink-0 z-10">
+                2
+              </div>
+<div class="space-y-0.5 pt-0.5">
+<h5 class="font-label-lg text-label-lg font-bold text-white">Tenant Provisioning</h5>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">
+                  Automated scripts configure isolated schema, DNS subdomains, and media CDN buckets.
+                </p>
+</div>
+</div>
+<!-- Step Timeline 3 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#1e2638] border border-[#2a374a] text-on-surface-variant flex items-center justify-center text-label-sm font-bold flex-shrink-0 z-10">
+                3
+              </div>
+<div class="space-y-0.5 pt-0.5">
+<h5 class="font-label-lg text-label-lg font-bold text-white">Welcome SMS &amp; Handover</h5>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">
+                  Master tenant owner credentials dispatched with initial 2-staff allocation and course wizard access.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenant Preview Identity Card -->
+<div class="bg-[#151b2b] border border-[#1e293b] rounded-2xl p-space-lg shadow-lg">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-space-sm">Subdomain Live Routing Preview</span>
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary text-[#002042] flex items-center justify-center font-title text-title font-bold">
+                A
+              </div>
+<div class="min-w-0">
+<h4 class="font-title text-title text-white truncate">Apex Combined Mathematics</h4>
+<p class="font-body-sm text-body-sm text-primary font-mono truncate">apex-maths.mindbridge.lk</p>
+</div>
+</div>
+<div class="space-y-1.5 pt-space-xs text-body-sm text-[#94a3b8]">
+<div class="flex justify-between items-center text-label-sm">
+<span>Infrastructure Status</span>
+<span class="font-semibold text-tertiary">Awaiting Clearance</span>
+</div>
+<div class="flex justify-between items-center text-label-sm">
+<span>Target Region</span>
+<span class="font-semibold text-white">Colombo (LK-1)</span>
+</div>
+<div class="flex justify-between items-center text-label-sm">
+<span>Direct Slip Verification</span>
+<span class="font-semibold text-emerald-400">Enabled</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<div class="w-full bg-[#1e2638] rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-full w-[45%]" title="45% Application Readiness"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-label-sm text-on-surface-variant">
+<span>Application Readiness</span>
+<span class="font-bold text-white">45%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Institutional Inquiries Card -->
+<div class="bg-[#0d1322] border border-[#1e293b] rounded-2xl p-space-lg shadow-lg">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">support_agent</span>
+<h4 class="font-title text-title text-white">Need Urgent Onboarding?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-[#94a3b8] mb-space-md leading-relaxed">
+            School principals and institutional heads requiring signed enterprise SLAs or faster document clearance can contact our regional verification team directly.
+          </p>
+<a class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-[#151b2b] hover:bg-[#1e2638] border border-[#1e293b] text-white font-label-md text-label-md font-semibold transition-colors" href="tel:+94112345678">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Platform Desk: +94 11 234 5678</span>
+</a>
+</div>
+<!-- Academic Trust Metrics -->
+<div class="bg-gradient-to-br from-[#005fad] to-[#002f5b] border border-primary/30 text-white rounded-2xl p-space-lg shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim font-bold">MindBridge Islandwide</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">stars</span>
+</div>
+<div class="font-display text-[32px] font-extrabold leading-none mb-1 text-white relative z-10">420+</div>
+<p class="font-body-sm text-body-sm text-[#d4e3ff] mb-space-md relative z-10">Independent tuition teachers &amp; institutes operating across 9 provinces.</p>
+<div class="grid grid-cols-2 gap-2 text-center text-label-sm pt-space-xs relative z-10">
+<div class="bg-black/25 backdrop-blur-sm border border-white/10 rounded-lg py-1.5 px-2">
+<div class="font-bold text-white">99.98%</div>
+<div class="text-[10px] text-[#a4c8ff] opacity-90">Class Uptime</div>
+</div>
+<div class="bg-black/25 backdrop-blur-sm border border-white/10 rounded-lg py-1.5 px-2">
+<div class="font-bold text-white">Rs. 48M+</div>
+<div class="text-[10px] text-[#a4c8ff] opacity-90">Processed Monthly</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-[#0d1322] border-t border-[#1e293b] mt-auto"><div class="max-w-7xl mx-auto px-margin py-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant">© 2025 MindBridge LMS. Enterprise Learning Infrastructure.</span></div><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-white transition-colors" href="#">Privacy Policy</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-white transition-colors" href="#">Terms of Service</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-white transition-colors" href="#">Institutional Inquiries</a></div></div></footer></body></html>
