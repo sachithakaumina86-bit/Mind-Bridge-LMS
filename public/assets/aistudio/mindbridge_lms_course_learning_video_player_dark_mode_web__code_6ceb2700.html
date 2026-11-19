@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface-bright": "#33394a", "inverse-primary": "#005fad", "inverse-on-surface": "#2a3040", "on-tertiary": "#003824", "on-background": "#dde2f8", "primary-fixed-dim": "#a4c8ff", "secondary-container": "#ee9800", "on-tertiary-fixed": "#002113", "on-primary-fixed-variant": "#004784", "surface-dim": "#0d1322", "on-surface": "#dde2f8", "surface-container-low": "#151b2b", "on-primary-fixed": "#001c3a", "error": "#ffb4ab", "on-secondary-container": "#5b3800", "on-tertiary-fixed-variant": "#005236", "surface": "#0d1322", "surface-container-lowest": "#080e1d", "surface-container-high": "#242a3a", "tertiary-container": "#00ab76", "on-error-container": "#ffdad6", "tertiary": "#4edea3", "surface-container": "#191f2f", "background": "#0d1322", "surface-variant": "#2f3445", "primary-container": "#3898ff", "secondary": "#ffb95f", "secondary-fixed": "#ffddb8", "on-tertiary-container": "#003623", "secondary-fixed-dim": "#ffb95f", "on-primary-container": "#002f5b", "error-container": "#93000a", "primary": "#a4c8ff", "tertiary-fixed": "#6ffbbe", "surface-container-highest": "#2f3445", "outline": "#8a919e", "tertiary-fixed-dim": "#4edea3", "on-secondary": "#472a00", "primary-fixed": "d4e3ff", "on-primary": "#00315e", "on-secondary-fixed": "#2a1700", "surface-tint": "#a4c8ff", "on-surface-variant": "#c0c7d5", "on-secondary-fixed-variant": "#653e00", "on-error": "#690005", "outline-variant": "#404753", "inverse-surface": "#dde2f8"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"space-md": "1rem", "space-2xl": "3rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-3xl": "4rem", "margin": "2rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-xl": "2rem", "space-xs": "0.25rem", "margin-mobile": "1rem"}, "fontFamily": {"body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"]}, "fontSize": {"body-lg": ["16px", {"lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400"}], "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}], "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}], "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400"}], "headline-sm": ["18px", {"lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600"}], "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800"}], "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 flex items-center px-6 gap-3"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">MindBridge</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Student LMS</span></div></div><div class="px-4 py-2"><div class="bg-surface-container rounded-xl p-3 flex flex-col gap-1.5 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase text-outline">Target Exam</span><span class="bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Verified</span></div><div class="font-label-md text-label-md font-bold text-on-surface truncate">Combined Mathematics A/L</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Eng. Kusal Senaratne</div></div></div><nav class="flex flex-col gap-1 px-4 mt-3" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard / Hub</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="ai-study-companion" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>AI Study Companion</span></a><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 transition-all bg-primary-container text-on-primary-container font-bold rounded-xl" data-path="courses-and-video-player" href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span><span>Courses &amp; Video Player</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="examinations-and-quizzes" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Examinations &amp; Quizzes</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="assignments-and-homework" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments &amp; Homework</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="tuition-and-slip-history" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Tuition &amp; Slip History</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="settings-and-profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Settings &amp; Profile</span></a></nav></div><div class="p-4 mx-4 mb-4 rounded-xl bg-surface-container-lowest flex flex-col gap-2 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Gateway Peering</span></div><div class="font-body-sm text-body-sm text-on-surface-variant">SLT &amp; Dialog 4G: <span class="text-on-surface font-semibold">Optimal (38ms)</span></div><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline pt-1"><span class="material-symbols-outlined text-[14px]">verified_user</span><span>SL DPA Certified Safe Storage</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-8 flex items-center justify-between gap-6"><div class="flex items-center gap-4 min-w-0"><div class="hidden xl:flex items-center gap-3 bg-surface-container px-3.5 py-1.5 rounded-xl"><span class="material-symbols-outlined text-primary text-[20px]">school</span><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-label-md text-label-md text-on-surface font-bold truncate max-w-[280px]">Apex Combined Mathematics</span><span class="bg-secondary-container/20 text-secondary font-label-sm text-label-sm px-2 py-0.2 rounded-full font-bold">Batch 2026/27 A/L Theory</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Lead Instructor: Eng. Kusal Senaratne</span></div></div><div class="relative flex-1 max-w-md"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-xl text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Search lectures, formulas, past papers, tutes..." type="text"/></div></div><div class="flex items-center gap-4 flex-shrink-0"><div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-primary text-[16px]">dark_mode</span><span class="font-label-sm text-label-sm text-on-surface-variant">Oceanic Midnight</span></div><button class="relative p-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-primary text-on-primary-container font-label-sm text-label-sm font-bold rounded-full flex items-center justify-center">2</span></button><div class="flex items-center gap-3 pl-3 bg-surface-container-low p-1.5 pr-4 rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Kavindu Nirmal Perera</span><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm text-outline">SL-LRN-89401</span><span class="text-outline text-[10px]">•</span><span class="font-label-sm text-label-sm text-primary">Senior A/L Candidate</span></div></div></div></div></div></header><main class="w-full pt-20 px-8 pb-12 flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Context Header & Breadcrumbs -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+<div class="flex flex-col gap-1.5 min-w-0">
+<!-- Breadcrumb Hierarchy -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-md text-label-md text-outline flex-wrap">
+<span class="hover:text-primary transition-colors cursor-pointer">Courses</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Apex Combined Mathematics</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface-variant">Unit 08: Integration</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Lesson 04</span>
+</nav>
+<!-- Video Lecture Title -->
+<div class="flex items-center gap-3 flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Integration by Parts &amp; Trigonometric Substitutions
+        </h1>
+<span class="bg-primary-container/20 text-primary-fixed-dim px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Theory &amp; Worked Examples
+        </span>
+</div>
+<!-- Instructor & Session Meta -->
+<div class="flex items-center gap-4 text-outline font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-[16px]">account_circle</span>
+          Eng. Kusal Senaratne
+        </span>
+<span>•</span>
+<span>Colombo Apex Central &amp; Islandwide Stream</span>
+<span>•</span>
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          2026/27 A/L Syllabic Milestone
+        </span>
+</div>
+</div>
+<!-- Active DRM & Low-Latency Status Badge -->
+<div class="flex items-center gap-3 shrink-0 self-start lg:self-center">
+<div class="bg-surface-container-low px-3.5 py-2 rounded-xl flex items-center gap-3 shadow-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></div>
+<div class="flex flex-col text-left">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-on-surface">
+<span>SLT Mobitel CDN Peering</span>
+<span class="text-tertiary text-[10px] font-extrabold">12.4 Mbps</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">0% Packet Loss • Buffer Free</span>
+</div>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface p-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center" title="Lecture Bookmark">
+<span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface p-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center" title="Lecture Theater Toggle">
+<span class="material-symbols-outlined text-[20px]">aspect_ratio</span>
+</button>
+</div>
+</div>
+<!-- Main Layout Grid: Cinema Player + Multi-Tab Panel -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Cinema Video Player (8 cols) -->
+<div class="xl:col-span-8 flex flex-col gap-6 min-w-0">
+<!-- Video Frame Container -->
+<div class="relative w-full aspect-video bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl flex flex-col justify-between group select-none">
+<!-- Live Lecture Board Image (Simulated Whiteboard Canvas) -->
+<div class="absolute inset-0 z-0 bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.01]" data-alt="Dark oceanic theme chalkboard style math lecture frame showing pure mathematics formulas of Integration by parts with Eng Kusal Senaratne chalkboard handwriting, integral symbols, ILATE heuristic matrix written in glowing cyan and white ink on dark textured slate board background, soft ambient studio lighting, sharp pedagogical focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJEGI__h1JBulOFSOxRTp1GtVxBgZl4NFx1CfaXRJSHdT2IUrD1g4pt_hM7QuZZVTt5JcDta0EE1S1LQ2d-Ljn1XKYWqQIwYhZX7pZtmPPvJK3lKxBD3iK5WyreGkQob6gYI8nI56knFbkbSByVx02D65d8Io4I3_LGfwsFb96ZYMl_0t-3VDEmj5t1vSZCV4OMekHecmpeieHMBoozjNEXEwdCi0c6y7-ByWg1UA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/60"></div>
+<!-- Static Mathematical Overlay for Crisp Readability -->
+<div class="absolute top-10 left-10 p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md max-w-md pointer-events-none hidden md:block">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-extrabold">Formula Derivation</span>
+<span class="bg-surface-container-high text-on-surface-variant px-1.5 py-0.2 rounded text-[10px]">Pure Maths II</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-mono tracking-tight font-bold">
+              ∫ u (dv/dx) dx = u v - ∫ v (du/dx) dx
+            </div>
+<div class="text-outline font-body-sm text-body-sm mt-1">
+              Applying product differentiation rule backwards with ILATE hierarchy.
+            </div>
+</div>
+</div>
+<!-- Floating Dynamic Forensic Watermark (Anti-Piracy SL DPA DRM) -->
+<div class="absolute z-10 top-6 right-6 pointer-events-none opacity-40 select-none font-mono text-[11px] text-outline flex items-center gap-1.5 bg-surface-container-lowest/60 px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[13px] text-error">lock</span>
+<span>SL-LRN-89401 • 203.94.132.18 • DRM AES-256</span>
+</div>
+<!-- Center Big Play Button (Hover micro-interaction) -->
+<div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+<button class="pointer-events-auto w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xl shadow-primary-container/30 hover:scale-110 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+</button>
+</div>
+<!-- Top In-Video Fast Info Strip -->
+<div class="relative z-10 p-4 flex items-center justify-between text-on-surface opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-b from-surface-container-lowest/80 to-transparent">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-md text-label-md font-bold tracking-wide">Apex High-Fidelity Lecture Stream #L4</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high/80 text-on-surface text-label-sm font-label-sm px-2 py-0.5 rounded font-mono">1080p60 HEVC</span>
+<span class="bg-primary/20 text-primary-fixed-dim text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">DRM Guard Active</span>
+</div>
+</div>
+<!-- Video Player Control Bar -->
+<div class="relative z-10 px-5 pb-4 pt-8 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/95 to-transparent flex flex-col gap-2.5">
+<!-- Scrubber Timeline with Chapter Markers -->
+<div class="relative flex flex-col group/timeline cursor-pointer py-1">
+<!-- Time Markers Preview Hover Container -->
+<div class="relative w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<!-- Buffer Bar -->
+<div class="absolute left-0 top-0 bottom-0 bg-surface-variant w-[68%] rounded-full"></div>
+<!-- Played Progress Bar -->
+<div class="absolute left-0 top-0 bottom-0 bg-primary-container w-[42%] rounded-full shadow-[0_0_12px_rgba(56,152,255,0.6)]"></div>
+</div>
+<!-- Scrubber Thumb -->
+<div class="absolute left-[42%] top-1/2 -translate-y-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-on-primary-container rounded-full ring-2 ring-primary-container shadow-md group-hover/timeline:scale-125 transition-transform pointer-events-none"></div>
+<!-- Chapter Marker Pins -->
+<div class="absolute inset-x-0 top-0 h-1.5 pointer-events-none flex items-center">
+<span class="absolute left-[0%] w-0.5 h-2.5 bg-on-surface/40 -translate-y-0.5" title="00:00 - Introduction &amp; Foundations"></span>
+<span class="absolute left-[24%] w-0.5 h-2.5 bg-primary/70 -translate-y-0.5" title="12:40 - ILATE Hierarchy Explained"></span>
+<span class="absolute left-[54%] w-0.5 h-2.5 bg-secondary/80 -translate-y-0.5" title="28:15 - A/L 2023 Paper II Q12b Breakdown"></span>
+<span class="absolute left-[86%] w-0.5 h-2.5 bg-tertiary/80 -translate-y-0.5" title="45:30 - Sinhala Detailed Synthesis"></span>
+</div>
+</div>
+<!-- Controls Bottom Row -->
+<div class="flex items-center justify-between gap-4 text-on-surface">
+<!-- Left Side: Playback, Timestamps & Chapters -->
+<div class="flex items-center gap-3">
+<button class="text-on-surface hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center">
+<span class="material-symbols-outlined text-[20px]">forward_10</span>
+</button>
+<!-- Volume Group -->
+<div class="flex items-center gap-2 group/volume pl-1">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<div class="w-16 h-1 bg-surface-container-high rounded-full overflow-hidden hidden sm:block">
+<div class="w-[85%] h-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Time Counter -->
+<div class="font-mono text-body-sm font-semibold text-on-surface-variant ml-2">
+<span class="text-on-surface">22:45</span> <span class="text-outline">/</span> 54:12
+              </div>
+<!-- Current Chapter Pill -->
+<div class="hidden md:flex items-center gap-1.5 bg-surface-container-high/70 hover:bg-surface-container-highest px-2.5 py-1 rounded-md text-on-surface font-label-sm text-label-sm cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-secondary text-[14px]">local_library</span>
+<span class="truncate max-w-[170px]">Ch 2: ILATE Rule Mastery</span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</div>
+</div>
+<!-- Right Side: Quality, Speed, Fullscreen -->
+<div class="flex items-center gap-3">
+<!-- Speed Selector Dropdown Pill -->
+<div class="relative group/speed">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-mono font-bold text-label-sm px-2.5 py-1 rounded-md transition-colors flex items-center gap-1">
+<span>1.25x</span>
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</button>
+</div>
+<!-- Resolution Pill -->
+<div class="relative group/quality">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-mono font-bold text-label-sm px-2.5 py-1 rounded-md transition-colors flex items-center gap-1">
+<span class="text-tertiary">1080p</span>
+<span class="material-symbols-outlined text-[14px]">settings</span>
+</button>
+</div>
+<!-- Theater Mode Button -->
+<button class="text-on-surface-variant hover:text-on-surface transition-colors p-1" title="Theater View">
+<span class="material-symbols-outlined text-[20px]">branding_watermark</span>
+</button>
+<!-- Fullscreen Button -->
+<button class="text-on-surface-variant hover:text-on-surface transition-colors p-1" title="Fullscreen (F)">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Chapter Quick Jump Bar -->
+<div class="bg-surface-container p-3 rounded-xl shadow-sm flex items-center gap-3 overflow-x-auto no-scrollbar">
+<span class="font-label-sm text-label-sm text-outline uppercase font-extrabold shrink-0 pl-1">Key Timestamps:</span>
+<button class="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm transition-all group">
+<span class="font-mono text-primary font-bold">00:00</span>
+<span>Intro &amp; Basic Formula</span>
+</button>
+<button class="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm transition-all">
+<span class="material-symbols-outlined text-[14px]">play_circle</span>
+<span class="font-mono">12:40</span>
+<span>ILATE Priority Matrix</span>
+</button>
+<button class="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm transition-all">
+<span class="font-mono text-secondary font-bold">28:15</span>
+<span>A/L 2023 Paper II Q12b</span>
+<span class="bg-secondary-container/20 text-secondary text-[10px] px-1.5 rounded font-bold">25 Marks</span>
+</button>
+<button class="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm transition-all">
+<span class="font-mono text-tertiary font-bold">45:30</span>
+<span>සිංහල සම්පූර්ණ විවරණය</span>
+</button>
+</div>
+<!-- Below Player Content Modules -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col gap-6">
+<!-- Tab Buttons for Lesson Meta -->
+<div class="flex items-center gap-3 pb-3">
+<button class="px-4 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Lesson Brief &amp; Syllabus Map</span>
+</button>
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Tute Delivery Tracking</span>
+</button>
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+<span>Sinhala Math Terms (පාරිභාෂික ශබ්ද)</span>
+</button>
+</div>
+<!-- Section 1: Lesson Overview & NIE Mapping -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 flex flex-col gap-3">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Cognitive Objectives &amp; Exam Strategy
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              In this session, Eng. Kusal Senaratne establishes the foundational logic behind resolving non-elementary integrals using repeated integration by parts. Special emphasis is given to identifying cyclic integrals ($e^{ax} \cos bx$) and transforming complex rational trigonometric integrands via tangent half-angle substitution ($t = \tan \frac{\theta}{2}$).
+            </p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">school</span>
+<span>NIE Combined Maths Syllabus Code: <strong class="text-on-surface">CM-AL-08.4</strong></span>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>Structured Essay Weight: <strong class="text-on-surface">25 Marks / 1000</strong></span>
+</div>
+</div>
+</div>
+<!-- Companion Physical Tute Download Card -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between gap-3 shadow-inner">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Physical Material</span>
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight mt-0.5">Unit 08 Tute Companion</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5">Batch 2026 Print Pack #04</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">PromptXpress Parcel:</span>
+<span class="text-tertiary font-bold">Delivered (Colombo)</span>
+</div>
+<div class="font-mono text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Waybill #PX-4902-LK</span>
+<span class="text-primary hover:underline cursor-pointer">Track</span>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md font-bold py-2 px-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-primary text-[18px]">download</span>
+<span>Download Digital PDF Backup (14 MB)</span>
+</button>
+</div>
+</div>
+<!-- Bilingual Math Terminology Quick Reference Grid -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">translate</span>
+              Bilingual Terminology Reference (ද්විභාෂා පාරිභාෂික වචන)
+            </span>
+<span class="text-outline font-label-sm text-label-sm">Essential for English &amp; Sinhala Medium A/L Papers</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Integration by Parts</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">කොටස් වශයෙන් අනුකලනය</span>
+<span class="font-body-sm text-body-sm text-outline mt-1 font-mono">∫ u dv = uv - ∫ v du</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Substitution Method</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">ආදේශ ක්‍රමය</span>
+<span class="font-body-sm text-body-sm text-outline mt-1 font-mono">x = g(t), dx = g'(t) dt</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Definite Integral</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">නියත අනුකලය</span>
+<span class="font-body-sm text-body-sm text-outline mt-1 font-mono">[F(x)]_a^b = F(b) - F(a)</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Arbitrary Constant</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">අභිමත නියතය (c)</span>
+<span class="font-body-sm text-body-sm text-outline mt-1 font-mono">c ∈ ℝ</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Curriculum Drawer & Interactive Workspace (4 cols) -->
+<div class="xl:col-span-4 flex flex-col gap-6">
+<!-- Curriculum Interactive Drawer Card -->
+<div class="bg-surface-container-low rounded-xl shadow-lg flex flex-col overflow-hidden">
+<!-- Drawer Header Tabs -->
+<div class="p-2 bg-surface-container flex items-center justify-between gap-1 shadow-sm">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-bold shadow-sm flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px] text-primary">playlist_play</span>
+<span>Playlist</span>
+<span class="bg-primary/20 text-primary px-1.5 py-0.2 rounded-full font-label-sm text-label-sm ml-1 font-mono">4/7</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px] text-tertiary">psychology</span>
+<span>AI Socratic</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+<span>Tutor Notes</span>
+</button>
+</div>
+<!-- Tab 1: Unit 08 Syllabus Playlist Content -->
+<div class="p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between pb-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline">Unit 08 Master Track</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Calculus &amp; Integral Calculus</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm font-bold bg-tertiary-container/10 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+<span>57% Completed</span>
+</div>
+</div>
+<!-- Lesson Item 1 (Done) -->
+<div class="bg-surface-container p-3 rounded-xl flex items-center gap-3 hover:bg-surface-container-high cursor-pointer transition-all group">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">L01: Anti-Derivatives &amp; Standard Forms</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">42:10</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Completed Jan 18</span>
+<span>•</span>
+<span class="text-tertiary flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">grade</span> 100% Quiz</span>
+</div>
+</div>
+</div>
+<!-- Lesson Item 2 (Done) -->
+<div class="bg-surface-container p-3 rounded-xl flex items-center gap-3 hover:bg-surface-container-high cursor-pointer transition-all group">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">L02: Algebraic &amp; Rational Substitutions</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">56:30</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Completed Jan 21</span>
+<span>•</span>
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">download</span> Notes PDF</span>
+</div>
+</div>
+</div>
+<!-- Lesson Item 3 (Done) -->
+<div class="bg-surface-container p-3 rounded-xl flex items-center gap-3 hover:bg-surface-container-high cursor-pointer transition-all group">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">L03: Partial Fractions in Integration</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">48:15</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Completed Jan 24</span>
+<span>•</span>
+<span class="text-tertiary">Passed</span>
+</div>
+</div>
+</div>
+<!-- Lesson Item 4 (CURRENTLY ACTIVE) -->
+<div class="bg-surface-container-high p-3 rounded-xl flex items-center gap-3 shadow-md relative overflow-hidden ring-1 ring-primary/40">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary truncate">L04: Integration by Parts &amp; Trig Substitutions</span>
+<span class="font-mono text-primary font-label-sm text-label-sm font-bold">54:12</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="text-primary-fixed-dim font-semibold">Active Session</span>
+<span>•</span>
+<span class="text-outline">Paper II Q12 Focus</span>
+</div>
+</div>
+</div>
+<!-- Lesson Item 5 (Upcoming) -->
+<div class="bg-surface-container p-3 rounded-xl flex items-center gap-3 hover:bg-surface-container-high cursor-pointer transition-all group opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">L05: Definite Integrals &amp; Symmetry Properties</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">62:00</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-outline">
+<span>Unlocks after L04 Quiz</span>
+<span>•</span>
+<span>Tute #08 Part B</span>
+</div>
+</div>
+</div>
+<!-- Lesson Item 6 (Upcoming) -->
+<div class="bg-surface-container p-3 rounded-xl flex items-center gap-3 hover:bg-surface-container-high cursor-pointer transition-all group opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">L06: Areas Between Curves &amp; Polar Integrals</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">50:45</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-outline">
+<span>Scheduled for Thursday</span>
+</div>
+</div>
+</div>
+<!-- Lesson Item 7 (Upcoming) -->
+<div class="bg-surface-container p-3 rounded-xl flex items-center gap-3 hover:bg-surface-container-high cursor-pointer transition-all group opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">L07: 15-Year Past Paper Deep Dive (2009–2024)</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">115:00</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-outline">
+<span>Mock Examination Milestone</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Socratic AI Timestamped Assistant Widget (Card) -->
+<div class="bg-surface-container-low rounded-xl p-5 shadow-lg flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="p-1.5 rounded-lg bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Socratic AI Companion</span>
+<span class="font-label-sm text-label-sm text-outline">In-Video Math Reasoner</span>
+</div>
+</div>
+<span class="bg-surface-container text-primary font-mono font-bold text-[11px] px-2 py-0.5 rounded">
+            Sync: 22:45
+          </span>
+</div>
+<!-- Sample Conversation Context -->
+<div class="flex flex-col gap-2.5 max-h-48 overflow-y-auto no-scrollbar pr-1">
+<div class="bg-surface-container p-3 rounded-lg text-body-sm font-body-sm text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline text-[11px]">
+<span class="font-semibold text-primary">Student Question @ 18:20</span>
+<span>2 mins ago</span>
+</div>
+<span>Why did Eng. Kusal pick $u = \ln(x)$ instead of $dv = \ln(x)$?</span>
+</div>
+<div class="bg-surface-container-high p-3 rounded-lg text-body-sm font-body-sm text-on-surface flex flex-col gap-1 border-l-2 border-tertiary">
+<div class="flex items-center justify-between text-outline text-[11px]">
+<span class="font-semibold text-tertiary">AI Tutor Response</span>
+<span>Instant</span>
+</div>
+<span>According to <strong>ILATE</strong>, Logarithmic functions ('L') have higher priority for $u$ than Algebraic ('A'). Differentiating $\ln(x)$ gives simple $\frac{1}{x}$, making $\int v \, du$ easily solvable!</span>
+</div>
+</div>
+<!-- Timestamped Prompt Input -->
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm px-3.5 py-2.5 rounded-xl focus:outline-none focus:ring-1 focus:ring-primary shadow-inner pr-10" placeholder="Ask question tagged at current time (22:45)..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+<!-- Quick Tutor Notice Card -->
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">campaign</span>
+<div class="flex flex-col gap-1 text-left">
+<span class="font-label-md text-label-md font-bold text-on-surface">Instructor Notice • Eng. Kusal Senaratne</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Make sure to complete HW set 04 problems 1 through 8 in your physical tute before tomorrow night's live discussion Zoom session at 8:00 PM.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

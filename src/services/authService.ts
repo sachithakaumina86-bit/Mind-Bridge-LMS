@@ -136,6 +136,43 @@ export function resolveBackendEndpoint(path: string): string | null {
   return `${baseUrl}${normalizedPath}`;
 }
 
+export function logBackendRequestDiagnostics(details: {
+  label: string;
+  endpoint: string | null;
+  method: string;
+  headers: Record<string, string>;
+  body: unknown;
+  status?: number;
+  error?: unknown;
+}): void {
+  const sanitizedHeaders = {
+    ...details.headers,
+    ...(details.headers.Authorization
+      ? {
+          Authorization: `Bearer <redacted len=${Math.max(0, details.headers.Authorization.length - 7)}>`,
+        }
+      : {}),
+  };
+
+  console.group(`[authService] ${details.label} diagnostics`);
+  console.log('VITE_API_BASE_URL:', import.meta.env?.VITE_API_BASE_URL ?? '<unset>');
+  console.log('Resolved endpoint:', details.endpoint ?? '<null>');
+  console.log(
+    'Window origin:',
+    typeof window !== 'undefined' ? window.location.origin : '<non-browser>'
+  );
+  console.log('Method:', details.method);
+  console.log('Headers:', sanitizedHeaders);
+  console.log('Request body:', details.body ?? '<none>');
+  if (details.status !== undefined) {
+    console.log('Response status:', details.status);
+  }
+  if (details.error !== undefined) {
+    console.warn('Fetch error:', details.error);
+  }
+  console.groupEnd();
+}
+
 export function getAuthIntegrationStatus(): FirebaseConfigStatus {
   const env = import.meta.env;
   const requiredFirebaseKeys = [
@@ -204,13 +241,24 @@ function mapFirebaseAuthError(err: unknown): string {
       return 'Please enter a valid email address.';
     case 'auth/email-already-in-use':
       return 'An account with this email address already exists.';
+    case 'auth/weak-password':
+      return 'Password is too weak. Please use at least 8 characters with uppercase, numbers, and symbols.';
     case 'auth/too-many-requests':
       return 'Too many failed attempts. Please wait a moment and try again.';
     case 'auth/network-request-failed':
       return 'Network error while contacting Firebase Authentication.';
     case 'auth/operation-not-allowed':
       return 'Email/Password sign-in is not enabled in the Firebase Console.';
+    case 'auth/unauthorized-domain':
+      return 'This domain is not authorized in Firebase Authentication settings.';
+    case 'auth/invalid-api-key':
+    case 'auth/app-not-authorized':
+    case 'auth/configuration-not-found':
+      return 'Firebase Authentication configuration is invalid or incomplete. Please check your VITE_FIREBASE_* settings.';
     default:
+      if (code) {
+        return `Authentication failed (${code}). Please check your credentials and try again.`;
+      }
       return 'Authentication failed. Please check your credentials and try again.';
   }
 }
@@ -266,13 +314,40 @@ export async function signInWithCredentials(payload: LoginPayload): Promise<Auth
       };
     }
 
-    const response = await fetch(endpoint, {
+    const requestHeaders: Record<string, string> = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${idToken}`,
+    };
+    logBackendRequestDiagnostics({
+      label: '/verify-session',
+      endpoint,
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${idToken}`,
-      },
+      headers: requestHeaders,
+      body: null,
     });
+
+    let response: Response;
+    try {
+      response = await fetch(endpoint, {
+        method: 'POST',
+        headers: requestHeaders,
+      });
+    } catch (fetchErr) {
+      logBackendRequestDiagnostics({
+        label: '/verify-session',
+        endpoint,
+        method: 'POST',
+        headers: requestHeaders,
+        body: null,
+        error: fetchErr,
+      });
+      return {
+        ok: false,
+        code: 'NETWORK_ERROR',
+        message: 'Could not reach the backend API to verify your session.',
+        details: 'Verify that VITE_API_BASE_URL is reachable and allows requests from this origin.',
+      };
+    }
 
     const body = (await response.json().catch(() => ({}))) as {
       error?: string;
@@ -352,13 +427,41 @@ export async function signInSuperAdminWithCredentials(
     );
     const idToken = await credential.user.getIdToken(true);
 
-    const response = await fetch(verifyEndpoint, {
+    const requestHeaders: Record<string, string> = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${idToken}`,
+    };
+    logBackendRequestDiagnostics({
+      label: '/verify-super-admin',
+      endpoint: verifyEndpoint,
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${idToken}`,
-      },
+      headers: requestHeaders,
+      body: null,
     });
+
+    let response: Response;
+    try {
+      response = await fetch(verifyEndpoint, {
+        method: 'POST',
+        headers: requestHeaders,
+      });
+    } catch (fetchErr) {
+      logBackendRequestDiagnostics({
+        label: '/verify-super-admin',
+        endpoint: verifyEndpoint,
+        method: 'POST',
+        headers: requestHeaders,
+        body: null,
+        error: fetchErr,
+      });
+      await signOut(auth);
+      return {
+        ok: false,
+        code: 'NETWORK_ERROR',
+        message: 'Could not reach the backend API to verify Super Admin authorization.',
+        details: 'Verify that VITE_API_BASE_URL is reachable and allows requests from this origin.',
+      };
+    }
 
     const body = (await response.json().catch(() => ({}))) as {
       error?: string;
@@ -484,20 +587,30 @@ export async function registerUniversalStudent(
     );
     const idToken = await credential.user.getIdToken(true);
 
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${idToken}`,
-      },
-      body: JSON.stringify({
-        fullName: payload.fullName.trim(),
-        mobile: payload.mobile.trim(),
-        academicStream: payload.academicStream,
-        preferredLanguage: payload.preferredLanguage,
-        whatsappOptIn: payload.whatsappOptIn,
-      }),
-    });
+    let response: Response;
+    try {
+      response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({
+          fullName: payload.fullName.trim(),
+          mobile: payload.mobile.trim(),
+          academicStream: payload.academicStream,
+          preferredLanguage: payload.preferredLanguage,
+          whatsappOptIn: payload.whatsappOptIn,
+        }),
+      });
+    } catch {
+      return {
+        ok: false,
+        code: 'NETWORK_ERROR',
+        message: 'Firebase account created, but could not reach the backend API to save your student profile.',
+        details: 'Verify that VITE_API_BASE_URL is reachable and allows requests from this origin.',
+      };
+    }
 
     const body = (await response.json().catch(() => ({}))) as {
       error?: string;

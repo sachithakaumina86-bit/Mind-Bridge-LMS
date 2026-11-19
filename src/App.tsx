@@ -11,16 +11,17 @@ import { MobileLightMarketingWebsite } from './components/marketing/MobileLightM
 import { StageNoticeToast } from './components/marketing/StageNoticeToast';
 import { TeacherOnboardingPage } from './components/onboarding/TeacherOnboardingPage';
 import { StudentRegistrationPage } from './components/registration/StudentRegistrationPage';
+import { StudentPortalPage } from './components/student/StudentPortalPage';
 
 /**
- * MindBridge LMS — Stage 01 & Stage 02 Route Architecture
+ * MindBridge LMS — Stage 01, Stage 02 & Stage 03 (Phase 1) Route Architecture
  * - `/`                 : Official Main Public Marketing Website (Stage 01)
  * - `/login`            : Split-Screen Login Authentication (Stage 02)
  * - `/register/student` : Universal Student Registration (Stage 02)
  * - `/apply/academy`    : Teacher / Institute Onboarding Application (Stage 02)
- *
- * Future route namespaces (`/academy/:slug`, `/student/*`, `/teacher/*`, `/admin/*`, `/super-admin/*`)
- * remain strictly separate and unimplemented in Stage 02.
+ * - `/student`          : Student Portal Entry (Stage 03 Phase 1 — Hub / Empty Hub)
+ * - `/student/hub`      : Universal Student Portal / Multi-Academy Hub (Stage 03 Phase 1)
+ * - `/student/empty-hub`: Student Empty Hub (Stage 03 Phase 1)
  */
 function normalizeRoute(pathname: string): string {
   const cleaned = pathname.replace(/\/+$/, '') || '/';
@@ -29,7 +30,10 @@ function normalizeRoute(pathname: string): string {
     cleaned === '/login' ||
     cleaned === '/super-admin/login' ||
     cleaned === '/register/student' ||
-    cleaned === '/apply/academy'
+    cleaned === '/apply/academy' ||
+    cleaned === '/student' ||
+    cleaned === '/student/hub' ||
+    cleaned === '/student/empty-hub'
   ) {
     return cleaned;
   }
@@ -166,6 +170,20 @@ export default function App() {
           theme={theme}
           onToggleTheme={handleToggleTheme}
           onNavigate={navigate}
+        />
+      )}
+
+      {(route === '/student' ||
+        route === '/student/hub' ||
+        route === '/student/empty-hub') && (
+        <StudentPortalPage
+          route={route}
+          theme={theme}
+          onToggleTheme={handleToggleTheme}
+          lang={lang}
+          onToggleLang={setLang}
+          onNavigate={navigate}
+          onActionNotice={showStageNotice}
         />
       )}
 

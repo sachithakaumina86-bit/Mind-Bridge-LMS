@@ -45,9 +45,11 @@ export const LoginPage: React.FC<LoginPageProps> = ({
     resetEmail?: string;
   }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [serverError, setServerError] = useState<{ message: string; details?: string } | null>(
-    null
-  );
+  const [serverError, setServerError] = useState<{
+    code?: string;
+    message: string;
+    details?: string;
+  } | null>(null);
 
   const roleBadgeLabel =
     roleTab === 'student'
@@ -96,7 +98,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
             rememberDevice,
           });
       if (!result.ok) {
-        setServerError({ message: result.message, details: result.details });
+        setServerError({ code: result.code, message: result.message, details: result.details });
       }
     } finally {
       setIsSubmitting(false);
@@ -115,7 +117,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
     try {
       const result = await requestPasswordReset({ email: resetEmail.trim() });
       if (!result.ok) {
-        setServerError({ message: result.message, details: result.details });
+        setServerError({ code: result.code, message: result.message, details: result.details });
       }
     } finally {
       setIsSubmitting(false);
@@ -471,14 +473,31 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                     <div
                       role="alert"
                       className={`mb-5 p-4 rounded-xl border text-xs space-y-1 ${
-                        isDark
-                          ? 'bg-amber-950/40 border-amber-500/40 text-amber-200'
-                          : 'bg-amber-50 border-amber-300 text-amber-900'
+                        serverError.code === 'FIREBASE_NOT_CONFIGURED' ||
+                        serverError.code === 'BACKEND_API_NOT_CONFIGURED'
+                          ? isDark
+                            ? 'bg-amber-950/40 border-amber-500/40 text-amber-200'
+                            : 'bg-amber-50 border-amber-300 text-amber-900'
+                          : isDark
+                            ? 'bg-red-950/40 border-red-500/40 text-red-200'
+                            : 'bg-red-50 border-red-300 text-red-900'
                       }`}
                     >
                       <div className="flex items-center gap-2 font-bold">
-                        <span className="material-symbols-outlined text-[18px]">info</span>
-                        <span>Authentication Integration Required</span>
+                        <span className="material-symbols-outlined text-[18px]">
+                          {serverError.code === 'FIREBASE_NOT_CONFIGURED' ||
+                          serverError.code === 'BACKEND_API_NOT_CONFIGURED'
+                            ? 'info'
+                            : 'error'}
+                        </span>
+                        <span>
+                          {serverError.code === 'FIREBASE_NOT_CONFIGURED' ||
+                          serverError.code === 'BACKEND_API_NOT_CONFIGURED'
+                            ? 'Authentication Integration Required'
+                            : serverError.code === 'NETWORK_ERROR'
+                              ? 'Backend Connection Error'
+                              : 'Authentication Failed'}
+                        </span>
                       </div>
                       <p>{serverError.message}</p>
                       {serverError.details && (

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#002113", "on-error-container": "#ffdad6", "tertiary-container": "#00ab76", "primary-fixed": "#d4e3ff", "secondary-container": "#ee9800", "surface-variant": "#2f3445", "on-tertiary-container": "#003623", "tertiary-fixed-dim": "#4edea3", "primary-container": "#3898ff", "secondary-fixed-dim": "#ffb95f", "primary-fixed-dim": "#a4c8ff", "on-secondary-container": "#5b3800", "surface": "#0d1322", "on-background": "#dde2f8", "on-secondary": "#472a00", "surface-container-highest": "#2f3445", "tertiary": "#4edea3", "on-tertiary": "#003824", "surface-container-high": "#242a3a", "surface-dim": "#0d1322", "outline-variant": "#404753", "surface-bright": "#33394a", "background": "#0d1322", "on-primary": "#00315e", "on-surface": "#dde2f8", "on-secondary-fixed": "#2a1700", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#080e1d", "tertiary-fixed": "#6ffbbe", "surface-container-low": "#151b2b", "secondary": "#ffb95f", "inverse-primary": "#005fad", "primary": "#a4c8ff", "on-error": "#690005", "secondary-fixed": "#ffddb8", "surface-tint": "#a4c8ff", "on-primary-container": "#002f5b", "on-primary-fixed-variant": "#004784", "surface-container": "#191f2f", "on-primary-fixed": "#001c3a", "error-container": "#93000a", "inverse-surface": "#dde2f8", "on-surface-variant": "#c0c7d5", "error": "#ffb4ab", "on-secondary-fixed-variant": "#653e00", "inverse-on-surface": "#2a3040", "outline": "#8a919e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-2xl": "3rem", "space-xl": "2rem", "space-3xl": "4rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-lg"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">neurology</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight">MindBridge</span><span class="font-label-sm text-label-sm text-tertiary uppercase">Academic AI Suite</span></div></div><span class="font-label-sm text-label-sm px-space-xs py-space-2xs bg-surface-container-high rounded text-outline">v2.4</span></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">functions</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Apex Combined Maths</span><span class="font-label-sm text-label-sm text-on-surface-variant">2025/2026 Batch</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard / Hub</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="ai-study-companion" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>AI Companion / Studio</span></div><span class="w-2 h-2 rounded-full bg-tertiary"></span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">play_lesson</span><span>Courses &amp; Player</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="examinations" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Examinations &amp; Quizzes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Assignments &amp; Work</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="tuition-and-slip-history" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Tuition &amp; Slip History</span></div><span class="font-label-sm text-label-sm px-space-xs py-space-2xs bg-tertiary-container/30 text-tertiary-fixed-dim rounded">Paid</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Oceanic Midnight</span><span class="font-label-sm text-label-sm text-outline">Dark Mode Sync</span></div></div><span class="material-symbols-outlined text-primary text-[18px]">dark_mode</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="settings-and-profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Settings &amp; Profile</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="font-title-md text-title-md text-on-surface tracking-tight hidden sm:inline">MindBridge</span></div><div class="relative flex-1"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-10 pr-space-md py-space-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary placeholder:text-outline" placeholder="Search lectures, KaTeX proofs, past papers, admissions..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">school</span><span class="font-label-sm text-label-sm text-on-surface-variant">Combined Maths A/L</span></div><button class="relative w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Kavindu Bandara</span><span class="font-label-sm text-label-sm text-on-surface-variant">Index #AL-7402</span></div></div></div></header><main class="relative pt-16 w-full px-gutter bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full pb-space-3xl gap-space-lg">
+<!-- Top Context Header Ribbon -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-md relative overflow-hidden">
+<div class="absolute -right-20 -top-24 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute right-96 -bottom-20 w-64 h-64 rounded-full bg-tertiary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span>Student Hub</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary-fixed-dim">AI Study Companion</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">Integration &amp; Calculus Assistant</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-space-2xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Socratic AI Study Companion &amp; Step-by-Step Reasoner</h1>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            Trained on NIE 2024 Sri Lankan A/L Combined Maths Marking Schemes
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-all font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">bookmark_add</span>
+<span>Save Session</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-all font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-outline">restart_alt</span>
+<span>Clear Chat</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-all font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>KaTeX Settings</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="text-tertiary-fixed font-medium">Inference Stream Active</span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">RAG Multi-Tenant Vector Store: <span class="text-on-surface font-semibold">Apex Combined Maths (2025/2026 Batch)</span></span>
+<span class="text-outline">•</span>
+<span>Latency: <strong class="text-on-surface">32ms</strong></span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm bg-surface-container px-space-sm py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Curriculum Anchor: G.C.E. Advanced Level (Pure &amp; Applied Maths)</span>
+</div>
+</div>
+</div>
+<!-- Workspace Grid: 3-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg w-full items-start">
+<!-- LEFT COLUMN: Knowledge Context & Formula Cheat Sheet (Col 3) -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Current Module Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">Active Module Focus</span>
+<span class="px-space-xs py-space-2xs bg-primary-container/20 text-primary-fixed-dim rounded font-label-sm text-label-sm font-semibold">Section 8.4</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Unit 08: Integration by Parts &amp; Weierstrass Substitution</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Advanced Level Pure Mathematics curriculum covering standard transformations, cyclic integrations, and rational trigonometric integrands.
+        </p>
+<!-- Bilingual Switcher Toggle -->
+<div class="mt-space-xs p-space-xs bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">translate</span>
+<span class="font-label-sm text-label-sm text-on-surface">ද්විභාෂා පදමාලාව (Glossary)</span>
+</div>
+<button class="px-space-xs py-space-2xs rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold hover:bg-surface-bright transition-colors" id="toggle-bilingual-btn">
+            SIN / ENG
+          </button>
+</div>
+<div class="flex flex-col gap-space-xs p-space-xs bg-surface-container-lowest rounded-md font-body-sm text-body-sm" id="bilingual-panel">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>කොටස් වශයෙන් අනුකලනය</span>
+<span class="text-primary font-medium">Integration by Parts</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>ආදේශ ක්‍රමය</span>
+<span class="text-primary font-medium">Substitution Method</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>වයර්ස්ට්‍රාස් ආදේශය</span>
+<span class="text-primary font-medium">Weierstrass Substitution</span>
+</div>
+</div>
+</div>
+<!-- Live KaTeX Mathematical Reference Well -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface font-title-md text-title-md">
+<span class="material-symbols-outlined text-primary text-[20px]">functions</span>
+<span>Formula Cheatsheet</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer hover:text-on-surface">open_in_full</span>
+</div>
+<!-- Formula 1: ILATE -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wide">ILATE SELECTION HIERARCHY</span>
+<span class="text-outline font-label-sm text-label-sm">Pure Maths II</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container font-mono text-center text-primary-fixed font-semibold tracking-wider text-body-md overflow-x-auto">
+            ∫ u (dv/dx) dx = u v − ∫ v (du/dx) dx
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Priority for <span class="text-on-surface font-semibold font-mono">u</span>: 
+            <span class="text-primary">I</span>nverse trig &gt; 
+            <span class="text-primary">L</span>ogarithmic &gt; 
+            <span class="text-primary">A</span>lgebraic &gt; 
+            <span class="text-primary">T</span>rigonometric &gt; 
+            <span class="text-primary">E</span>xponential
+          </p>
+</div>
+<!-- Formula 2: Weierstrass -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wide">WEIERSTRASS HALF-ANGLE t-SUB</span>
+<span class="text-outline font-label-sm text-label-sm">Standard Ref</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-on-surface flex flex-col gap-1 font-mono text-center text-body-sm overflow-x-auto">
+<div>t = tan(x/2) ⇒ dx = (2 / 1+t²) dt</div>
+<div class="text-primary-fixed">sin(x) = 2t/(1+t²)  |  cos(x) = (1−t²)/(1+t²)</div>
+</div>
+</div>
+<!-- Formula 3: Definite Integration by Parts -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold tracking-wide">LIMIT BOUNDARY EVALUATION</span>
+<div class="p-space-xs rounded bg-surface-container font-mono text-center text-on-surface text-body-sm overflow-x-auto">
+            [ u(x) · v(x) ]<sub>a</sub><sup>b</sup> − ∫<sub>a</sub><sup>b</sup> v (du/dx) dx
+          </div>
+<span class="font-label-sm text-label-sm text-on-error-container bg-error-container/20 px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-error">warning</span>
+            Never omit boundary evaluation on the product term!
+          </span>
+</div>
+</div>
+<!-- Past Exam Reference Anchors -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Target Past Exam Questions</span>
+<span class="font-label-sm text-label-sm text-outline">NIE Archives</span>
+</div>
+<!-- Past paper 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">2021 Paper II • Q11 (b)</span>
+<span class="px-space-xs py-space-2xs rounded bg-error-container/30 text-error font-label-sm text-label-sm font-bold">25 Marks • Hard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Evaluate ∫<sub>0</sub><sup>π/2</sup> e<sup>2x</sup> sin(3x) dx using repetitive integration by parts.
+          </p>
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>View Tutor Scheme Breakdown</span>
+</div>
+</div>
+<!-- Past paper 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">2018 Paper II • Q13 (a)</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold">15 Marks • Medium</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Using the substitution t = tan(x/2), show that ∫ dx / (5 + 4 cos x) = 2/3 arctan(…)
+          </p>
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>View Tutor Scheme Breakdown</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Socratic Dialogue & Reasoning Canvas (Col 6) -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Dialogue Canvas Container -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-lg shadow-sm">
+<!-- Thread Header Meta -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[24px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Socratic Mentor — Combined Maths</span>
+<span class="font-label-sm text-label-sm text-tertiary">Guiding Principle: Cognitive Step-by-Step Discovery</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Session Active</span>
+</div>
+</div>
+<!-- Chat History Stream -->
+<div class="flex flex-col gap-space-lg">
+<!-- Student Message 1 -->
+<div class="flex items-start gap-space-md flex-row-reverse">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+<div class="flex flex-col items-end gap-1 max-w-[85%]">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kavindu Bandara (Index #AL-7402)</span>
+<span class="font-label-sm text-label-sm text-outline">10:42 AM</span>
+</div>
+<div class="bg-surface-container-highest p-space-md rounded-2xl rounded-tr-none text-on-surface font-body-md text-body-md shadow-sm">
+                Why do we choose <span class="font-mono text-primary font-semibold">u = x</span> and <span class="font-mono text-primary font-semibold">dv = e^(2x) dx</span> in <span class="font-mono text-primary font-semibold">∫ x e^(2x) dx</span> instead of setting <span class="font-mono text-secondary">u = e^(2x)</span> and <span class="font-mono text-secondary">dv = x dx</span>? Wouldn't both integrate fine?
+              </div>
+</div>
+</div>
+<!-- Socratic AI Response 1 -->
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary-container text-[20px]">psychology</span>
+</div>
+<div class="flex flex-col gap-space-sm max-w-[92%]">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">Socratic AI Reasoner</span>
+<span class="px-space-xs py-space-2xs bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm rounded">Pedagogical Mode</span>
+<span class="font-label-sm text-label-sm text-outline">10:43 AM</span>
+</div>
+<div class="bg-surface-container p-space-lg rounded-2xl rounded-tl-none text-on-surface font-body-md text-body-md flex flex-col gap-space-md shadow-sm">
+<p>
+                  That is a foundational question, Kavindu. In mathematics—and especially under Sri Lankan A/L Combined Maths marking rubrics—our fundamental objective in <strong>Integration by Parts</strong> is <em>algebraic simplification</em>, not simply finding expressions that are mechanically integrable.
+                </p>
+<!-- Comparison Split Canvas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-xs">
+<!-- Path A -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">PATH A: YOUR PROPOSED INVERSION</span>
+<span class="material-symbols-outlined text-error text-[18px]">cancel</span>
+</div>
+<div class="font-mono text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div>Let <span class="text-secondary">u = e^(2x)</span> ⇒ du = 2e^(2x) dx</div>
+<div>Let <span class="text-secondary">dv = x dx</span> ⇒ v = (1/2)x²</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded font-mono text-body-sm text-on-surface">
+                      ∫ u dv = (1/2)x² e^(2x) − ∫ <span class="text-error font-bold">x² e^(2x)</span> dx
+                    </div>
+<span class="font-label-sm text-label-sm text-error">
+                      Result: The integrand power grew from x to x²! The integral became harder.
+                    </span>
+</div>
+<!-- Path B -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">PATH B: ILATE CONVENTION</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<div class="font-mono text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div>Let <span class="text-primary">u = x</span> (Algebraic) ⇒ du = 1 dx</div>
+<div>Let <span class="text-primary">dv = e^(2x) dx</span> ⇒ v = (1/2)e^(2x)</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded font-mono text-body-sm text-on-surface">
+                      ∫ u dv = (1/2)x e^(2x) − ∫ <span class="text-tertiary font-bold">(1/2)e^(2x)</span> dx
+                    </div>
+<span class="font-label-sm text-label-sm text-tertiary">
+                      Result: The polynomial factor vanished to a constant (1)! Elementary solution achieved.
+                    </span>
+</div>
+</div>
+<p class="font-body-md text-body-md">
+                  Notice what occurred? By selecting <span class="font-mono text-primary font-semibold">u</span> as the algebraic term, differentiation collapses the polynomial degree (<span class="font-mono">x → 1</span>), leaving only the exponential function in the remaining integral.
+                </p>
+<!-- Interactive Step-Check Socratic Prompt -->
+<div class="mt-space-xs p-space-md rounded-xl bg-surface-container-high flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology_alt</span>
+<span class="font-title-md text-title-md text-on-surface">Active Socratic Check: Test Your Intuition</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Suppose our integral was <span class="font-mono text-primary font-semibold">∫ x · ln(x) dx</span>. Applying the ILATE hierarchy, which term must become <span class="font-mono text-primary">u</span>, and why?
+                  </p>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="socratic-option text-left p-space-sm rounded-lg bg-surface-container hover:bg-surface-bright transition-all flex items-start gap-space-sm group">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0">1</span>
+<span class="font-body-sm text-body-sm text-on-surface">Let <span class="font-mono text-primary">u = x</span> because polynomials should always be differentiated first.</span>
+</button>
+<button class="socratic-option text-left p-space-sm rounded-lg bg-surface-container hover:bg-surface-bright transition-all flex items-start gap-space-sm group">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0">2</span>
+<span class="font-body-sm text-body-sm text-on-surface">Let <span class="font-mono text-primary">u = ln(x)</span> because Logarithmic precedes Algebraic in ILATE, and we cannot directly integrate ln(x) without parts.</span>
+</button>
+<button class="socratic-option text-left p-space-sm rounded-lg bg-surface-container hover:bg-surface-bright transition-all flex items-start gap-space-sm group">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0">3</span>
+<span class="font-body-sm text-body-sm text-on-surface">Either choice yields an identical number of calculation steps under standard Sri Lankan A/L schemes.</span>
+</button>
+</div>
+<!-- Feedback Toast (Interactive Toggle via JS) -->
+<div class="hidden p-space-sm rounded-lg bg-tertiary-container/30 text-on-surface font-body-sm text-body-sm flex items-center gap-space-sm" id="option-feedback">
+<span class="material-symbols-outlined text-tertiary text-[20px]">task_alt</span>
+<div><strong>Brilliant reasoning!</strong> 'L' precedes 'A'. Differentiating ln(x) gives 1/x, which neatly cancels with the integrated polynomial (1/2)x² to leave a simple power integration.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- KaTeX & Formula Input Console Area -->
+<div class="mt-space-md flex flex-col gap-space-xs bg-surface-container rounded-xl p-space-md shadow-sm">
+<!-- Math Symbol Quick Dock -->
+<div class="flex items-center gap-space-xs flex-wrap pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-1">KaTeX Fast Palette:</span>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\int_{a}^{b}">
+              ∫<sub>a</sub><sup>b</sup>
+</button>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\frac{d}{dx}">
+              d/dx
+            </button>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\sqrt{x}">
+              √x
+            </button>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\pi">
+              π
+            </button>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\sum_{n=1}^{\infty}">
+              Σ
+            </button>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\tan\left(\frac{x}{2}\right)">
+              tan(x/2)
+            </button>
+<button class="math-insert px-space-xs py-1 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-mono font-bold text-label-sm transition-colors" data-latex="\lim_{x \to 0}">
+              lim<sub>x→0</sub>
+</button>
+</div>
+<!-- Formula Preview Bar (Dynamic MathJax/KaTeX Container) -->
+<div class="p-space-xs px-space-sm bg-surface-container-lowest rounded-md text-on-surface-variant font-mono text-body-sm flex items-center justify-between" id="katex-preview-tray">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="font-label-sm text-label-sm uppercase">Active Proof Preview:</span>
+</span>
+<span class="text-on-surface" id="preview-text">u = ln(x) ⇒ du/dx = 1/x ; dv/dx = x ⇒ v = x²/2</span>
+</div>
+<!-- Input Bar with Controls -->
+<div class="flex items-end gap-space-sm mt-space-2xs">
+<div class="flex-1 bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-1 focus-within:ring-1 focus-within:ring-primary">
+<textarea class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none resize-none" id="prompt-input" placeholder="Ask a mathematical reasoning query or write your proof step in KaTeX format..." rows="2"></textarea>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs text-outline">
+<button class="hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Upload handwritten scratchpad photo">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+</button>
+<button class="hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Voice dictation (Sinhala / English)">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<button class="hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Attach Past Paper Reference">
+<span class="material-symbols-outlined text-[18px]">attach_file</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Press Shift+Enter for new line</span>
+</div>
+</div>
+<!-- Send Action Button -->
+<button class="h-12 w-12 rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container transition-all flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Scratchpad / Blackboard Canvas Preview Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-title-md text-title-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">draw</span>
+<span>Digital Coordinate &amp; Integral Scratchpad</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface px-space-xs py-1 rounded bg-surface-container">Clear Canvas</button>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-fixed-dim px-space-xs py-1 rounded bg-surface-container">Export to Tutor</button>
+</div>
+</div>
+<!-- Interactive Mock Canvas with SVG Coordinate Curves -->
+<div class="w-full h-44 rounded-lg bg-surface-container-lowest p-space-sm relative overflow-hidden flex items-center justify-center">
+<svg class="w-full h-full text-outline/30" fill="none" viewbox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="2 4" x1="0" x2="600" y1="25" y2="25"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" x1="0" x2="600" y1="50" y2="50"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="0" x2="600" y1="75" y2="75"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" x1="0" x2="600" y1="100" y2="100"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" x1="0" x2="600" y1="125" y2="125"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" x1="150" x2="150" y1="0" y2="150"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="300" x2="300" y1="0" y2="150"></line>
+<line stroke="currentColor" stroke-dasharray="2 4" x1="450" x2="450" y1="0" y2="150"></line>
+<!-- Shaded Area Under Curve: Integral Region -->
+<path d="M 220,75 Q 300,10 380,75 Z" fill="#3898ff" fill-opacity="0.18"></path>
+<!-- Curves -->
+<path d="M 80,120 Q 220,-20 380,75 T 540,75" fill="none" stroke="#3898ff" stroke-width="2.5"></path>
+<path d="M 80,40 Q 250,140 520,30" fill="none" stroke="#ffb95f" stroke-dasharray="4 3" stroke-width="2"></path>
+<!-- Mathematical Markers & Coordinates -->
+<circle cx="220" cy="75" fill="#4edea3" r="4"></circle>
+<text fill="#4edea3" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" x="210" y="95">x = a</text>
+<circle cx="380" cy="75" fill="#4edea3" r="4"></circle>
+<text fill="#4edea3" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" x="375" y="95">x = b</text>
+<text fill="#a4c8ff" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" x="260" y="45">∫ f(x) dx</text>
+<text fill="#ffb95f" font-family="Plus Jakarta Sans" font-size="11" x="430" y="35">g(x) tangent</text>
+</svg>
+<div class="absolute bottom-2 right-2 px-space-xs py-space-2xs bg-surface-container-high/80 backdrop-blur rounded font-label-sm text-label-sm text-outline">
+            Interactive KaTeX Geometry Layer
+          </div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Diagnostic Telemetry & Student Mastery (Col 3) -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Student Mastery Meter Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Calculus Telemetry</span>
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+</div>
+<!-- Circular or Semi-gauge Mastery Display -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="84, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-headline-sm text-on-surface font-bold">84%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Integration by Parts</span>
+<span class="font-label-sm text-label-sm text-tertiary">Mastery: Island Rank Tier A</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">38 Problems Mastered</span>
+</div>
+</div>
+<!-- Secondary Breakdown Progress Bars -->
+<div class="flex flex-col gap-space-xs font-label-sm text-label-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Trigonometric Substitutions</span>
+<span class="text-secondary font-semibold">68%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 68%"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant mt-space-2xs">
+<span>Rational Fractions Decomposition</span>
+<span class="text-tertiary font-semibold">92%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 92%"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant mt-space-2xs">
+<span>Definite Integral Limit Handlers</span>
+<span class="text-error font-semibold">45%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</div>
+<!-- Recent Misconceptions Flagged Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">bug_report</span>
+<span class="font-title-md text-title-md text-on-surface">Cognitive Misconceptions Flagged</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Detected from Kavindu's last 3 timed mock submissions and live canvas steps:
+        </p>
+<!-- Misconception 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+              Constant of Integration (+C)
+            </span>
+<span class="px-space-xs py-space-2xs rounded bg-error-container/30 text-error font-label-sm text-label-sm font-bold">-2 Marks Risk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Repeatedly omitted <span class="font-mono text-on-surface">+ C</span> before applying definite boundary conditions in indefinite integral phases.
+          </p>
+</div>
+<!-- Misconception 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+              Algebraic Sign Inversion
+            </span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold">-3 Marks Risk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Failed to propagate negative sign in <span class="font-mono text-on-surface">∫ − cos(x) dx</span> during second-pass recursive cycles.
+          </p>
+</div>
+</div>
+<!-- Recommended Practice Drills -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Recommended Drills</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">AI Generated</span>
+</div>
+<!-- Drill 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Drill #104: Cyclic ∫ e^(ax) cos(bx)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. 12 mins • 15 Marks</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<!-- Drill 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Drill #109: arctan(x) with u = arctan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. 8 mins • 10 Marks</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<!-- Drill 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Drill #114: Multi-Step Weierstrass</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. 20 mins • 25 Marks</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- High Impact Direct CTA Banner -->
+<div class="rounded-xl p-space-lg bg-gradient-to-br from-primary-container/20 via-surface-container to-surface-container-lowest flex flex-col gap-space-sm shadow-md relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>Targeted Mastery Pass</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface leading-snug">
+          Practice Model Problem #14 with Eng. Kusal's Marking Scheme
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Includes official 2024 mark distribution rubric, common student traps, and examiner insights.
+        </p>
+<button class="mt-space-xs w-full py-space-sm px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md transition-all">
+<span>Launch Model Problem</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Island Academic Ranking Context -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Island Percentile: Top 2.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ahead in Combined Mathematics A/L</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Bilingual Glossary Toggle
+  const bilingualBtn = document.getElementById('toggle-bilingual-btn');
+  const bilingualPanel = document.getElementById('bilingual-panel');
+  if (bilingualBtn && bilingualPanel) {
+    bilingualBtn.addEventListener('click', () => {
+      bilingualPanel.classList.toggle('hidden');
+    });
+  }
+
+  // Interactive Multiple-Choice Socratic Check
+  const options = document.querySelectorAll('.socratic-option');
+  const feedback = document.getElementById('option-feedback');
+  options.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      // Highlight selection
+      options.forEach(b => {
+        b.classList.remove('bg-primary-container/20', 'ring-1', 'ring-primary');
+      });
+      btn.classList.add('bg-primary-container/20');
+
+      if (index === 1) { // Correct option
+        if (feedback) {
+          feedback.classList.remove('hidden');
+          feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } else {
+        if (feedback) {
+          feedback.classList.remove('hidden');
+          feedback.innerHTML = `
+            <span class="material-symbols-outlined text-secondary text-[20px]">info</span>
+            <div><strong>Consider carefully:</strong> If u = x, then du = dx, but integrating dv = ln(x) dx is not an elementary single-step integral! In ILATE, Logarithmic comes first.</div>
+          `;
+          feedback.className = "p-space-sm rounded-lg bg-secondary-container/20 text-on-surface font-body-sm text-body-sm flex items-center gap-space-sm";
+        }
+      }
+    });
+  });
+
+  // KaTeX Quick Symbol Insertion into Textarea
+  const mathButtons = document.querySelectorAll('.math-insert');
+  const promptInput = document.getElementById('prompt-input');
+  const previewText = document.getElementById('preview-text');
+
+  mathButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const latex = btn.getAttribute('data-latex');
+      if (promptInput && latex) {
+        promptInput.value += ' ' + latex + ' ';
+        promptInput.focus();
+        if (previewText) {
+          previewText.textContent = promptInput.value;
+        }
+      }
+    });
+  });
+
+  if (promptInput && previewText) {
+    promptInput.addEventListener('input', () => {
+      if (promptInput.value.trim() !== '') {
+        previewText.textContent = promptInput.value;
+      } else {
+        previewText.textContent = "u = ln(x) ⇒ du/dx = 1/x ; dv/dx = x ⇒ v = x²/2";
+      }
+    });
+  }
+</script></main></div></body></html>

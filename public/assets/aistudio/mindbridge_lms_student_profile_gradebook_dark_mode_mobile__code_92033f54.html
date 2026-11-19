@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>MindBridge LMS — Student Profile &amp; Gradebook</title>
+<!-- Tailwind CSS v3 with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+Sinhala:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#080e1d',
+            surface: {
+              DEFAULT: '#0d1322',
+              dim: '#080e1d',
+              bright: '#1e2638',
+              container: '#151b2b',
+              high: '#1c2438'
+            },
+            accent: {
+              blue: '#0875e8',
+              sapphire: '#3898ff'
+            },
+            border: '#1e293b'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sinhala: ['"Noto Sans Sinhala"', '"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-scrollbars">
+    /* Hide scrollbars for pill-tab horizontal scrolling */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style data-purpose="typography-and-effects">
+    body {
+      background-color: #080e1d;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .glow-sapphire {
+      box-shadow: 0 0 20px -3px rgba(56, 152, 255, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-midnight text-slate-100 min-h-screen pb-28 antialiased selection:bg-accent-blue selection:text-white">
+<!-- BEGIN: TopHeader -->
+<header class="sticky top-0 z-40 bg-[#080e1d]/95 backdrop-blur-md border-b border-border/80 px-4 py-2.5 flex items-center justify-between" data-purpose="main-header">
+<div class="flex items-center space-x-2.5">
+<!-- MindBridge LMS Brand Logo -->
+<img alt="MindBridge LMS Logo" class="h-9 w-auto object-contain drop-shadow-sm rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdKexBwPxddvvZt5onHWqK596elqrmQnoUtcUdjcz37fy_Ced26wvxGSDp-DAxiz7P2G4xFYQtKOAumcubqQePdMWiDUA0EuLLc6ARNIZ0fXYHFOYLXSmCumS8acifdFG2QmE15YNsfm1ukfu-YAYVNl7kv24pT-v0V2lF74dbE0rxnl5Lj1LlXpmjf995reBvtQ1PLZCusZBY0QvL-8N0JPQH1A8D49KBjA1yRdIcTPphaV0Xl_BE"/>
+<div class="flex items-center space-x-1.5 pl-1.5 border-l border-slate-700/60">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="text-[10px] font-semibold tracking-wider uppercase text-emerald-400">99.9% SLA</span>
+</div>
+</div>
+<!-- Header Right Quick Actions -->
+<div class="flex items-center space-x-2.5">
+<!-- Notifications Bell -->
+<button aria-label="Notifications" class="relative p-2 rounded-xl bg-surface-container hover:bg-surface-high border border-border text-slate-300 transition" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-midnight"></span>
+</button>
+<!-- Student Avatar with sapphire accent -->
+<div class="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-tr from-accent-blue to-accent-sapphire text-white font-bold text-xs ring-2 ring-accent-sapphire/40 shadow-inner">
+        KP
+      </div>
+</div>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: StatusBarPill -->
+<section class="px-4 pt-3.5" data-purpose="sync-and-streak-bar">
+<div class="flex items-center justify-between bg-surface-container/70 border border-border rounded-xl px-3 py-2 text-xs">
+<!-- WhatsApp Sync indicator -->
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"></span>
+<span class="text-slate-400 font-medium">Parent WhatsApp Active:</span>
+<span class="text-slate-200 font-semibold tracking-wide">+94 77 •••• 921</span>
+</div>
+<!-- Streak & XP Flame badge -->
+<div class="flex items-center space-x-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full font-bold text-[11px]">
+<span>🔥</span>
+<span>14d • 1,420 XP</span>
+</div>
+</div>
+</section>
+<!-- END: StatusBarPill -->
+<main class="px-4 pt-3 space-y-4">
+<!-- BEGIN: StudentDossierCard -->
+<article class="bg-surface rounded-2xl border border-border p-4 relative overflow-hidden shadow-lg" data-purpose="student-dossier">
+<!-- Subtle background radial highlight -->
+<div class="absolute -top-12 -right-12 w-40 h-40 bg-accent-sapphire/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center space-x-2">
+<h1 class="text-lg font-bold text-white tracking-tight">Kavindu Nirmal Perera</h1>
+<!-- Verified blue badge -->
+<svg class="w-4 h-4 text-accent-sapphire fill-current" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<p class="text-xs text-slate-400 mt-0.5 font-medium flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Royal College Colombo 07
+          </p>
+</div>
+<!-- Sinhala Medium badge -->
+<span class="bg-surface-bright/80 text-accent-sapphire border border-accent-sapphire/30 text-[11px] font-sinhala font-semibold px-2 py-0.5 rounded-md">
+          සිංහල මාධ්‍ය
+        </span>
+</div>
+<!-- Cohort, Index & Target Meta Matrix -->
+<div class="grid grid-cols-2 gap-2 mt-3.5 pt-3 border-t border-slate-800/80 text-xs">
+<div class="bg-surface-container rounded-lg p-2 border border-slate-800">
+<span class="text-[10px] uppercase text-slate-400 block font-medium">Batch / Stream</span>
+<span class="font-semibold text-slate-200 text-xs">Batch A (Theory + Revision)</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2 border border-slate-800">
+<span class="text-[10px] uppercase text-slate-400 block font-medium">Index No</span>
+<span class="font-mono font-semibold text-slate-200 tracking-wider">SL-LRN-89401</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2 border border-slate-800">
+<span class="text-[10px] uppercase text-slate-400 block font-medium">Target Aspirant</span>
+<span class="font-semibold text-amber-300 text-xs truncate block">Univ. of Moratuwa Eng</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2 border border-slate-800">
+<span class="text-[10px] uppercase text-slate-400 block font-medium">National NIC</span>
+<span class="font-mono font-medium text-slate-300">200518902144</span>
+</div>
+</div>
+<!-- Action Buttons: Transcript & QR -->
+<div class="flex items-center space-x-2 mt-3.5">
+<button class="flex-1 bg-accent-blue hover:bg-blue-600 text-white font-semibold text-xs py-2 px-3 rounded-xl transition flex items-center justify-center space-x-2 shadow-md" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Official Transcript (PDF)</span>
+</button>
+<button aria-label="Student QR Identity" class="p-2 bg-surface-bright hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl transition flex items-center justify-center" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</article>
+<!-- END: StudentDossierCard -->
+<!-- BEGIN: AcademicStandingMetrics -->
+<section class="space-y-2" data-purpose="academic-standing-section">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-400">Academic Standing</h2>
+<span class="text-[11px] text-accent-sapphire font-semibold">2025/26 Cycle</span>
+</div>
+<!-- 2x2 Metric Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Metric 1: District Rank -->
+<div class="bg-surface rounded-xl p-3 border border-border">
+<span class="text-[11px] text-slate-400 block font-medium">District Rank</span>
+<div class="flex items-baseline space-x-1.5 mt-1">
+<span class="text-xl font-extrabold text-white">#14</span>
+<span class="text-[11px] text-slate-400">/ 428 Batch</span>
+</div>
+<span class="inline-block mt-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+            Top 3.2% Col.
+          </span>
+</div>
+<!-- Metric 2: All-Island Rank -->
+<div class="bg-surface rounded-xl p-3 border border-border">
+<span class="text-[11px] text-slate-400 block font-medium">All-Island Rank</span>
+<div class="flex items-baseline space-x-1 mt-1">
+<span class="text-xl font-extrabold text-white">98.4<span class="text-xs font-normal text-slate-400">%ile</span></span>
+</div>
+<span class="inline-block mt-1 text-[10px] font-semibold text-accent-sapphire bg-accent-blue/10 px-1.5 py-0.5 rounded">
+            Top 1.6% Sri Lanka
+          </span>
+</div>
+<!-- Metric 3: Aggregate Score -->
+<div class="bg-surface rounded-xl p-3 border border-border">
+<span class="text-[11px] text-slate-400 block font-medium">Combined Aggregate</span>
+<div class="flex items-baseline space-x-1 mt-1">
+<span class="text-xl font-extrabold text-white">91.8<span class="text-xs font-normal text-slate-400">%</span></span>
+</div>
+<span class="inline-block mt-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+            A* High Distinction
+          </span>
+</div>
+<!-- Metric 4: Projected Z-Score -->
+<div class="bg-surface rounded-xl p-3 border border-accent-blue/40 bg-gradient-to-b from-surface to-surface-container">
+<span class="text-[11px] text-slate-400 block font-medium">Projected Z-Score</span>
+<div class="flex items-baseline space-x-1 mt-1">
+<span class="text-xl font-extrabold text-accent-sapphire">2.1840</span>
+</div>
+<span class="inline-block mt-1 text-[10px] font-medium text-slate-300">
+            UoM Eng Cut: <span class="text-emerald-400 font-bold">1.985</span>
+</span>
+</div>
+</div>
+</section>
+<!-- END: AcademicStandingMetrics -->
+<!-- BEGIN: PerformanceArcChart -->
+<section class="bg-surface rounded-2xl border border-border p-4" data-purpose="longitudinal-chart">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-400">18-Month Performance Arc</h2>
+<p class="text-sm font-bold text-white mt-0.5">Combined Maths (Paper I &amp; II Composite)</p>
+</div>
+<span class="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+          +9.5% Net Gain
+        </span>
+</div>
+<!-- SVG Chart Canvas Area -->
+<div class="mt-4 relative h-36 w-full" data-purpose="chart-svg-container">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 340 120">
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#3898ff" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#3898ff" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid horizontal lines -->
+<line stroke="#1e293b" stroke-dasharray="3 3" x1="0" x2="340" y1="20" y2="20"></line>
+<line stroke="#1e293b" stroke-dasharray="3 3" x1="0" x2="340" y1="55" y2="55"></line>
+<line stroke="#1e293b" stroke-dasharray="3 3" x1="0" x2="340" y1="90" y2="90"></line>
+<!-- Apex Cohort Mean Line (dashed reference) -->
+<path d="M 0 85 C 60 83, 120 80, 180 78 C 240 76, 290 74, 340 72" fill="none" stroke="#64748b" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Shaded Area Below Kavindu's Curve -->
+<path d="M 0 68 C 60 55, 110 58, 170 38 C 230 25, 290 20, 340 12 L 340 120 L 0 120 Z" fill="url(#areaGradient)"></path>
+<!-- Kavindu's Main Trend Line -->
+<path d="M 0 68 C 60 55, 110 58, 170 38 C 230 25, 290 20, 340 12" fill="none" stroke="#3898ff" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Key Data Nodes -->
+<circle cx="0" cy="68" fill="#080e1d" r="3.5" stroke="#3898ff" stroke-width="2"></circle>
+<circle cx="170" cy="38" fill="#080e1d" r="3.5" stroke="#3898ff" stroke-width="2"></circle>
+<circle cx="340" cy="12" fill="#3898ff" r="4.5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- Chart Footnote & Legend -->
+<div class="flex items-center justify-between text-[11px] text-slate-400 mt-2 pt-2 border-t border-slate-800">
+<div class="flex items-center space-x-3">
+<span class="flex items-center"><span class="w-2.5 h-1 bg-accent-sapphire inline-block mr-1 rounded"></span> Kavindu (92.0%)</span>
+<span class="flex items-center"><span class="w-2.5 h-1 bg-slate-500 inline-block mr-1 rounded"></span> Apex Cohort Mean (69.4%)</span>
+</div>
+<span class="text-slate-500">May '24 — Oct '25</span>
+</div>
+<!-- Pacing Alert Callout -->
+<div class="mt-3 bg-surface-container-high rounded-xl p-2.5 text-xs flex items-center justify-between border border-slate-800">
+<div class="flex items-center space-x-2">
+<span class="text-emerald-400">⚡</span>
+<span class="text-slate-300 font-medium">Trajectory: Clears Island Top 20 Threshold</span>
+</div>
+<span class="text-[10px] font-bold text-accent-sapphire uppercase tracking-wider">A* Track</span>
+</div>
+</section>
+<!-- END: PerformanceArcChart -->
+<!-- BEGIN: CurriculumMastery -->
+<section class="space-y-3" data-purpose="mastery-breakdown">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-400">Curriculum Mastery</h2>
+<span class="text-[11px] text-slate-400">G.C.E. A/L Combined Maths</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<!-- Paper I: Pure Mathematics Card -->
+<div class="bg-surface rounded-xl p-3.5 border border-border">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-accent-sapphire"></span>
+<h3 class="text-xs font-bold text-white">Pure Mathematics (Paper I)</h3>
+</div>
+<span class="text-xs font-extrabold text-accent-sapphire">94.2%</span>
+</div>
+<!-- Unit Progress Bars -->
+<div class="space-y-2 text-[11px]">
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span>Complex Numbers</span>
+<span class="font-semibold text-slate-200">98%</span>
+</div>
+<div class="w-full bg-surface-bright h-1.5 rounded-full overflow-hidden">
+<div class="bg-accent-sapphire h-1.5 rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span>Coordinate Geometry</span>
+<span class="font-semibold text-slate-200">95%</span>
+</div>
+<div class="w-full bg-surface-bright h-1.5 rounded-full overflow-hidden">
+<div class="bg-accent-sapphire h-1.5 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span>Differential Equations</span>
+<span class="font-semibold text-slate-200">92%</span>
+</div>
+<div class="w-full bg-surface-bright h-1.5 rounded-full overflow-hidden">
+<div class="bg-accent-sapphire h-1.5 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Paper II: Applied Mathematics Card -->
+<div class="bg-surface rounded-xl p-3.5 border border-border">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<h3 class="text-xs font-bold text-white">Applied Mathematics (Paper II)</h3>
+</div>
+<span class="text-xs font-extrabold text-emerald-400">89.4%</span>
+</div>
+<!-- Unit Progress Bars -->
+<div class="space-y-2 text-[11px]">
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span>Statics (Equilibrium &amp; Friction)</span>
+<span class="font-semibold text-slate-200">92%</span>
+</div>
+<div class="w-full bg-surface-bright h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-400 h-1.5 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span>Probability &amp; Statistics</span>
+<span class="font-semibold text-slate-200">89%</span>
+</div>
+<div class="w-full bg-surface-bright h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-400 h-1.5 rounded-full" style="width: 89%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span>Rigid Body Dynamics</span>
+<span class="font-semibold text-slate-200">87%</span>
+</div>
+<div class="w-full bg-surface-bright h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-400 h-1.5 rounded-full" style="width: 87%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CurriculumMastery -->
+<!-- BEGIN: AIDiagnosticsBanner -->
+<div class="bg-gradient-to-r from-accent-blue/20 via-surface to-accent-sapphire/10 border border-accent-blue/30 rounded-2xl p-3.5 flex items-center justify-between shadow-md" data-purpose="ai-diagnostics-card">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-xl bg-accent-blue/20 border border-accent-blue/40 flex items-center justify-center text-accent-sapphire">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-white">AI Diagnostic Prescription</h4>
+<p class="text-[11px] text-slate-400">4 Weak Concept Drills ready for Pure Maths Paper I</p>
+</div>
+</div>
+<button class="bg-accent-sapphire hover:bg-accent-blue text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg transition whitespace-nowrap" type="button">
+        Start Drills
+      </button>
+</div>
+<!-- END: AIDiagnosticsBanner -->
+<!-- BEGIN: OfficialSubmissionsLedger -->
+<section class="space-y-3" data-purpose="submissions-ledger">
+<div class="flex items-center justify-between px-1">
+<div>
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-400">Official Submissions Ledger</h2>
+<p class="text-[11px] text-slate-500">Graded Papers, Speed Exams &amp; Term Tests</p>
+</div>
+<!-- Cryptographic seal note -->
+<div class="flex items-center space-x-1 text-[10px] text-slate-400">
+<svg class="w-3.5 h-3.5 text-accent-sapphire" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-mono">SHA256 Verified</span>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="flex space-x-2 overflow-x-auto no-scrollbar pb-1 text-xs" data-purpose="ledger-filter-tabs">
+<button class="px-3 py-1.5 rounded-lg bg-accent-blue text-white font-semibold whitespace-nowrap shadow-sm" type="button">All (30)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface hover:bg-surface-bright text-slate-400 hover:text-slate-200 border border-border whitespace-nowrap" type="button">Exams (12)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface hover:bg-surface-bright text-slate-400 hover:text-slate-200 border border-border whitespace-nowrap" type="button">Homework (18)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface hover:bg-surface-bright text-slate-400 hover:text-slate-200 border border-border whitespace-nowrap" type="button">Pure Maths</button>
+</div>
+<!-- Submissions List -->
+<div class="space-y-2.5">
+<!-- Item 1: Exam Unit 03 -->
+<article class="bg-surface rounded-xl p-3 border border-border hover:border-slate-700 transition" data-purpose="ledger-item">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-blue-500/10 text-accent-sapphire border border-blue-500/30 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
+                  Exam-2025-U3
+                </span>
+<span class="text-xs font-bold text-white">Unit 03 Speed Exam (Pure Maths)</span>
+</div>
+<p class="text-[11px] text-slate-400">Completed 24 Oct 2025 • Timed Proctored (60 min)</p>
+</div>
+<div class="text-right">
+<span class="text-base font-extrabold text-white">92<span class="text-xs text-slate-400">/100</span></span>
+<span class="block text-[10px] font-bold text-emerald-400">A* Distinction</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs">
+<span class="text-[11px] text-slate-400 flex items-center gap-1">
+<svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Paper Receipt #LMS-9941
+            </span>
+<button class="text-accent-sapphire hover:underline text-[11px] font-semibold flex items-center space-x-1" type="button">
+<span>View Solution PDF</span>
+<span>→</span>
+</button>
+</div>
+</article>
+<!-- Item 2: HW-04 Trig -->
+<article class="bg-surface rounded-xl p-3 border border-border hover:border-slate-700 transition" data-purpose="ledger-item">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
+                  HW-04
+                </span>
+<span class="text-xs font-bold text-white">Advanced Trigonometry Proofs</span>
+</div>
+<p class="text-[11px] text-slate-400">Submitted 20 Oct 2025 • Self-Assessed + Evaluator Mark</p>
+</div>
+<div class="text-right">
+<span class="text-base font-extrabold text-white">92<span class="text-xs text-slate-400">/100</span></span>
+<span class="block text-[10px] font-semibold text-emerald-400">Marked PDF</span>
+</div>
+</div>
+</article>
+<!-- Item 3: HW-03 Partial Fractions -->
+<article class="bg-surface rounded-xl p-3 border border-border hover:border-slate-700 transition" data-purpose="ledger-item">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
+                  HW-03
+                </span>
+<span class="text-xs font-bold text-white">Partial Fractions &amp; Integration Rules</span>
+</div>
+<p class="text-[11px] text-slate-400">Submitted 15 Oct 2025 • Handwritten OCR Scanned</p>
+</div>
+<div class="text-right">
+<span class="text-base font-extrabold text-white">94<span class="text-xs text-slate-400">/100</span></span>
+<span class="block text-[10px] font-semibold text-emerald-400">Distinction</span>
+</div>
+</div>
+</article>
+<!-- Item 4: Mock-T2-P1 -->
+<article class="bg-surface rounded-xl p-3 border border-border hover:border-slate-700 transition" data-purpose="ledger-item">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-purple-500/10 text-purple-400 border border-purple-500/30 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
+                  Mock-T2-P1
+                </span>
+<span class="text-xs font-bold text-white">Term 02 Mock — Combined Paper 01</span>
+</div>
+<p class="text-[11px] text-slate-400">Colombo Regional Hall Sitting (3 Hours)</p>
+</div>
+<div class="text-right">
+<span class="text-base font-extrabold text-white">88<span class="text-xs text-slate-400">/100</span></span>
+<span class="block text-[10px] font-semibold text-accent-sapphire">Island Rank #38</span>
+</div>
+</div>
+</article>
+<!-- Item 5: HW-02 Statics Drill -->
+<article class="bg-surface rounded-xl p-3 border border-border hover:border-slate-700 transition" data-purpose="ledger-item">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
+                  HW-02
+                </span>
+<span class="text-xs font-bold text-white">Statics Drill 02 (Coplanar Forces)</span>
+</div>
+<p class="text-[11px] text-slate-400">Submitted 08 Oct 2025</p>
+</div>
+<div class="text-right">
+<span class="text-base font-extrabold text-white">86<span class="text-xs text-slate-400">/100</span></span>
+<span class="block text-[10px] font-semibold text-emerald-400">Completed</span>
+</div>
+</div>
+</article>
+<!-- Item 6: In Evaluation Paper -->
+<article class="bg-surface rounded-xl p-3 border border-dashed border-slate-700" data-purpose="ledger-item-pending">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-slate-800 text-slate-400 border border-slate-700 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
+                  GRP-2024
+                </span>
+<span class="text-xs font-bold text-slate-300">Colombo District Past Paper 2024</span>
+</div>
+<p class="text-[11px] text-slate-500">Submitted yesterday 23:40 • Queue position #41</p>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center space-x-1 text-[11px] font-medium text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded">
+<svg class="animate-spin w-3 h-3" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor"></path>
+</svg>
+<span>In Evaluation</span>
+</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: OfficialSubmissionsLedger -->
+<!-- BEGIN: MasterLecturerFeedback -->
+<section class="bg-surface rounded-2xl border border-border p-4 relative" data-purpose="lecturer-endorsement">
+<div class="flex items-center space-x-3 mb-2.5">
+<div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center font-bold text-xs text-accent-sapphire border border-accent-sapphire/30">
+          KS
+        </div>
+<div>
+<h3 class="text-xs font-bold text-white">Eng. Kusal Senaratne</h3>
+<p class="text-[10px] text-slate-400">Head Lecturer • Combined Mathematics</p>
+</div>
+</div>
+<blockquote class="text-xs text-slate-300 italic border-l-2 border-accent-sapphire pl-3 leading-relaxed">
+        “Kavindu exhibits exceptional proof structures in Complex Numbers &amp; Calculus. Maintain precision during high-speed drills to preserve his 2.18+ Z-Score trajectory for Moratuwa Engineering.”
+      </blockquote>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="text-[10px] bg-surface-container px-2 py-0.5 rounded border border-slate-800 text-slate-400">Focus: Rigid Dynamics Speed</span>
+<span class="text-[10px] bg-surface-container px-2 py-0.5 rounded border border-slate-800 text-slate-400">Mastery: Differential Eq.</span>
+</div>
+</section>
+<!-- END: MasterLecturerFeedback -->
+<!-- BEGIN: TuitionAndSlipCompliance -->
+<section class="bg-surface rounded-2xl border border-border p-4 space-y-3" data-purpose="tuition-compliance">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-400">Tuition &amp; Slip Compliance</h2>
+<p class="text-xs font-bold text-white mt-0.5">2025/2026 Academic Year</p>
+</div>
+<span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+          In Good Standing
+        </span>
+</div>
+<!-- Payment Status Alert -->
+<div class="bg-surface-container rounded-xl p-3 border border-slate-800 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="text-[11px] text-slate-400 block font-medium">November 2025 Tuition</span>
+<span class="text-sm font-bold text-slate-100">LKR 4,500 <span class="text-[11px] font-normal text-amber-400">(Due 05 Nov)</span></span>
+</div>
+<button class="bg-accent-blue hover:bg-blue-600 text-white font-semibold text-xs px-3 py-1.5 rounded-lg transition shadow" type="button">
+          Upload Bank Slip
+        </button>
+</div>
+<!-- Quick bank detail reference -->
+<div class="flex items-center justify-between text-[11px] text-slate-400 px-1 pt-1">
+<span>October 2025: <strong class="text-emerald-400">Verified &amp; Approved</strong></span>
+<button class="text-accent-sapphire hover:underline" type="button">View Bank Details</button>
+</div>
+</section>
+<!-- END: TuitionAndSlipCompliance -->
+</main>
+<!-- BEGIN: FixedBottomNav -->
+<nav class="fixed bottom-0 inset-x-0 z-50 bg-[#080e1d]/95 backdrop-blur-lg border-t border-border px-3 py-2" data-purpose="bottom-tab-navigation">
+<div class="flex items-center justify-around max-w-md mx-auto">
+<!-- Nav Item 1: Overview -->
+<a class="flex flex-col items-center justify-center py-1 px-2 text-slate-400 hover:text-slate-200 transition" href="#overview">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">Overview</span>
+</a>
+<!-- Nav Item 2: Courses -->
+<a class="flex flex-col items-center justify-center py-1 px-2 text-slate-400 hover:text-slate-200 transition" href="#courses">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">Courses</span>
+</a>
+<!-- Nav Item 3: Exams -->
+<a class="flex flex-col items-center justify-center py-1 px-2 text-slate-400 hover:text-slate-200 transition" href="#exams">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">Exams</span>
+</a>
+<!-- Nav Item 4: Gradebook (Active sapphire blue) -->
+<a class="flex flex-col items-center justify-center py-1 px-2 text-accent-sapphire transition relative" href="#gradebook">
+<div class="relative">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-accent-sapphire shadow-[0_0_8px_#3898ff]"></span>
+</div>
+<span class="text-[10px] font-bold mt-1 text-accent-sapphire">Gradebook</span>
+</a>
+<!-- Nav Item 5: Billing -->
+<a class="flex flex-col items-center justify-center py-1 px-2 text-slate-400 hover:text-slate-200 transition" href="#billing">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">Billing</span>
+</a>
+</div>
+</nav>
+<!-- END: FixedBottomNav -->
+</body></html>

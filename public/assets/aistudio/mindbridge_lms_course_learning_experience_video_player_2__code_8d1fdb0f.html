@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001b3f", "on-primary-container": "#fefcff", "tertiary-fixed": "#ffddb4", "on-primary-fixed-variant": "#00458f", "on-tertiary-fixed-variant": "#633f00", "on-error-container": "#93000a", "surface-container-highest": "#d9e2ff", "inverse-primary": "#abc7ff", "error": "#ba1a1a", "surface-dim": "#cfd9fb", "surface-container": "#eaedff", "background": "#faf8ff", "on-secondary-fixed": "#041847", "surface-container-low": "#f2f3ff", "on-surface": "#101b34", "inverse-on-surface": "#eef0ff", "secondary-fixed": "#dbe1ff", "on-tertiary": "#ffffff", "on-secondary-container": "#405081", "secondary": "#4d5c8e", "tertiary": "#7f5300", "on-error": "#ffffff", "primary-fixed-dim": "#abc7ff", "surface-container-high": "#e1e7ff", "on-primary": "#ffffff", "on-tertiary-container": "#fffbff", "error-container": "#ffdad6", "secondary-fixed-dim": "#b5c5fd", "primary-container": "#0072e4", "on-secondary-fixed-variant": "#354575", "on-tertiary-fixed": "#291800", "tertiary-container": "#a06900", "on-surface-variant": "#414754", "primary": "#005ab6", "secondary-container": "#b5c5fd", "surface": "#faf8ff", "outline": "#717785", "inverse-surface": "#25304a", "on-background": "#101b34", "surface-tint": "#005cba", "outline-variant": "#c1c6d6", "surface-variant": "#d9e2ff", "tertiary-fixed-dim": "#ffb952", "on-secondary": "#ffffff", "surface-bright": "#faf8ff", "primary-fixed": "#d7e3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xl": "2rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "title": [ "Plus Jakarta Sans" ], "display": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "display-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "title": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "display": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(7,27,74,0.06)]"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><a class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center justify-center" data-path="course-syllabus" href="#" title="Return to Course Syllabus"><span class="material-symbols-outlined text-[22px]">arrow_back</span></a><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="hidden sm:inline-block font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">MindBridge</span></div><span class="text-outline-variant font-light hidden lg:inline-block">|</span><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full"><span class="material-symbols-outlined text-[15px] text-primary">domain</span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">Apex Combined Mathematics</span></div><div class="hidden lg:flex items-center gap-space-sm min-w-0 pl-space-xs"><span class="text-outline-variant text-[14px]">/</span><div class="truncate"><div class="font-title text-title font-bold text-on-surface truncate leading-none">2025 A/L Combined Mathematics Theory</div><div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1 flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>Lesson 34: Differential Equations &amp; Population Growth Dynamics</div></div></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-lg"><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface-variant">Batch Progress (Batch 2025-A)</span><span class="font-label-md text-label-md text-on-surface font-semibold">68% Completed</span></div><div class="w-24 h-2 bg-surface-container-high rounded-full overflow-hidden ml-1"><div class="bg-primary h-full rounded-full" style="width: 68%"></div></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-2 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="lesson-player" href="#">Video Player</a><a class="px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="course-syllabus" href="#">Curriculum</a><a class="px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="lesson-resources" href="#">Notes &amp; HW</a><a class="hidden sm:inline-block px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="discussion-forum" href="#">Q&amp;A</a></nav><div class="flex items-center gap-space-xs pl-space-xs"><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center justify-center" title="Toggle Theater Mode" type="button"><span class="material-symbols-outlined text-[20px]">fullscreen</span></button><button class="hidden md:flex p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors items-center justify-center" title="Curriculum Drawer" type="button"><span class="material-symbols-outlined text-[20px]">view_sidebar</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Learning Context Ribbon -->
+<section class="w-full bg-surface-container-low px-space-md lg:px-margin py-3 shadow-sm">
+<div class="max-w-[1720px] mx-auto flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm">
+<div class="flex items-center flex-wrap gap-x-3 gap-y-1 min-w-0">
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" data-path="course-syllabus" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Course Hub</span>
+</a>
+<span class="text-outline-variant font-light hidden sm:inline">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Module 03: Differential Calculus &amp; Real-World Applications</span>
+<span class="text-outline-variant font-light hidden sm:inline">•</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Lesson 34 of 50: Differential Equations &amp; Population Dynamics (Pure Maths)</span>
+<div class="flex items-center gap-2 mt-0.5 sm:mt-0">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-primary">schedule</span> 1h 48m 22s
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Verified • Oct Slip Cleared
+          </span>
+</div>
+</div>
+<div class="flex items-center flex-wrap gap-2 shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" title="Toggle Theater Mode" type="button">
+<span class="material-symbols-outlined text-[17px] text-primary">aspect_ratio</span>
+<span class="hidden sm:inline">Theater Mode</span>
+</button>
+<label class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container cursor-pointer select-none">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autoplay Next</span>
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</label>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[17px] text-tertiary">download_for_offline</span>
+<span class="hidden md:inline">Handout PDF (24 pgs)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:brightness-105 transition-all" onclick="switchSidebarTab('copilot')" type="button">
+<span class="material-symbols-outlined text-[17px]">auto_awesome</span>
+<span>Ask Copilot</span>
+</button>
+<div class="flex items-center gap-1 pl-1">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant disabled:opacity-40" title="Previous Lesson (Lesson 33)" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Next Lesson (Lesson 35)" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Learning Stage -->
+<div class="max-w-[1720px] w-full mx-auto px-space-md lg:px-margin py-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT MAIN COLUMN: Video + Sub Tabs (approx 70%) -->
+<div class="lg:col-span-8 xl:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- Video Player Card -->
+<div class="relative w-full rounded-xl overflow-hidden bg-on-secondary-fixed shadow-md flex flex-col group select-none">
+<!-- Screen Simulation Container (16:9 Aspect Ratio) -->
+<div class="relative w-full aspect-video bg-neutral-950 overflow-hidden flex items-center justify-center">
+<!-- Chalkboard Lecture Visual Simulation -->
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-on-secondary-fixed via-on-primary-fixed to-neutral-950 opacity-95"></div>
+<!-- Grid Chalk lines -->
+<div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px); background-size: 40px 40px;"></div>
+<!-- Blackboard Content & Teacher Illustration -->
+<div class="absolute inset-0 p-8 flex flex-col justify-between pointer-events-none">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-error text-on-error font-label-sm text-label-sm uppercase tracking-wider font-bold animate-pulse">RECORDED LIVE • APEX 2025</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/20 backdrop-blur-sm text-surface font-label-sm text-label-sm">Pure Maths Theory Unit 03</span>
+</div>
+<div class="flex items-center gap-2 text-surface/80 font-mono text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>CHALKBOARD STREAM • CAM-01 4K PROXY</span>
+</div>
+</div>
+<!-- Mathematical Chalk Formula Overlay on Board -->
+<div class="max-w-2xl my-auto space-y-4">
+<div class="inline-block px-3 py-1 rounded bg-primary-container/30 backdrop-blur-md text-surface-container-high font-label-md text-label-md">
+                Derivation 34.2: Verhulst Logistic Differential Model
+              </div>
+<div class="font-mono text-surface-container-lowest/90 text-2xl lg:text-3xl font-bold tracking-tight bg-on-secondary-fixed/50 backdrop-blur-sm p-4 rounded-lg">
+<span class="text-tertiary-fixed font-bold">dP/dt</span> = k · P · <span class="text-secondary-fixed">(1 - P / K)</span>
+</div>
+<div class="font-mono text-surface-container-high text-sm lg:text-base space-y-1">
+<p class="text-secondary-fixed-dim">∫ [ 1 / ( P(1 - P/K) ) ] dP = ∫ k dt + C</p>
+<p class="text-surface-container-highest/80">⇒ (1/K) · ln| P / (K - P) | = k·t + C₀   [At t=0, P = P₀]</p>
+</div>
+</div>
+<!-- Lecturer Credit Pill -->
+<div class="flex items-center justify-between text-surface-container-high">
+<div class="flex items-center gap-3 bg-neutral-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">KS</div>
+<div class="text-xs">
+<div class="font-semibold text-surface">Eng. Kusal Senaratne (B.Sc. Eng Hons, Moratuwa)</div>
+<div class="text-[10px] text-surface-container-highest/70">Apex Combined Mathematics Academy • Colombo 07</div>
+</div>
+</div>
+<div class="text-right text-[11px] text-surface-container-highest/60 font-mono">
+                Frame Rate: 60.00 fps • H.265 / HEVC 10-bit
+              </div>
+</div>
+</div>
+<!-- Dynamic Anti-Rip DRM Floating Watermark (Multi-Positioned Security Scrim) -->
+<div class="absolute inset-0 pointer-events-none select-none z-20 flex flex-col justify-between p-6 opacity-35 hover:opacity-50 transition-opacity">
+<div class="self-start text-[11px] font-mono text-tertiary-fixed font-semibold bg-neutral-900/40 px-2 py-0.5 rounded rotate-[-2deg]">
+              SL-LRN-89401 • Kavindu Nirmal Perera • NIC: 200518902144
+            </div>
+<div class="self-center text-center text-[12px] font-mono text-surface-container-lowest font-medium bg-neutral-950/40 px-3 py-1 rounded backdrop-blur-xs rotate-[4deg]">
+              APEX-DRM://SESSION_ID_482910 // IP: 192.248.32.14 (SLT Peered Colombo) // 2025-10-24 16:42:10 SLST // LICENSED TO STUDENT
+            </div>
+<div class="self-end text-[10px] font-mono text-tertiary-fixed-dim bg-neutral-900/40 px-2 py-0.5 rounded">
+              ENCRYPTED DRM TOKEN • RE-STREAMING PROHIBITED (C) APEX 2025
+            </div>
+</div>
+<!-- Center Big Play Button Overlay (when paused or hover) -->
+<button class="absolute z-30 w-16 h-16 rounded-full bg-primary-container/90 hover:bg-primary-container text-on-primary flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[34px] ml-1">play_arrow</span>
+</button>
+</div>
+<!-- Scrubber Bar with Chapter Segments -->
+<div class="relative w-full bg-neutral-900 px-4 pt-3 pb-1 cursor-pointer group/scrub">
+<!-- Timeline Bar -->
+<div class="relative w-full h-2 bg-neutral-700 rounded-full overflow-visible">
+<!-- Loaded / Buffered Bar -->
+<div class="absolute left-0 top-0 bottom-0 bg-neutral-600 rounded-full" style="width: 72%;"></div>
+<!-- Played Progress Bar -->
+<div class="absolute left-0 top-0 bottom-0 bg-primary-container rounded-full" style="width: 39%;"></div>
+<!-- Scrubber Thumb -->
+<div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface shadow-md ring-2 ring-primary -ml-2" style="left: 39%;"></div>
+<!-- Chapter Markers (dots on timeline) -->
+<span class="absolute top-0 bottom-0 w-0.5 bg-neutral-950" style="left: 17%;" title="18:20 - Logistic Growth Model"></span>
+<span class="absolute top-0 bottom-0 w-0.5 bg-neutral-950" style="left: 39%;" title="42:15 - Variable Separation Technique"></span>
+<span class="absolute top-0 bottom-0 w-0.5 bg-neutral-950" style="left: 67%;" title="1:12:40 - 2021 A/L Past Paper Model"></span>
+<span class="absolute top-0 bottom-0 w-0.5 bg-neutral-950" style="left: 90%;" title="1:38:00 - Q&amp;A Summary"></span>
+</div>
+<!-- Chapter tooltip preview on hover -->
+<div class="flex items-center justify-between text-[11px] text-surface-container-high/70 mt-1 font-mono">
+<span>00:00 Intro</span>
+<span class="text-tertiary-fixed font-semibold">[Current: Variable Separation (42:15)]</span>
+<span>1:12:40 Past Paper</span>
+<span>1:48:22 End</span>
+</div>
+</div>
+<!-- Custom Video Control Toolbar -->
+<div class="w-full bg-neutral-950 px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-surface">
+<!-- Left Controls: Play, Skips, Volume, Timestamp -->
+<div class="flex items-center gap-2 sm:gap-3">
+<button class="p-1.5 rounded hover:bg-neutral-800 text-surface transition-colors" title="Play / Pause" type="button">
+<span class="material-symbols-outlined text-[24px]">pause</span>
+</button>
+<button class="p-1 rounded hover:bg-neutral-800 text-surface-container-highest transition-colors" title="10s Back" type="button">
+<span class="material-symbols-outlined text-[22px]">replay_10</span>
+</button>
+<button class="p-1 rounded hover:bg-neutral-800 text-surface-container-highest transition-colors" title="10s Forward" type="button">
+<span class="material-symbols-outlined text-[22px]">forward_10</span>
+</button>
+<!-- Volume Control -->
+<div class="flex items-center gap-1.5 group/vol">
+<button class="p-1 text-surface-container-highest hover:text-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<div class="w-16 h-1.5 bg-neutral-700 rounded-full overflow-hidden hidden sm:block">
+<div class="h-full bg-primary-container" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Time Display -->
+<div class="font-mono text-label-sm text-label-sm text-surface-container-high pl-1">
+<span class="text-surface font-semibold">42:15</span> <span class="opacity-40">/</span> 1:48:22
+            </div>
+</div>
+<!-- Right Controls: Audio track, Quality, Speed, Fullscreen -->
+<div class="flex items-center gap-2">
+<!-- Dual Audio Selector -->
+<div class="relative group/audio hidden sm:block">
+<button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-label-sm text-label-sm font-medium text-surface" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">translate</span>
+<span>සිංහල + ENG</span>
+</button>
+</div>
+<!-- Playback Speed Pill -->
+<button class="px-2 py-0.5 rounded bg-neutral-800 hover:bg-neutral-700 text-label-sm text-label-sm font-semibold text-surface" type="button">
+              1.25x
+            </button>
+<!-- Quality Pill -->
+<div class="hidden md:flex items-center gap-1 px-2.5 py-0.5 rounded bg-neutral-800 text-label-sm text-label-sm text-tertiary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+              1080p FHD
+            </div>
+<!-- Subtitles Toggle -->
+<button class="p-1.5 rounded hover:bg-neutral-800 text-primary-fixed" title="Subtitles (Active)" type="button">
+<span class="material-symbols-outlined text-[20px]">subtitles</span>
+</button>
+<!-- Fullscreen -->
+<button class="p-1.5 rounded hover:bg-neutral-800 text-surface" title="Full Screen" type="button">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- DRM & Edge CDN Status Banner -->
+<div class="w-full bg-neutral-900/90 px-4 py-1.5 flex flex-wrap items-center justify-between text-[11px] font-mono text-surface-container-high/80 border-t border-neutral-800">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="text-surface font-semibold">Low-Latency SLT Edge CDN</span>
+<span class="text-neutral-500">•</span>
+<span>14ms RTT (Colombo Node #04)</span>
+<span class="text-neutral-500">•</span>
+<span>Widevine L1 DRM Verified</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-tertiary-fixed">Audio: PCM Stereo 48kHz</span>
+<span class="hidden sm:inline text-neutral-400">Student ID: SL-LRN-89401</span>
+</div>
+</div>
+</div>
+<!-- Tabbed Workspace Underneath Video -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Workspace Tabs Header -->
+<div class="flex items-center overflow-x-auto bg-surface-container-low px-space-md pt-2 border-b border-surface-container">
+<button class="subtab-btn inline-flex items-center gap-2 px-space-md py-3 border-b-2 border-primary text-primary font-label-lg text-label-lg font-semibold whitespace-nowrap" id="tab-btn-overview" onclick="switchSubTab('overview')" type="button">
+<span class="material-symbols-outlined text-[19px]">article</span>
+<span>Overview &amp; Key Concepts</span>
+</button>
+<button class="subtab-btn inline-flex items-center gap-2 px-space-md py-3 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg whitespace-nowrap" id="tab-btn-proofs" onclick="switchSubTab('proofs')" type="button">
+<span class="material-symbols-outlined text-[19px]">functions</span>
+<span>LaTeX Derivations &amp; Proofs</span>
+</button>
+<button class="subtab-btn inline-flex items-center gap-2 px-space-md py-3 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg whitespace-nowrap" id="tab-btn-handout" onclick="switchSubTab('handout')" type="button">
+<span class="material-symbols-outlined text-[19px]">picture_as_pdf</span>
+<span>Handout PDF Reader</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold">24p</span>
+</button>
+<button class="subtab-btn inline-flex items-center gap-2 px-space-md py-3 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg whitespace-nowrap" id="tab-btn-discussion" onclick="switchSubTab('discussion')" type="button">
+<span class="material-symbols-outlined text-[19px]">forum</span>
+<span>Student Discussion</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface font-semibold text-[11px]">18</span>
+</button>
+</div>
+<!-- Sub Tab 1: Overview & Key Concepts (Default Visible) -->
+<div class="p-space-lg flex flex-col gap-space-lg" id="subtab-content-overview">
+<!-- Bilingual Synopsis Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg font-bold">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span>Lesson Synopsis • පාඩමේ සාරාංශය</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              In this session, Eng. Kusal Senaratne examines first-order separable differential equations with real-world applications to biological population dynamics. We derive the famous <strong>Verhulst Logistic Equation</strong>, contrasting exponential Malthusian growth with carrying capacity limits (<span class="font-mono text-primary font-semibold">K</span>) under finite regional resources.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              මෙහිදී සම්පත් සීමා සහිත පරිසරයක සිදුවන ගහන වර්ධනය ආදර්ශනය කිරීම සඳහා වන වර්හුල්ස්ට් ලොජිස්ටික් සමීකරණය (<span class="font-mono text-on-surface font-semibold">dP/dt = kP(1 - P/K)</span>) සාකච්ඡා කෙරේ. විශේෂයෙන් 2021 සහ 2018 විභාග ප්‍රශ්න පත්‍රවල අනුකලනය හා අර්ධ භාග යෙදීම් ගැටලු පියවරෙන් පියවර මෙහිදී විසඳනු ලැබේ.
+            </p>
+</div>
+<!-- Synchronized Video Timestamps / Bookmarks -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title text-title font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">timelapse</span>
+                Synchronized Video Timestamps (ප්‍රධාන මාතෘකා)
+              </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Click timecode to jump</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<button class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors text-left shadow-sm" type="button">
+<span class="px-2 py-1 rounded bg-surface-container-highest text-primary font-mono font-bold text-xs">00:00</span>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">1. Introduction to Population Growth Models</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Exponential vs constrained environmental growth review.</div>
+</div>
+</button>
+<button class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors text-left shadow-sm" type="button">
+<span class="px-2 py-1 rounded bg-surface-container-highest text-primary font-mono font-bold text-xs">18:20</span>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">2. Derivation of Carrying Capacity Formula</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Physical significance of constant K and saturation limit.</div>
+</div>
+</button>
+<button class="flex items-start gap-3 p-3 rounded-lg bg-primary/10 text-left shadow-sm" type="button">
+<span class="px-2 py-1 rounded bg-primary text-on-primary font-mono font-bold text-xs">42:15</span>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-primary truncate flex items-center gap-1.5">
+<span>3. Variable Separation Technique</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container text-on-primary text-[10px] font-bold">PLAYING</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Resolution into partial fractions: 1 / [P(K - P)].</div>
+</div>
+</button>
+<button class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors text-left shadow-sm" type="button">
+<span class="px-2 py-1 rounded bg-surface-container-highest text-primary font-mono font-bold text-xs">1:12:40</span>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">4. 2021 A/L Past Paper Model Question</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Colombo District structured marking scheme breakdown.</div>
+</div>
+</button>
+</div>
+</div>
+<!-- Quick Exam Alert Callout -->
+<div class="p-space-md rounded-xl bg-tertiary-fixed/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[24px] mt-0.5">notification_important</span>
+<div class="space-y-1">
+<h4 class="font-label-lg text-label-lg font-bold text-on-tertiary-fixed">Apex Exam Tip • 2025 Paper Analysis</h4>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Remember: When solving partial fractions with constants <span class="font-mono font-bold">K</span>, do NOT treat <span class="font-mono font-bold">K</span> as a variable. Pull <span class="font-mono font-bold">1/K</span> out of the integration symbol before taking natural logarithms to secure all 15 method marks!
+              </p>
+</div>
+</div>
+</div>
+<!-- Sub Tab 2: LaTeX Mathematical Proofs -->
+<div class="hidden p-space-lg flex flex-col gap-space-lg" id="subtab-content-proofs">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title text-title font-bold text-on-surface">Rigorous Step-by-Step Mathematical Derivations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Official syllabus derivation notation for G.C.E. A/L Combined Mathematics Paper I</p>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Copy LaTeX
+            </button>
+</div>
+<!-- Formula Step 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">Step 1: The General Logistic Growth Differential Form</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">Eq 34.1a</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest font-mono text-lg text-center text-on-surface overflow-x-auto">
+              \[ \frac{dP}{dt} = k P \left(1 - \frac{P}{K}\right) = \frac{k}{K} P (K - P) \]
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Here, \(P(t)\) denotes the population at time \(t\), \(k &gt; 0\) is the intrinsic growth rate parameter, and \(K\) is the carrying capacity of the environment.
+            </p>
+</div>
+<!-- Formula Step 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">Step 2: Separation of Variables and Partial Fractions</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">Eq 34.1b</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest font-mono text-lg text-center text-on-surface overflow-x-auto space-y-2">
+<div>\[ \int \frac{dP}{P(K - P)} = \int \frac{k}{K} dt \]</div>
+<div class="text-base text-primary font-bold">\[ \frac{1}{K} \int \left( \frac{1}{P} + \frac{1}{K - P} \right) dP = \frac{k}{K} \int dt \]</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Multiplying both sides by \(K\) eliminates the constant multiplier:
+            </p>
+<div class="p-3 rounded-lg bg-surface-container-lowest font-mono text-sm text-center text-on-surface">
+              \[ \ln|P| - \ln|K - P| = kt + C \implies \ln \left| \frac{P}{K - P} \right| = kt + C \]
+            </div>
+</div>
+<!-- Formula Step 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">Step 3: Boundary Condition Application &amp; Explicit Solution</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">Final Closed Form</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest font-mono text-lg text-center text-primary-container font-bold overflow-x-auto">
+              \[ P(t) = \frac{K}{1 + \left( \frac{K - P_0}{P_0} \right) e^{-kt}} \]
+            </div>
+<div class="flex items-center gap-2 text-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>As \(t \to \infty\), \(e^{-kt} \to 0\), leading naturally to \(P(t) \to K\), establishing the asymptotic ceiling.</span>
+</div>
+</div>
+</div>
+<!-- Sub Tab 3: PDF Handout In-Browser DRM View -->
+<div class="hidden p-space-lg flex flex-col gap-space-md" id="subtab-content-handout">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">description</span>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Apex_Combined_Maths_Theory_Unit03_2025.pdf</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Page 14 of 24 • DRM Signed for Kavindu Nirmal Perera (SL-LRN-89401)</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded bg-surface-container text-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" type="button">Previous Page</button>
+<span class="font-mono text-label-sm text-label-sm px-2">14 / 24</span>
+<button class="px-3 py-1 rounded bg-surface-container text-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" type="button">Next Page</button>
+<button class="p-1 rounded bg-surface-container text-on-surface" title="Zoom In" type="button"><span class="material-symbols-outlined text-[18px]">zoom_in</span></button>
+<button class="p-1 rounded bg-surface-container text-on-surface" title="Zoom Out" type="button"><span class="material-symbols-outlined text-[18px]">zoom_out</span></button>
+</div>
+</div>
+<!-- Document Render Area Simulation -->
+<div class="w-full h-96 rounded-xl bg-surface-container p-6 relative overflow-hidden flex flex-col items-center justify-center text-center shadow-inner">
+<div class="absolute inset-0 bg-[radial-gradient(#d0dbee_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+<!-- Diagonal Watermark Across Handout -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-10 select-none">
+<span class="font-bold text-4xl lg:text-6xl text-on-surface transform -rotate-45 tracking-widest font-mono">
+                SL-LRN-89401 • APEX ACADEMY
+              </span>
+</div>
+<!-- PDF Page Card Content -->
+<div class="relative z-10 max-w-lg bg-surface-container-lowest p-6 rounded-lg shadow-md space-y-3 text-left">
+<div class="flex items-center justify-between border-b pb-2 border-surface-container">
+<span class="font-title text-title font-bold text-on-surface">Unit 03: Section 4.3</span>
+<span class="font-mono text-label-sm text-label-sm text-primary">Sri Lanka A/L Exam Prep</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+<strong>Exercise 34.C:</strong> A bacterial culture in a laboratory tank grows at a rate proportional to its current population and the available remaining nutrient volume. If the initial count is 200 units and reaches 800 units in 3 hours with a maximum capacity of 5,000 units...
+              </p>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Model Q 2021 [Mark: 25]</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold">Solution Attached in Appendix B</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub Tab 4: Student Discussion (18) -->
+<div class="hidden p-space-lg flex flex-col gap-space-lg" id="subtab-content-discussion">
+<div class="flex items-center justify-between">
+<h3 class="font-title text-title font-bold text-on-surface">Live Batch Doubt Clearings (18 Queries)</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+              Tutor Assistant Active
+            </span>
+</div>
+<!-- Add comment input -->
+<div class="flex gap-3">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs shrink-0">
+              KN
+            </div>
+<div class="flex-1 flex flex-col gap-2">
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-primary h-20 resize-none" placeholder="Ask your question regarding Lesson 34 (English or සිංහලෙන්)..."></textarea>
+<div class="flex justify-between items-center">
+<span class="text-xs text-on-surface-variant">Include timestamp automatically with "@time"</span>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-colors" type="button">
+                  Post Question
+                </button>
+</div>
+</div>
+</div>
+<!-- Existing Comments -->
+<div class="space-y-4 pt-2">
+<!-- Comment 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Nethmi Sandali De Silva</span>
+<span class="text-xs text-on-surface-variant font-mono">• 2 hours ago</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-mono text-[11px] font-bold">@42:15</span>
+</div>
+<span class="text-xs text-tertiary font-semibold">Batch 2025 Colombo</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                Sir, 42:15 දී partial fractions වෙන් කරද්දී 1/K එළියට ගන්න එක විභාගෙදි අනිවාර්යයෙන්ම පෙන්වන්න ඕනෙද? නැත්නම් කෙලින්ම logarithm formula එක ලියන්න පුළුවන්ද?
+              </p>
+<!-- Reply from TA -->
+<div class="mt-2 ml-4 pl-3 border-l-2 border-primary space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-primary">Eng. Janaka Bandara (Apex TA)</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container text-on-primary text-[10px] font-semibold">INSTRUCTOR VERIFIED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  නෙත්මි, අනිවාර්යයෙන්ම 1/K එළියට ගන්න පියවර ලියන්න ඕනේ. Marking scheme එකේ 'M1' (Method Mark) එක ලැබෙන්නේ අර්ධ භාග වලට වෙන් කළ ආකාරය පැහැදිලිව පෙන්වූ විට පමණි.
+                </p>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Raveen Wickramasinghe</span>
+<span class="text-xs text-on-surface-variant font-mono">• 5 hours ago</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-mono text-[11px] font-bold">@1:14:00</span>
+</div>
+<span class="text-xs text-on-surface-variant font-semibold">Gampaha Center</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                Could someone clarify if the 2021 A/L model question uses initial condition P(0) = K/4 or K/2? In my student tutorial it's printed slightly blurred.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT SIDEBAR COLUMN: Curriculum + Gemini AI Copilot (approx 30%) -->
+<div class="lg:col-span-4 xl:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- Interactive Sidebar Tab Headers -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="grid grid-cols-2 p-1.5 bg-surface-container-low rounded-t-xl gap-1">
+<button class="sidebar-tab-btn py-2.5 px-3 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm transition-all flex items-center justify-center gap-1.5" id="tab-nav-curriculum" onclick="switchSidebarTab('curriculum')" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+<span>Curriculum (50)</span>
+</button>
+<button class="sidebar-tab-btn py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-1.5" id="tab-nav-copilot" onclick="switchSidebarTab('copilot')" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span>
+<span>AI Copilot v2.5</span>
+</button>
+</div>
+<!-- TAB CONTENT: Curriculum Tree -->
+<div class="p-space-md flex flex-col gap-space-md max-h-[820px] overflow-y-auto" id="sidebar-curriculum-content">
+<!-- Overall Progress Box -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Batch Progress (Apex 2025 Theory)</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">84% (42/50 Completed)</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 84%"></div>
+</div>
+</div>
+<!-- Module Accordion List -->
+<div class="space-y-2">
+<!-- Module 01 (Completed) -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<button class="w-full p-3 flex items-center justify-between text-left hover:bg-surface-container transition-colors" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Module 01: Foundations &amp; Polynomials</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6/6 ✓</span>
+</button>
+</div>
+<!-- Module 02 (Completed) -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<button class="w-full p-3 flex items-center justify-between text-left hover:bg-surface-container transition-colors" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Module 02: Trigonometric Circular Systems</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8/8 ✓</span>
+</button>
+</div>
+<!-- Module 03 (Current Active Module) -->
+<div class="rounded-lg bg-surface-container-low border-2 border-primary/20 overflow-hidden">
+<button class="w-full p-3 flex items-center justify-between text-left bg-surface-container font-label-md text-label-md font-bold text-primary" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_open</span>
+<span>Module 03: Differential Calculus</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary">8/10</span>
+</button>
+<!-- Lessons in Module 03 -->
+<div class="p-2 space-y-1 bg-surface-container-lowest">
+<!-- Lesson 32 (Completed) -->
+<a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low text-on-surface-variant transition-colors text-xs" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+<span class="truncate">Lesson 32: Rate of Change Word Problems</span>
+</div>
+<span class="font-mono text-[11px] shrink-0 text-outline">1h 32m</span>
+</a>
+<!-- Lesson 33 (Completed) -->
+<a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low text-on-surface-variant transition-colors text-xs" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+<span class="truncate">Lesson 33: First Order Separable Forms</span>
+</div>
+<span class="font-mono text-[11px] shrink-0 text-outline">1h 45m</span>
+</a>
+<!-- Lesson 34 (Active - Playing) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-primary/10 text-primary font-semibold text-xs border-l-4 border-primary">
+<div class="flex items-center gap-2 min-w-0">
+<div class="flex items-end gap-0.5 h-3 shrink-0">
+<span class="w-1 bg-primary h-full animate-bounce"></span>
+<span class="w-1 bg-primary h-2/3 animate-bounce [animation-delay:0.15s]"></span>
+<span class="w-1 bg-primary h-full animate-bounce [animation-delay:0.3s]"></span>
+</div>
+<span class="truncate text-on-surface font-bold">Lesson 34: Population Dynamics</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-mono text-[10px] shrink-0">NOW</span>
+</div>
+<!-- Lesson 35 (Locked) -->
+<div class="flex items-center justify-between p-2 rounded-lg text-on-surface-variant/60 text-xs">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-outline text-[16px]">lock</span>
+<span class="truncate">Lesson 35: Fluid Dynamics &amp; Torricelli's Law</span>
+</div>
+<span class="font-mono text-[11px] shrink-0">2h 05m</span>
+</div>
+<!-- Lesson 36 (Locked) -->
+<div class="flex items-center justify-between p-2 rounded-lg text-on-surface-variant/60 text-xs">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-outline text-[16px]">lock</span>
+<span class="truncate">Lesson 36: Unit 03 Timed Mock Evaluation</span>
+</div>
+<span class="font-mono text-[11px] shrink-0">3h 00m</span>
+</div>
+</div>
+</div>
+<!-- Module 04 (Upcoming) -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden opacity-75">
+<button class="w-full p-3 flex items-center justify-between text-left" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">lock</span>
+<span class="font-label-md text-label-md font-medium text-on-surface">Module 04: Integral Calculus &amp; Volumes</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0/12</span>
+</button>
+</div>
+<!-- Module 05 (Upcoming) -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden opacity-75">
+<button class="w-full p-3 flex items-center justify-between text-left" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">lock</span>
+<span class="font-label-md text-label-md font-medium text-on-surface">Module 05: Applied Mechanics (Statics)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0/8</span>
+</button>
+</div>
+</div>
+<!-- Tutor Office Hours Alert -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div class="text-xs">
+<div class="font-bold text-on-surface">Tutor Live Q&amp;A Room</div>
+<div class="text-on-surface-variant">Today at 7:30 PM SLST via Zoom</div>
+</div>
+<button class="ml-auto px-2 py-1 rounded bg-primary text-on-primary text-[11px] font-semibold" type="button">Join</button>
+</div>
+</div>
+<!-- TAB CONTENT: Gemini AI Math Copilot -->
+<div class="hidden p-space-md flex flex-col gap-3" id="sidebar-copilot-content">
+<!-- Copilot Header Banner -->
+<div class="p-3 rounded-lg bg-gradient-to-r from-primary-container via-primary to-on-secondary-fixed text-on-primary flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">auto_awesome</span>
+<div>
+<div class="font-label-md text-label-md font-bold leading-tight">Gemini AI Academic Copilot</div>
+<div class="text-[11px] text-surface-container-highest/80 font-mono">Trained on Sri Lanka Combined Maths Syllabus</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider">v2.5 Flash</span>
+</div>
+<!-- Interactive Chat Message Area -->
+<div class="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+<!-- Student Query Bubble -->
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span>Kavindu Nirmal</span>
+<span class="text-primary font-mono">@43:20</span>
+</div>
+<div class="p-3 rounded-2xl rounded-tr-sm bg-primary-container text-on-primary font-body-sm text-body-sm max-w-[90%] shadow-sm">
+                How do we resolve the partial fractions \(\frac{1}{P(K-P)}\) quickly during exam pressure?
+              </div>
+</div>
+<!-- Gemini Response Bubble (Bilingual + LaTeX) -->
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-center gap-1.5 text-xs text-tertiary font-bold">
+<span class="material-symbols-outlined text-[15px]">auto_awesome</span>
+<span>Gemini Academic Solver</span>
+<span class="font-normal text-on-surface-variant font-mono">• Just now</span>
+</div>
+<div class="p-3.5 rounded-2xl rounded-tl-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm space-y-2.5 max-w-[96%] shadow-sm">
+<p>
+                  Here is the quick <strong>Cover-Up Rule</strong> method for resolving \(\frac{1}{P(K-P)}\):
+                </p>
+<!-- Equation Card -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest font-mono text-xs text-primary font-bold text-center">
+                  \[ \frac{1}{P(K-P)} = \frac{1}{K}\left( \frac{1}{P} + \frac{1}{K-P} \right) \]
+                </div>
+<p class="text-on-surface-variant text-[13px] leading-relaxed">
+<strong>Sinhala Explanation (සිංහලෙන්):</strong><br/>
+                  මෙහිදී ලවයේ \(1\) වෙනුවට \(\frac{(K - P) + P}{K}\) යොදාගැනීමෙන් තත්පර 10කින් අර්ධ භාග වෙන් කළ හැක:
+                </p>
+<div class="p-2 rounded bg-surface-container-lowest text-[11px] font-mono text-on-surface space-y-1">
+<div>\(\frac{1}{K} \left[ \frac{K-P}{P(K-P)} + \frac{P}{P(K-P)} \right]\)</div>
+<div>\(= \frac{1}{K}\left( \frac{1}{P} + \frac{1}{K-P} \right)\)</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1 text-emerald-700">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Refer Lesson 34 @ 44:02 for chalkboard proof
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Copilot Query Input -->
+<div class="pt-2">
+<div class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low focus-within:ring-2 focus-within:ring-primary shadow-inner">
+<span class="material-symbols-outlined text-primary text-[20px] ml-1">psychology</span>
+<input class="flex-1 bg-transparent text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Ask a doubt in English or සිංහල..." type="text"/>
+<button class="p-2 rounded-lg bg-primary text-on-primary hover:bg-primary/90 transition-colors shadow-sm" title="Send to Gemini" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant px-1 mt-1">
+<span>Supports handwritten photo uploads &amp; LaTeX formulas</span>
+<button class="text-primary hover:underline font-semibold" type="button">Attach Photo</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Tutor Note & Instructor Verification Card -->
+<div class="w-full p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center font-bold text-primary text-lg shadow-sm">
+            KS
+          </div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Eng. Kusal Senaratne</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Apex Combined Mathematics Faculty Chair</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs text-on-surface-variant leading-relaxed">
+          “Students must practice the 1999–2024 Differential Equation past paper bank before attending next Tuesday's live speed revision paper.”
+        </div>
+<div class="flex items-center justify-between text-xs pt-1">
+<a class="text-primary font-semibold hover:underline" href="#">View 2025 Paper Bank (PDF)</a>
+<span class="text-outline-variant">•</span>
+<a class="text-on-surface-variant hover:text-on-surface" href="#">Book 1-on-1 Office Hour</a>
+</div>
+</div>
+</div>
+</div>
+<!-- STICKY BOTTOM COMPLETION & ACTION BAR -->
+<section class="sticky bottom-0 z-40 w-full bg-surface-container-lowest/95 backdrop-blur-md py-3 px-space-md lg:px-margin shadow-[0_-4px_16px_rgba(7,27,74,0.08)] border-t border-surface-container">
+<div class="max-w-[1720px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- Current Lesson Status Info -->
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-bold text-on-surface truncate">Lesson 34 Progress: 42m of 1h 48m watched</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span>Minimum 80% watch time required for completion mark</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">quiz</span>
+<span>5-Question Concept Check</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary/90 text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all" type="button">
+<span>Mark as Complete &amp; Next Lesson</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function switchSubTab(tabId) {
+    const tabs = ['overview', 'proofs', 'handout', 'discussion'];
+    tabs.forEach(t => {
+      const content = document.getElementById('subtab-content-' + t);
+      const btn = document.getElementById('tab-btn-' + t);
+      if (content && btn) {
+        if (t === tabId) {
+          content.classList.remove('hidden');
+          btn.classList.add('border-primary', 'text-primary', 'font-semibold');
+          btn.classList.remove('border-transparent', 'text-on-surface-variant');
+        } else {
+          content.classList.add('hidden');
+          btn.classList.remove('border-primary', 'text-primary', 'font-semibold');
+          btn.classList.add('border-transparent', 'text-on-surface-variant');
+        }
+      }
+    });
+  }
+
+  function switchSidebarTab(tabName) {
+    const curriculumContent = document.getElementById('sidebar-curriculum-content');
+    const copilotContent = document.getElementById('sidebar-copilot-content');
+    const curriculumBtn = document.getElementById('tab-nav-curriculum');
+    const copilotBtn = document.getElementById('tab-nav-copilot');
+
+    if (tabName === 'curriculum') {
+      curriculumContent.classList.remove('hidden');
+      copilotContent.classList.add('hidden');
+      curriculumBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+      curriculumBtn.classList.remove('text-on-surface-variant');
+      copilotBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+      copilotBtn.classList.add('text-on-surface-variant');
+    } else {
+      curriculumContent.classList.add('hidden');
+      copilotContent.classList.remove('hidden');
+      copilotBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+      copilotBtn.classList.remove('text-on-surface-variant');
+      curriculumBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+      curriculumBtn.classList.add('text-on-surface-variant');
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-low py-space-lg shadow-[0_-1px_6px_rgba(7,27,74,0.03)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">MindBridge Enterprise LMS © 2025</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">Institutional Tenant: Apex Combined Mathematics Academy (Colombo)</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span>HD 1080p Stream Active</span><a class="hover:text-primary transition-colors" data-path="student-grades" href="#">Transcript &amp; Ranks</a><a class="hover:text-primary transition-colors" data-path="support-desk" href="#">Technical Support (Sri Lanka UTC+5:30)</a></div></div></footer></body></html>

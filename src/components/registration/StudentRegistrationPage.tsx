@@ -53,9 +53,11 @@ export const StudentRegistrationPage: React.FC<StudentRegistrationPageProps> = (
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [serverError, setServerError] = useState<{ message: string; details?: string } | null>(
-    null
-  );
+  const [serverError, setServerError] = useState<{
+    code?: string;
+    message: string;
+    details?: string;
+  } | null>(null);
 
   const strength = evaluatePasswordStrength(password);
 
@@ -108,7 +110,7 @@ export const StudentRegistrationPage: React.FC<StudentRegistrationPageProps> = (
       });
 
       if (!result.ok) {
-        setServerError({ message: result.message, details: result.details });
+        setServerError({ code: result.code, message: result.message, details: result.details });
       }
     } finally {
       setIsSubmitting(false);
@@ -238,14 +240,31 @@ export const StudentRegistrationPage: React.FC<StudentRegistrationPageProps> = (
               <div
                 role="alert"
                 className={`p-4 rounded-xl border text-xs space-y-1 ${
-                  isDark
-                    ? 'bg-amber-950/40 border-amber-500/40 text-amber-200'
-                    : 'bg-amber-50 border-amber-300 text-amber-900'
+                  serverError.code === 'FIREBASE_NOT_CONFIGURED' ||
+                  serverError.code === 'BACKEND_API_NOT_CONFIGURED'
+                    ? isDark
+                      ? 'bg-amber-950/40 border-amber-500/40 text-amber-200'
+                      : 'bg-amber-50 border-amber-300 text-amber-900'
+                    : isDark
+                      ? 'bg-red-950/40 border-red-500/40 text-red-200'
+                      : 'bg-red-50 border-red-300 text-red-900'
                 }`}
               >
                 <div className="font-bold flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-[18px]">info</span>
-                  <span>Live Backend &amp; Firebase Integration Required</span>
+                  <span className="material-symbols-outlined text-[18px]">
+                    {serverError.code === 'FIREBASE_NOT_CONFIGURED' ||
+                    serverError.code === 'BACKEND_API_NOT_CONFIGURED'
+                      ? 'info'
+                      : 'error'}
+                  </span>
+                  <span>
+                    {serverError.code === 'FIREBASE_NOT_CONFIGURED' ||
+                    serverError.code === 'BACKEND_API_NOT_CONFIGURED'
+                      ? 'Live Backend & Firebase Integration Required'
+                      : serverError.code === 'NETWORK_ERROR'
+                        ? 'Backend Connection Error'
+                        : 'Registration Failed'}
+                  </span>
                 </div>
                 <p>{serverError.message}</p>
                 {serverError.details && <p className="opacity-80">{serverError.details}</p>}

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#a4c8ff",
+          "surface-container-low": "#151b2b",
+          "inverse-primary": "#005fad",
+          "on-secondary-fixed": "#2a1700",
+          "outline": "#8a919e",
+          "on-primary-fixed": "#001c3a",
+          "surface-variant": "#2f3445",
+          "inverse-surface": "#dde2f8",
+          "secondary-fixed": "#ffddb8",
+          "on-error-container": "#ffdad6",
+          "surface-container-highest": "#2f3445",
+          "surface-tint": "#a4c8ff",
+          "tertiary-fixed": "#6ffbbe",
+          "on-tertiary-fixed": "#002113",
+          "on-tertiary-container": "#003623",
+          "outline-variant": "#404753",
+          "primary-container": "#3898ff",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-tertiary": "#003824",
+          "surface-container": "#191f2f",
+          "secondary-fixed-dim": "#ffb95f",
+          "on-secondary": "#472a00",
+          "on-primary-fixed-variant": "#004784",
+          "surface-bright": "#33394a",
+          "on-surface": "#dde2f8",
+          "background": "#080e1d",
+          "on-secondary-container": "#5b3800",
+          "on-background": "#dde2f8",
+          "tertiary-container": "#00ab76",
+          "surface": "#0d1322",
+          "on-primary": "#00315e",
+          "inverse-on-surface": "#2a3040",
+          "on-error": "#690005",
+          "on-surface-variant": "#c0c7d5",
+          "secondary": "#ffb95f",
+          "primary-fixed-dim": "#a4c8ff",
+          "error": "#ffb4ab",
+          "surface-container-lowest": "#0d1322",
+          "tertiary": "#4edea3",
+          "on-tertiary-fixed-variant": "#005236",
+          "secondary-container": "#ee9800",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-primary-container": "#002f5b",
+          "surface-dim": "#0d1322",
+          "error-container": "#93000a",
+          "surface-container-high": "#1e2638",
+          "primary-fixed": "#d4e3ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2rem",
+          "margin": "2rem",
+          "space-2xl": "3rem",
+          "space-3xl": "4rem",
+          "margin-mobile": "1rem",
+          "space-2xs": "0.125rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "display-lg-mobile": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"],
+          "display-lg": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }],
+          "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }],
+          "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+          "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+          "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }],
+          "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }],
+          "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }]
+        }
+      },
+    },
+  }</script></head><body class="bg-[#080e1d] font-body-md text-[#f1f5f9] antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-[#0d1322]/95 backdrop-blur-xl border-b border-[#1f283d] shadow-[0_4px_20px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-space-xl flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain brightness-110" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] text-[#f1f5f9] leading-tight tracking-tight font-bold">MindBridge <span class="text-primary-container">LMS</span></span><span class="font-label-sm text-[11px] text-[#94a3b8] font-medium tracking-normal">Learn • Manage • Achieve</span></div></div><div class="h-8 w-[1px] bg-[#1f283d] mx-space-xs hidden md:block"></div><div class="relative hidden lg:block"><button class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg bg-[#151b2b] hover:bg-[#1e2638] text-[#f1f5f9] transition-all text-left border border-[#1f283d]" type="button"><div class="w-7 h-7 rounded-lg bg-primary-container text-[#002f5b] flex items-center justify-center font-bold text-sm"><span class="material-symbols-outlined text-[18px]">domain</span></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-primary-container font-semibold uppercase tracking-wider">Active Academy</span><span class="font-label-lg text-label-lg text-[#f1f5f9] flex items-center gap-space-xs">Apex Combined Mathematics <span class="material-symbols-outlined text-[#8a919e] text-[18px]">expand_more</span></span></div></button></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-[#151b2b] border border-[#1f283d] text-[#ffb95f] font-label-md text-label-md"><span class="material-symbols-outlined text-[#ffb95f] text-[16px]">schedule</span><span>SLST 14:40</span></div><div class="hidden md:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-[#1e2638] border border-[#f59e0b]/30 text-[#f59e0b] font-label-md text-label-md shadow-sm"><span class="material-symbols-outlined text-[#f59e0b] text-[18px]">local_fire_department</span><span class="font-semibold">14-Day Streak</span><span class="text-[#404753]">•</span><span class="font-medium text-[#ffd08a]">1,420 XP</span></div><div class="hidden sm:flex items-center rounded-lg bg-[#151b2b] border border-[#1f283d] p-space-xs"><button class="px-space-sm py-space-xs rounded-lg bg-primary-container font-label-sm text-label-sm text-[#002f5b] font-bold shadow-sm" type="button">EN</button><button class="px-space-sm py-space-xs rounded-lg text-[#94a3b8] hover:text-[#f1f5f9] font-label-sm text-label-sm font-medium transition-colors" type="button">සිංහල</button></div><div class="relative"><button class="relative p-space-sm rounded-lg text-[#94a3b8] hover:bg-[#1e2638] hover:text-[#f1f5f9] transition-all" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error-container text-[#ffdad6] font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button></div><div class="h-8 w-[1px] bg-[#1f283d] hidden sm:block"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-lg text-label-lg text-[#f1f5f9] leading-tight">Kavindu Nirmal Perera</span><span class="font-label-sm text-label-sm text-[#94a3b8]">A/L 2025 Science • SL-LRN-89401</span></div><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-[#002f5b] shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-0 h-full w-72 bg-[#0d1322] border-r border-[#1f283d] z-40 flex flex-col pt-24 pb-space-lg shadow-xl"><div class="px-space-lg pb-space-md"><div class="p-space-sm rounded-lg bg-[#151b2b] border border-[#1f283d]"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-[#94a3b8] font-medium">Enrolled Tenant</span><span class="w-2 h-2 rounded-full bg-primary-container"></span></div><div class="font-label-lg text-label-lg text-[#f1f5f9] font-semibold truncate mt-space-xs">Apex Combined Mathematics</div><div class="font-label-sm text-label-sm text-[#ffb95f] truncate">Eng. Kusal Senaratne</div><div class="font-label-sm text-[10px] text-[#64748b] truncate mt-space-xs">apex-maths.mindbridge.lk</div></div></div><nav class="flex-1 px-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-[#002f5b] font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Overview / My Learning Hub</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>My Enrolled Courses</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="live-classes" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">podium</span><span>Live Virtual Classes</span></div><span class="px-space-xs py-0.5 rounded-full bg-error-container text-[#ffdad6] font-label-sm text-[10px] font-bold uppercase tracking-wider animate-pulse">LIVE</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments &amp; Homework</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="quizzes" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Quizzes &amp; Mock Exams</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="doubt-solver" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-primary-container">smart_toy</span><span>Doubt Solver</span></div><span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary font-label-sm text-[10px] font-bold border border-primary/20">Gemini</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Bank Slips &amp; Receipts</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-[#94a3b8] hover:bg-[#151b2b] hover:text-[#f1f5f9] transition-all font-body-md text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined text-[20px]">workspace_premium</span><span>Certificates &amp; Badges</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg bg-primary-container text-[#002f5b] font-semibold transition-all font-body-md text-body-md" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Profile &amp; Preferences</span></a></nav><div class="px-space-lg pt-space-sm"><div class="p-space-sm rounded-lg bg-[#151b2b] border border-[#1f283d] text-center"><div class="flex items-center justify-center gap-space-xs text-[#8a919e] font-label-sm text-label-sm mb-space-xs"><span class="material-symbols-outlined text-[14px]">verified_user</span><span>Universal Learner Pass</span></div><div class="font-label-sm text-[10px] text-[#94a3b8] leading-tight">Schema LK-CENTRAL-04 • Verified</div></div></div></aside><div class="pl-72"><main class="w-full min-h-screen pt-20 px-space-xl pb-space-xl bg-[#080e1d]"><div class="flex flex-col w-full space-y-space-xl">
+<!-- ========================================== -->
+<!-- 1. STUDENT PROFILE MASTER HEADER & SUMMARY -->
+<!-- ========================================== -->
+<section class="w-full bg-[#151b2b] border border-[#1f283d] rounded-xl shadow-lg p-space-lg relative overflow-hidden">
+<!-- Asymmetric subtle accent top-right arch bridge element -->
+<div class="absolute -top-16 -right-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-start justify-between gap-space-lg relative z-10">
+<!-- Student Identity Block -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover shadow-md border border-[#1f283d]" data-alt="Editorial candid portrait of an 18-year-old Sri Lankan male student wearing neat high school collegiate attire, soft natural window light, crisp clarity, professional student photo with confident subtle smile, cinematic modern university background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGiLRREj3pnFJ-ePNNDcLAXwTVvgjEZtp0RRamKIyD3Dd86_8gF0PynwLLF6lYZw_TeWWFXRrMRqhzJryUMX45kUvFgWvmONJXwxtBKMpQntE6tNtkPBVzB6v7dD68q7ciXGsaH5xwIpfyTBtGuiBt-7WBPRIFcCgW2NPOod9ugXPSX4a5QTPCYYo0olELDhuse4efBvSNqOAP4Ew0_oLqZaZ07YQyye9jUYX8Neg"/>
+<div class="absolute -bottom-1 -right-1 bg-[#0d1322] border border-[#1f283d] p-1 rounded-full shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-primary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 space-y-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-[#f1f5f9] font-bold tracking-tight">Kavindu Nirmal Perera</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary border border-primary/20 font-label-sm text-label-sm font-semibold tracking-wide">
+              සිංහල මාධ්‍ය • Sinhala Medium
+            </span>
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-[#94a3b8] border border-[#1f283d] font-label-sm text-label-sm">
+              Batch A (Theory + Revision)
+            </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-[#94a3b8] font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-container">school</span>
+              Royal College, Colombo 07
+            </span>
+<span class="text-[#404753]">•</span>
+<span class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm uppercase text-[#8a919e]">NIC:</span>
+<span class="font-medium text-[#f1f5f9] font-mono">200518902144</span>
+</span>
+<span class="text-[#404753]">•</span>
+<span class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm uppercase text-[#8a919e]">Index:</span>
+<span class="font-medium text-[#f1f5f9] font-mono">SL-LRN-89401</span>
+</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 pt-1 font-body-sm text-body-sm text-[#ffb95f]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">target</span>
+              Target: <strong class="text-[#f1f5f9] font-medium">UoM Faculty of Engineering</strong>
+</span>
+<span class="text-[#404753]">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-[#8a919e]">supervisor_account</span>
+              Guardian: Dr. H. M. Perera (+94 77 •••• 921)
+            </span>
+</div>
+</div>
+</div>
+<!-- Action Utilities -->
+<div class="flex flex-wrap items-center gap-space-xs xl:flex-col xl:items-end justify-start">
+<div class="flex items-center gap-space-xs">
+<button class="h-10 px-space-md rounded-lg bg-primary-container hover:bg-primary-container/90 text-[#002f5b] font-label-lg text-label-lg font-semibold transition-colors shadow-sm flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Official Transcript (PDF)</span>
+</button>
+<button class="h-10 px-space-sm rounded-lg bg-[#1e2638] hover:bg-[#2f3445] text-[#f1f5f9] border border-[#1f283d] font-label-lg text-label-lg transition-colors flex items-center justify-center" title="Print Marks Card" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="h-10 px-space-sm rounded-lg bg-[#1e2638] hover:bg-[#2f3445] text-[#f1f5f9] border border-[#1f283d] font-label-lg text-label-lg transition-colors flex items-center justify-center" title="Profile Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-[#94a3b8] font-label-sm text-label-sm mt-1">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Parent WhatsApp Sync: <strong class="text-[#f1f5f9] font-semibold">Active</strong> (077••••921)</span>
+</div>
+</div>
+</div>
+<!-- Island & District Standings Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-lg pt-space-lg bg-[#0d1322] border border-[#1f283d] rounded-xl p-space-md">
+<!-- Metric 1: District Rank -->
+<div class="flex flex-col space-y-1">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase tracking-wider font-semibold">Colombo District Rank</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-primary-container font-bold">#14</span>
+<span class="font-body-sm text-body-sm text-[#94a3b8]">/ 428 Batch</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> Top 3.2% in District
+        </span>
+</div>
+<!-- Metric 2: Island Percentile -->
+<div class="flex flex-col space-y-1">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase tracking-wider font-semibold">Island-Wide Percentile</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-[#f1f5f9] font-bold">98.4%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-[#003824] text-[#4edea3] border border-[#4edea3]/30 font-semibold">A* Tier</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#ffb95f] font-medium">Top 1.6% across Sri Lanka</span>
+</div>
+<!-- Metric 3: Weighted Grade -->
+<div class="flex flex-col space-y-1">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase tracking-wider font-semibold">Weighted Aggregate</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-[#f1f5f9] font-bold">91.8%</span>
+<span class="font-body-sm text-body-sm text-[#8a919e] font-medium">Distinction</span>
+</div>
+<div class="w-full bg-[#1e2638] rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 91.8%"></div>
+</div>
+</div>
+<!-- Metric 4: Projected Z-Score -->
+<div class="flex flex-col space-y-1">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase tracking-wider font-semibold">Projected Z-Score</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-[#10b981] font-bold font-mono">2.1840</span>
+<span class="material-symbols-outlined text-[#10b981] text-[18px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#94a3b8] font-medium">
+          Cutoff target: <strong class="text-[#f1f5f9] font-semibold">UoM Eng (1.985+)</strong>
+</span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 2. NAVIGATION TABS & FILTER BAR            -->
+<!-- ========================================== -->
+<section class="w-full flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Tab Controls -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0">
+<button class="px-space-md py-space-sm rounded-lg bg-primary-container text-[#002f5b] font-label-lg text-label-lg font-semibold shadow-sm whitespace-nowrap flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+<span>Overview &amp; Analytics</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-[#151b2b] hover:bg-[#1e2638] text-[#94a3b8] hover:text-[#f1f5f9] border border-[#1f283d] font-label-lg text-label-lg font-medium transition-colors whitespace-nowrap flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment</span>
+<span>Exams &amp; Quizzes <span class="text-[#64748b] font-normal">(12)</span></span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-[#151b2b] hover:bg-[#1e2638] text-[#94a3b8] hover:text-[#f1f5f9] border border-[#1f283d] font-label-lg text-label-lg font-medium transition-colors whitespace-nowrap flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">task</span>
+<span>Homework &amp; Drills <span class="text-[#64748b] font-normal">(18)</span></span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-[#151b2b] hover:bg-[#1e2638] text-[#94a3b8] hover:text-[#f1f5f9] border border-[#1f283d] font-label-lg text-label-lg font-medium transition-colors whitespace-nowrap flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">event_available</span>
+<span>Attendance <span class="text-primary-container font-bold">96.4%</span></span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-[#151b2b] hover:bg-[#1e2638] text-[#94a3b8] hover:text-[#f1f5f9] border border-[#1f283d] font-label-lg text-label-lg font-medium transition-colors whitespace-nowrap flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Tuition History</span>
+</button>
+</div>
+<!-- Filter Dropdowns -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<div class="relative">
+<select class="h-10 pl-space-md pr-8 rounded-lg bg-[#151b2b] text-[#f1f5f9] border border-[#1f283d] font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm appearance-none cursor-pointer">
+<option>All Modules (Pure &amp; Applied)</option>
+<option>Pure Mathematics (Paper I)</option>
+<option>Applied Mechanics (Paper II)</option>
+<option>Calculus &amp; Analysis</option>
+<option>Statistics &amp; Probability</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-[#8a919e] text-[18px]">expand_more</span>
+</div>
+<div class="relative">
+<select class="h-10 pl-space-md pr-8 rounded-lg bg-[#151b2b] text-[#f1f5f9] border border-[#1f283d] font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm appearance-none cursor-pointer">
+<option>2024 - 2025 Full Session</option>
+<option>Term 01: Core Theory</option>
+<option>Term 02: Analytical Synthesis</option>
+<option>Term 03: Speed Exam Series</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-[#8a919e] text-[18px]">calendar_month</span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 3. TRAJECTORY & DOMAIN MASTERY BENTO GRID  -->
+<!-- ========================================== -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Left: Historical Trajectory Sparkline / Chart -->
+<div class="lg:col-span-7 bg-[#151b2b] border border-[#1f283d] rounded-xl shadow-lg p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-bold">Academic Trajectory &amp; Cohort Baseline</h2>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Continuous standardized scores vs. Apex Colombo Batch mean (May 2024 – Oct 2025)</p>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary-container font-semibold">
+<span class="w-3 h-1 bg-primary-container rounded-full"></span> Kavindu (92.0%)
+            </span>
+<span class="flex items-center gap-1 text-[#8a919e] font-medium">
+<span class="w-3 h-1 bg-[#404753] rounded-full"></span> Cohort Avg (69.4%)
+            </span>
+</div>
+</div>
+<!-- Trajectory Vector Graphic (Inline Clean SVG Dark Mode) -->
+<div class="w-full h-48 py-space-sm">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 540 160">
+<defs>
+<lineargradient id="primaryAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#3898ff" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#3898ff" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#1f283d" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="20" y2="20"></line>
+<line stroke="#1f283d" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="65" y2="65"></line>
+<line stroke="#1f283d" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="110" y2="110"></line>
+<line stroke="#1f283d" stroke-width="1" x1="0" x2="540" y1="150" y2="150"></line>
+<!-- Cohort Average Dashed Line (~68-71%) -->
+<path d="M 0 95 C 90 92, 180 94, 270 90 C 360 88, 450 86, 540 85" fill="none" stroke="#64748b" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Student Progression Area & Curve (82.5% -> 86.0% -> 89.2% -> 92.0%) -->
+<path d="M 0 65 Q 130 52, 260 40 T 540 22 L 540 150 L 0 150 Z" fill="url(#primaryAreaGrad)"></path>
+<path d="M 0 65 Q 130 52, 260 40 T 540 22" fill="none" stroke="#3898ff" stroke-linecap="round" stroke-width="3"></path>
+<!-- Key Milestones -->
+<circle cx="0" cy="65" fill="#3898ff" r="4" stroke="#0d1322" stroke-width="2"></circle>
+<circle cx="180" cy="49" fill="#3898ff" r="4" stroke="#0d1322" stroke-width="2"></circle>
+<circle cx="360" cy="32" fill="#3898ff" r="4" stroke="#0d1322" stroke-width="2"></circle>
+<circle cx="540" cy="22" fill="#a4c8ff" r="5" stroke="#0d1322" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex justify-between items-center text-[#8a919e] font-label-sm text-label-sm px-1">
+<span>May 2024 (82.5%)</span>
+<span>Aug 2024 (86.0%)</span>
+<span>Dec 2024 (87.8%)</span>
+<span>Apr 2025 (89.2%)</span>
+<span class="text-primary-container font-bold">Oct 2025 (92.0% Current)</span>
+</div>
+</div>
+<!-- Small Callout Banner -->
+<div class="mt-space-md p-space-sm rounded-lg bg-[#0d1322] border border-[#1f283d] flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px]">military_tech</span>
+<span class="font-body-sm text-body-sm text-[#dde2f8]">Consistent +9.5% climb above cohort mean across 6 consecutive term assessments.</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-[#ffb95f] whitespace-nowrap">Tier: High Honors</span>
+</div>
+</div>
+<!-- Right: Domain Mastery & Cognitive Taxonomy Breakdown -->
+<div class="lg:col-span-5 bg-[#151b2b] border border-[#1f283d] rounded-xl shadow-lg p-space-lg flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-bold">Domain Competency</h2>
+<span class="font-label-sm text-label-sm text-[#8a919e]">G.C.E. A/L Syllabi Benchmarks</span>
+</div>
+<div class="space-y-space-md">
+<!-- Paper I: Pure Mathematics -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="font-semibold text-[#f1f5f9] flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+                Pure Mathematics (Paper I)
+              </span>
+<span class="font-bold text-primary-container font-mono">94.2% <span class="text-[#8a919e] font-normal text-[11px]">(Rank #08)</span></span>
+</div>
+<div class="w-full bg-[#1e2638] rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full" style="width: 94.2%"></div>
+</div>
+<div class="flex justify-between text-[#8a919e] font-label-sm text-[11px]">
+<span>Complex Numbers: 98%</span>
+<span>Coord Geometry: 95%</span>
+<span>Diff. Eq: 92%</span>
+</div>
+</div>
+<!-- Paper II: Applied Mathematics -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="font-semibold text-[#f1f5f9] flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#ffb95f]"></span>
+                Applied Mathematics (Paper II)
+              </span>
+<span class="font-bold text-[#ffb95f] font-mono">89.4% <span class="text-[#8a919e] font-normal text-[11px]">(Rank #19)</span></span>
+</div>
+<div class="w-full bg-[#1e2638] rounded-full h-2 overflow-hidden">
+<div class="bg-[#ffb95f] h-2 rounded-full" style="width: 89.4%"></div>
+</div>
+<div class="flex justify-between text-[#8a919e] font-label-sm text-[11px]">
+<span>Statics &amp; Friction: 92%</span>
+<span>Probability: 89%</span>
+<span>Dynamics: 87%</span>
+</div>
+</div>
+<!-- Cognitive Bloom Skill Distribution -->
+<div class="pt-space-xs space-y-1.5">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase tracking-wider font-semibold">Cognitive Skill Index</span>
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="p-space-xs rounded bg-[#0d1322] border border-[#1f283d]">
+<span class="block font-label-sm text-[10px] text-[#8a919e]">Theory / Foundations</span>
+<span class="font-headline-sm text-[18px] text-[#f1f5f9] font-bold">99%</span>
+</div>
+<div class="p-space-xs rounded bg-[#0d1322] border border-[#1f283d]">
+<span class="block font-label-sm text-[10px] text-[#8a919e]">Analytical Reasoning</span>
+<span class="font-headline-sm text-[18px] text-primary-container font-bold">92%</span>
+</div>
+<div class="p-space-xs rounded bg-[#0d1322] border border-[#1f283d]">
+<span class="block font-label-sm text-[10px] text-[#8a919e]">Olympiad Distinction</span>
+<span class="font-headline-sm text-[18px] text-[#10b981] font-bold">68%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action: Weak spot remediation trigger -->
+<div class="p-space-sm rounded-lg bg-[#003824] border border-[#4edea3]/30 flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-[#6ffbbe]">
+<span class="material-symbols-outlined text-[18px] text-[#4edea3]">bolt</span>
+<span class="font-label-sm text-label-sm font-semibold">4 Weak Concept Focus Drills Ready</span>
+</div>
+<button class="text-[#4edea3] hover:text-[#6ffbbe] font-label-sm text-label-sm font-bold hover:underline flex items-center gap-0.5" type="button">
+          Launch Drills <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 4. DETAILED GRADEBOOK LEDGER TABLE         -->
+<!-- ========================================== -->
+<section class="w-full bg-[#151b2b] border border-[#1f283d] rounded-xl shadow-lg overflow-hidden">
+<!-- Table Header & Controls -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md border-b border-[#1f283d]">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-bold">Official Gradebook &amp; Submissions Ledger</h2>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Validated scores certified under Apex Combined Maths Examination Control LK-04</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-[#8a919e]">Showing 6 of 30 assessments</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-[#1e2638] hover:bg-[#2f3445] text-[#f1f5f9] border border-[#1f283d] font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span> Filter View
+        </button>
+</div>
+</div>
+<!-- Responsive Table Wrapper -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#0d1322] border-b border-[#1f283d] text-[#8a919e] font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-lg">Assessment &amp; Code</th>
+<th class="py-space-sm px-space-md">Type</th>
+<th class="py-space-sm px-space-md">Date</th>
+<th class="py-space-sm px-space-md">Module Domain</th>
+<th class="py-space-sm px-space-md">Weight</th>
+<th class="py-space-sm px-space-md">Score / 100</th>
+<th class="py-space-sm px-space-md">Grade</th>
+<th class="py-space-sm px-space-md">Batch Rank</th>
+<th class="py-space-sm px-space-lg text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#1f283d] text-[#dde2f8] font-body-sm text-body-sm">
+<!-- Row 1: Unit 03 Speed Examination -->
+<tr class="hover:bg-[#1e2638]/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">Unit 03 Speed Examination</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">EXAM-2025-U3</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-[#1e2638] text-primary border border-primary/20 font-label-sm text-label-sm font-semibold whitespace-nowrap">Timed Exam</span>
+</td>
+<td class="py-space-md px-space-md text-[#94a3b8] font-mono whitespace-nowrap">24 Oct 2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-[#f1f5f9]">Pure Mathematics</span>
+<span class="font-label-sm text-[11px] text-[#8a919e]">Diff. Eq &amp; Complex Numbers</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#94a3b8]">25%</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container font-mono">92</span>
+<span class="text-[#8a919e] font-label-sm text-[11px]">/ 100</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary font-label-sm text-label-sm font-bold border border-primary/30">A* (Dist.)</span>
+</td>
+<td class="py-space-md px-space-md font-semibold font-mono text-[#f1f5f9]">#14 <span class="text-[#8a919e] font-normal text-[11px]">/ 428</span></td>
+<td class="py-space-md px-space-lg text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+                Receipt &amp; Sol. <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Assignment 04 Advanced Trigonometry -->
+<tr class="hover:bg-[#1e2638]/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">Assignment 04: Advanced Trigonometry &amp; De Moivre</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">HW-04</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-[#1e2638] text-[#94a3b8] border border-[#1f283d] font-label-sm text-label-sm font-medium whitespace-nowrap">Homework</span>
+</td>
+<td class="py-space-md px-space-md text-[#94a3b8] font-mono whitespace-nowrap">20 Oct 2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-[#f1f5f9]">Pure Mathematics</span>
+<span class="font-label-sm text-[11px] text-[#8a919e]">Trigonometry Identities</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#94a3b8]">5%</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm font-bold text-[#f1f5f9] font-mono">92</span>
+<span class="text-[#8a919e] font-label-sm text-[11px]">/ 100</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary font-label-sm text-label-sm font-bold border border-primary/30">A*</span>
+</td>
+<td class="py-space-md px-space-md font-semibold font-mono text-[#f1f5f9]">#12 <span class="text-[#8a919e] font-normal text-[11px]">/ 280</span></td>
+<td class="py-space-md px-space-lg text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+                Marked PDF <span class="material-symbols-outlined text-[14px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Assignment 03 Partial Fractions -->
+<tr class="hover:bg-[#1e2638]/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">Assignment 03: Partial Fractions &amp; Polynomials</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">HW-03</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-[#1e2638] text-[#94a3b8] border border-[#1f283d] font-label-sm text-label-sm font-medium whitespace-nowrap">Homework</span>
+</td>
+<td class="py-space-md px-space-md text-[#94a3b8] font-mono whitespace-nowrap">12 Oct 2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-[#f1f5f9]">Pure Mathematics</span>
+<span class="font-label-sm text-[11px] text-[#8a919e]">Algebraic Decompositions</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#94a3b8]">5%</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container font-mono">94</span>
+<span class="text-[#8a919e] font-label-sm text-[11px]">/ 100</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary font-label-sm text-label-sm font-bold border border-primary/30">A*</span>
+</td>
+<td class="py-space-md px-space-md font-semibold font-mono text-primary-container">#03 <span class="text-[#8a919e] font-normal text-[11px]">/ 280</span></td>
+<td class="py-space-md px-space-lg text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+                Marked PDF <span class="material-symbols-outlined text-[14px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Term 02 Comprehensive Mock Paper I -->
+<tr class="hover:bg-[#1e2638]/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">Term 02 Comprehensive Mock Paper I</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">MOCK-T2-P1</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-[#2a1700] text-[#ffddb8] border border-[#ffb95f]/30 font-label-sm text-label-sm font-semibold whitespace-nowrap">3-Hour Exam</span>
+</td>
+<td class="py-space-md px-space-md text-[#94a3b8] font-mono whitespace-nowrap">28 Sep 2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-[#f1f5f9]">Combined Pure Maths</span>
+<span class="font-label-sm text-[11px] text-[#8a919e]">Comprehensive Paper I</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#94a3b8]">30%</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm font-bold text-[#f1f5f9] font-mono">88</span>
+<span class="text-[#8a919e] font-label-sm text-[11px]">/ 100</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-[#2a1700] text-[#ffddb8] border border-[#ffb95f]/30 font-label-sm text-label-sm font-bold">Grade A</span>
+</td>
+<td class="py-space-md px-space-md font-semibold font-mono text-[#f1f5f9]">#22 <span class="text-[#8a919e] font-normal text-[11px]">/ 428</span></td>
+<td class="py-space-md px-space-lg text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+                Paper Analysis <span class="material-symbols-outlined text-[14px]">analytics</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Statics Drill 02 (Resubmission highlighted) -->
+<tr class="hover:bg-[#1e2638]/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">Statics Drill 02: Lami's Theorem &amp; Friction</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">HW-02</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-[#1e2638] text-[#94a3b8] border border-[#1f283d] font-label-sm text-label-sm font-medium whitespace-nowrap">Homework</span>
+</td>
+<td class="py-space-md px-space-md text-[#94a3b8] font-mono whitespace-nowrap">15 Sep 2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-[#f1f5f9]">Applied: Statics</span>
+<span class="font-label-sm text-[11px] text-[#8a919e]">Equilibrium &amp; Friction</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#94a3b8]">5%</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1 font-mono">
+<span class="text-[#64748b] line-through font-label-sm text-[11px]">48</span>
+<span class="material-symbols-outlined text-[12px] text-[#8a919e]">arrow_right_alt</span>
+<span class="font-headline-sm text-headline-sm font-bold text-[#f1f5f9]">86</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-[#2a1700] text-[#ffddb8] border border-[#ffb95f]/30 font-label-sm text-label-sm font-bold">Grade A (Resub)</span>
+</td>
+<td class="py-space-md px-space-md font-semibold font-mono text-[#f1f5f9]">#45 <span class="text-[#8a919e] font-normal text-[11px]">/ 280</span></td>
+<td class="py-space-md px-space-lg text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+                Resub Audit <span class="material-symbols-outlined text-[14px]">history</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Colombo District Past Paper 2024 Colloquium -->
+<tr class="hover:bg-[#1e2638]/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">Colombo District Past Paper 2024 Colloquium</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">GRP-2024</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-[#003824] text-[#4edea3] border border-[#4edea3]/30 font-label-sm text-label-sm font-semibold whitespace-nowrap">Group Task</span>
+</td>
+<td class="py-space-md px-space-md text-[#94a3b8] font-mono whitespace-nowrap">04 Sep 2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-[#f1f5f9]">Applied: Dynamics</span>
+<span class="font-label-sm text-[11px] text-[#8a919e]">Projectiles &amp; Circular Motion</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#94a3b8]">10%</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-[#4edea3] font-semibold">In Evaluation</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-[#94a3b8] border border-[#1f283d] font-label-sm text-label-sm font-medium">Under Review</span>
+</td>
+<td class="py-space-md px-space-md font-mono text-[#64748b]">--</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+                Group Thread <span class="material-symbols-outlined text-[14px]">forum</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Footer -->
+<div class="p-space-md bg-[#0d1322] border-t border-[#1f283d] flex flex-col sm:flex-row items-center justify-between gap-space-sm text-[#8a919e] font-label-sm text-label-sm">
+<span>Official Record Lock: SHA256-APEX-89401-2025 • Verified by Eng. Kusal Senaratne Office</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-[#1e2638] text-[#64748b] border border-[#1f283d] font-semibold cursor-not-allowed" disabled="" type="button">Previous</button>
+<span class="px-space-xs text-[#f1f5f9] font-bold">1</span>
+<button class="px-space-sm py-1 rounded bg-[#151b2b] hover:bg-[#1e2638] text-[#dde2f8] border border-[#1f283d] transition-colors" type="button">2</button>
+<button class="px-space-sm py-1 rounded bg-[#151b2b] hover:bg-[#1e2638] text-[#dde2f8] border border-[#1f283d] transition-colors" type="button">3</button>
+<button class="px-space-sm py-1 rounded bg-[#151b2b] hover:bg-[#1e2638] text-[#dde2f8] border border-[#1f283d] transition-colors" type="button">Next</button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 5. BILLING & LECTURER ENDORSEMENT DUAL COL -->
+<!-- ========================================== -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Left Column: Master Tutor Remarks & Prescription (7 Cols) -->
+<div class="lg:col-span-7 bg-[#151b2b] border border-[#1f283d] rounded-xl shadow-lg p-space-lg flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm border border-[#1f283d]" data-alt="Distinguished Sri Lankan senior engineering lecturer in navy blazer, warm intellectual academic expression, modern classroom studio background with mathematical chalkboard notation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF92LPg8aN0G3josogknYC0wEHXQBOG36pxawFVG1prcfJxUewrvfjTWjg8L1hyahFzH7gn3r94NFZJ8mrpNuqRhRKLFENnN2LCosjwFXuBoM_rUQBuQfHYNALDdanFbD2GKDosHZsdfB977xmibqJCN8ujqAU3RtRNvdL3UGrced7Xd1RsP8jEKTkPPKbvhmSv_q297XMqFE3ft7UYDNuzrsD47UitfM50MFJyuA"/>
+<div class="flex flex-col">
+<span class="font-title text-title text-[#f1f5f9] font-bold">Eng. Kusal Senaratne</span>
+<span class="font-label-sm text-label-sm text-[#ffb95f]">B.Sc. Eng (Hons) Moratuwa • Head Master Tutor</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary border border-primary/20 font-label-sm text-label-sm font-semibold">
+            Certified Review
+          </span>
+</div>
+<!-- Lecturer Statement Quote -->
+<blockquote class="p-space-md rounded-lg bg-[#0d1322] border border-[#1f283d] font-body-md text-body-md text-[#dde2f8] italic relative mt-space-sm">
+<span class="text-primary-container font-bold text-headline-sm leading-none mr-1">“</span>
+          Kavindu demonstrates first-class conceptual rigor in pure algebra and calculus. To cement an island top-50 rank in 2025, concentrate on speed drills in Paper II rigid body rotation and center of gravity derivations. Excellent consistency in homework submissions.
+          <span class="text-primary-container font-bold text-headline-sm leading-none ml-1">”</span>
+</blockquote>
+<!-- Diagnostic Prescriptions -->
+<div class="mt-space-md space-y-space-xs">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase tracking-wider font-semibold">Personalized High-Yield Targets</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-1">
+<div class="p-space-sm rounded-lg bg-[#0d1322] border border-[#1f283d] flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-title text-label-lg text-[#f1f5f9] font-semibold">Rigid Body Dynamics</span>
+<span class="font-body-sm text-[12px] text-[#94a3b8]">Review 2018–2023 Moratuwa model papers.</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-[#0d1322] border border-[#1f283d] flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[#4edea3] text-[18px] mt-0.5">timer</span>
+<div class="flex flex-col">
+<span class="font-title text-label-lg text-[#f1f5f9] font-semibold">Speed Time Budget</span>
+<span class="font-body-sm text-[12px] text-[#94a3b8]">Shave 8 mins from Complex Number Q5.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer WhatsApp Dispatch Meta -->
+<div class="pt-space-sm flex items-center justify-between text-[#94a3b8] font-label-sm text-label-sm border-t border-[#1f283d]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-[16px]">chat</span>
+          Last report card automatically dispatched to Parent WhatsApp on <strong>24 Oct at 17:45 SLST</strong>
+</span>
+<button class="text-primary-container hover:underline font-semibold" type="button">Resend</button>
+</div>
+</div>
+<!-- Right Column: Tuition Billing & Bank Slip Compliance (5 Cols) -->
+<div class="lg:col-span-5 bg-[#151b2b] border border-[#1f283d] rounded-xl shadow-lg p-space-lg flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">account_balance_wallet</span>
+<h2 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-bold">Tuition &amp; Bank Slip Status</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-[#1e2638] text-primary border border-primary/20 font-label-sm text-label-sm font-semibold">
+            Colombo LK-04
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-[#94a3b8] mb-space-md">
+          Monthly academy tuition verification via People's Bank or Commercial Bank direct slips.
+        </p>
+<!-- Current Month Status Card -->
+<div class="p-space-md rounded-lg bg-[#0d1322] border border-[#1f283d] mb-space-md">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-[#8a919e] uppercase font-semibold">Active Enrollment: October 2025</span>
+<span class="px-space-xs py-0.5 rounded bg-[#003824] text-[#4edea3] border border-[#4edea3]/30 font-label-sm text-[11px] font-bold">VERIFIED</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-[#f1f5f9] font-bold font-mono">LKR 4,500</span>
+<span class="font-mono text-[#8a919e] font-label-sm text-label-sm">#APX-SLIP-89401-OCT</span>
+</div>
+<div class="flex items-center gap-1 text-[#94a3b8] font-body-sm text-[12px] mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">verified</span>
+<span>Verified by Academy TA on 02 Oct • All past papers &amp; video archives unlocked</span>
+</div>
+</div>
+<!-- Next Month Notice & Upload CTA -->
+<div class="p-space-md rounded-lg bg-[#1e2638] border border-[#1f283d] space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-[#f1f5f9] font-semibold">November 2025 Tuition</span>
+<span class="font-label-sm text-label-sm text-[#ffb95f] font-bold">Due 05 Nov</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">Upload bank deposit receipt or online transfer reference to preserve uninterrupted LMS access.</p>
+<div class="pt-2 flex items-center gap-space-xs">
+<button class="flex-1 h-9 rounded-lg bg-primary-container hover:bg-primary-container/90 text-[#002f5b] font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Upload Bank Slip</span>
+</button>
+<button class="px-space-sm h-9 rounded-lg bg-[#151b2b] hover:bg-[#242a3a] text-[#f1f5f9] border border-[#1f283d] font-label-sm text-label-sm font-semibold transition-colors" type="button">
+              Payment Guide
+            </button>
+</div>
+</div>
+</div>
+<!-- Access Status Guarantee -->
+<div class="flex items-center gap-space-xs text-primary-container font-label-sm text-label-sm pt-space-xs">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+<span>Account in Good Standing: No automated lock restrictions applied.</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interaction handlers for interactive demo components
+  document.addEventListener('DOMContentLoaded', () => {
+    // Tab switching demo state
+    const tabs = document.querySelectorAll('button[class*="Overview"], button[class*="Exams"], button[class*="Homework"], button[class*="Attendance"], button[class*="Tuition"]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-[#002f5b]');
+          t.classList.add('bg-[#151b2b]', 'text-[#94a3b8]');
+        });
+        tab.classList.remove('bg-[#151b2b]', 'text-[#94a3b8]');
+        tab.classList.add('bg-primary-container', 'text-[#002f5b]');
+      });
+    });
+  });
+</script></main><footer class="w-full bg-[#0d1322] border-t border-[#1f283d] py-space-md px-space-xl shadow-lg"><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-[#94a3b8] font-label-sm text-label-sm"><span>Protected by MindBridge Universal Learner Pass • Multi-Tenant Isolated Schema LK-CENTRAL-04</span><span class="text-[#8a919e] font-medium">© 2025 MindBridge LMS South Asia. All rights reserved.</span></div></footer></div></body></html>

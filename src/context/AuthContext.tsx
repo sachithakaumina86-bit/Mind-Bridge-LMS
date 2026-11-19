@@ -52,6 +52,44 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, []);
 
+  const logVerifySessionDiagnostics = useCallback(
+    (details: {
+      viteApiBaseUrl: string | undefined;
+      endpoint: string | null;
+      origin: string;
+      method: string;
+      headers: Record<string, string>;
+      body: string | null;
+      status?: number;
+      error?: unknown;
+    }) => {
+      const sanitizedHeaders = {
+        ...details.headers,
+        ...(details.headers.Authorization
+          ? {
+              Authorization: `Bearer <redacted len=${Math.max(0, details.headers.Authorization.length - 7)}>`,
+            }
+          : {}),
+      };
+
+      console.group('[AuthContext] /verify-session diagnostics');
+      console.log('VITE_API_BASE_URL:', details.viteApiBaseUrl ?? '<unset>');
+      console.log('Resolved endpoint:', details.endpoint ?? '<null>');
+      console.log('Window origin:', details.origin);
+      console.log('Method:', details.method);
+      console.log('Headers:', sanitizedHeaders);
+      console.log('Request body:', details.body ?? '<none>');
+      if (details.status !== undefined) {
+        console.log('Response status:', details.status);
+      }
+      if (details.error !== undefined) {
+        console.warn('Fetch error:', details.error);
+      }
+      console.groupEnd();
+    },
+    []
+  );
+
   const refreshBackendSession = useCallback(async (): Promise<VerifiedSessionProfile | null> => {
     const token = await getIdToken(true);
     if (!token) {
@@ -59,29 +97,68 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return null;
     }
 
+    const viteApiBaseUrl = import.meta.env?.VITE_API_BASE_URL;
     const endpoint = resolveBackendEndpoint('/verify-session');
+    const origin = typeof window !== 'undefined' ? window.location.origin : '<non-browser>';
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    };
+
     if (!endpoint) {
+      logVerifySessionDiagnostics({
+        viteApiBaseUrl,
+        endpoint,
+        origin,
+        method: 'POST',
+        headers,
+        body: null,
+      });
       setVerifiedProfile(null);
       return null;
     }
 
     try {
+      logVerifySessionDiagnostics({
+        viteApiBaseUrl,
+        endpoint,
+        origin,
+        method: 'POST',
+        headers,
+        body: null,
+      });
+
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers,
       });
 
       if (response.status === 401) {
         // Expired or revoked session: clear verified profile
+        logVerifySessionDiagnostics({
+          viteApiBaseUrl,
+          endpoint,
+          origin,
+          method: 'POST',
+          headers,
+          body: null,
+          status: response.status,
+        });
         setVerifiedProfile(null);
         setSessionError('Your session has expired. Please sign in again.');
         return null;
       }
 
       if (!response.ok) {
+        logVerifySessionDiagnostics({
+          viteApiBaseUrl,
+          endpoint,
+          origin,
+          method: 'POST',
+          headers,
+          body: null,
+          status: response.status,
+        });
         setVerifiedProfile(null);
         return null;
       }
@@ -91,11 +168,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setVerifiedProfile(profile);
       setSessionError(null);
       return profile;
-    } catch {
+    } catch (error) {
+      logVerifySessionDiagnostics({
+        viteApiBaseUrl,
+        endpoint,
+        origin,
+        method: 'POST',
+        headers,
+        body: null,
+        error,
+      });
       setVerifiedProfile(null);
+      setSessionError(
+        'Unable to reach the backend session verification service. Please verify VITE_API_BASE_URL and CORS ALLOWED_ORIGIN.'
+      );
       return null;
     }
-  }, [getIdToken]);
+  }, [getIdToken, logVerifySessionDiagnostics]);
 
   const signOut = useCallback(async () => {
     const auth = getFirebaseAuth();

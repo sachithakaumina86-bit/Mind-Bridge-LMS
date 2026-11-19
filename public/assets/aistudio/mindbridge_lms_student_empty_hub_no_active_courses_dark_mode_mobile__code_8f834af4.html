@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-fixed": "#002113", "on-primary-fixed-variant": "#004784", "on-surface-variant": "#c0c7d5", "on-tertiary": "#003824", "error-container": "#93000a", "primary-container": "#3898ff", "inverse-on-surface": "#2a3040", "primary": "#a4c8ff", "surface-dim": "#0d1322", "tertiary-container": "#00ab76", "outline-variant": "#404753", "inverse-primary": "#005fad", "on-error": "#690005", "surface-container-highest": "#2f3445", "tertiary": "#4edea3", "inverse-surface": "#dde2f8", "surface-container-high": "#242a3a", "secondary-fixed-dim": "#ffb95f", "surface-container": "#191f2f", "on-error-container": "#ffdad6", "surface-variant": "#2f3445", "on-surface": "#dde2f8", "secondary": "#ffb95f", "tertiary-fixed": "#6ffbbe", "on-secondary": "#472a00", "on-primary": "#00315e", "surface": "#0d1322", "on-primary-container": "#002f5b", "tertiary-fixed-dim": "#4edea3", "primary-fixed": "#d4e3ff", "on-primary-fixed": "#001c3a", "primary-fixed-dim": "#a4c8ff", "on-tertiary-fixed-variant": "#005236", "outline": "#8a919e", "secondary-container": "#ee9800", "surface-bright": "#33394a", "error": "#ffb4ab", "surface-container-lowest": "#080e1d", "on-secondary-fixed": "#2a1700", "on-tertiary-container": "#003623", "surface-tint": "#a4c8ff", "on-secondary-container": "#5b3800", "background": "#0d1322", "surface-container-low": "#151b2b", "secondary-fixed": "#ffddb8", "on-secondary-fixed-variant": "#653e00", "on-background": "#dde2f8" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "space-sm": "0.5rem", "space-2xl": "3rem", "space-2xs": "0.125rem", "space-3xl": "4rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "gutter": "1.5rem", "space-xl": "2rem" }, fontFamily: { "headline-xl": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.025em", fontWeight: "800" }], "headline-xl-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "0", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "0", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "0", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_4px_20px_rgba(7,11,20,0.45)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back or close" class="w-11 h-11 -ml-space-xs rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="font-label-md text-label-md text-primary font-bold tracking-wider uppercase hidden xs:inline-block">MindBridge</span></div></div><div class="flex items-center gap-space-sm"><span class="font-title-md text-title-md text-on-surface truncate max-w-[150px] sm:max-w-xs">Anti Cheat Lockout</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-margin-mobile pb-space-2xl gap-space-lg">
+<!-- Dynamic Welcome & Student Identity Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl">
+<div class="absolute -right-12 -top-12 w-36 h-36 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex flex-col min-w-0 pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">A/L 2026 Batch Active</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate mt-space-2xs">
+          Welcome, Kavindu Nirmal
+        </h1>
+<div class="flex items-center flex-wrap gap-x-space-sm gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+            SL-2026-9041
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="truncate">Western Province Center</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-primary text-[24px]">school</span>
+</div>
+</div>
+</div>
+<!-- Educational Empty State Illustration & Core Framing -->
+<div class="flex flex-col items-center text-center bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-xl">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-highest px-3 py-1 rounded-full mb-space-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-widest">Status: Fresh Session</span>
+</div>
+<!-- Emblem Canvas Icon Container -->
+<div class="relative w-28 h-28 my-space-xs flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-primary/10 animate-ping opacity-25"></div>
+<div class="relative w-24 h-24 rounded-2xl bg-surface-container flex flex-col items-center justify-center shadow-2xl">
+<span class="material-symbols-outlined text-primary text-[44px]">menu_book</span>
+<div class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-on-secondary-container text-[18px]">add</span>
+</div>
+</div>
+</div>
+<!-- Headline and Subtext -->
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-extrabold mt-space-md">
+      You are not enrolled in any courses yet
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed max-w-sm">
+      Join an academy or enter a course invitation code provided by your tuition master to access weekly live interactive streams, tute delivery packages, and unlisted high-yield recordings.
+    </p>
+<!-- Interactive Primary & Secondary Call to Actions -->
+<div class="w-full flex flex-col gap-space-sm mt-space-lg">
+<a class="w-full py-3.5 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-lg active:scale-[0.98] transition-transform" href="https://apex-maths.mindbridge.lk" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Browse Academy Storefront</span>
+</a>
+<button class="w-full py-3.5 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md active:scale-[0.98] transition-transform" id="open-invite-dialog" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">key</span>
+<span>Enter Course Invite Code</span>
+</button>
+<div class="pt-space-xs">
+<a class="inline-flex items-center justify-center gap-1 font-body-sm text-body-sm text-primary underline underline-offset-4 active:text-primary-fixed leading-normal" href="#bank-slip-audit">
+<span>Already transferred tuition fees through a bank counter or CDM?</span>
+<span class="font-semibold text-secondary">Upload Offline Bank Deposit Slip</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Modal / Floating Code Drawer (Hidden by default, toggled via micro-JS) -->
+<div class="hidden flex-col bg-surface-container rounded-xl p-space-md shadow-2xl relative" id="invite-drawer">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">pin</span>
+<span class="font-title-md text-title-md text-on-surface">Course Voucher / Master Code</span>
+</div>
+<button class="w-8 h-8 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center" id="close-invite-drawer" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+      Enter the 8-character token printed on your tuition ID card or shared by your provincial coordinator.
+    </p>
+<div class="mt-space-sm flex flex-col gap-space-sm">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-title-md text-title-md tracking-widest px-space-md py-3 rounded-lg uppercase focus:outline-none" id="voucher-code" maxlength="16" placeholder="e.g. APEX-MATHS-26" type="text" uppercase=""/>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg font-bold flex items-center justify-center gap-space-xs" onclick="handleRedeemCode()" type="button">
+<span>Verify &amp; Unlock Stream</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Trust Indicators Banner -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-lowest rounded-xl p-space-sm shadow-md">
+<div class="flex flex-col items-center text-center p-space-2xs">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Cloud Campus</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Encrypted Stream</span>
+</div>
+<div class="flex flex-col items-center text-center p-space-2xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Instant LMS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Zero Wait Unlock</span>
+</div>
+<div class="flex flex-col items-center text-center p-space-2xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">local_shipping</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Island Tutes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Prompt Courier</span>
+</div>
+</div>
+<!-- 3-Step Walkthrough Card -->
+<div class="flex flex-col bg-surface-container-low rounded-xl p-space-md shadow-xl gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">3-Step Student Activation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">How to join live batches and receive printed tutes</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold">GUIDE</span>
+</div>
+<!-- Step Items Vertical Stack -->
+<div class="flex flex-col gap-space-sm">
+<!-- Step 01 -->
+<div class="flex items-start gap-space-sm bg-surface-container rounded-lg p-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-label-sm font-label-sm shrink-0 shadow-sm">
+          01
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Find Your Academy &amp; Subject</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Select Combined Maths, Physics, or Chemistry tailored for the G.C.E. A/L Sinhala or English medium syllabus.
+          </span>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="flex items-start gap-space-sm bg-surface-container rounded-lg p-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-sm font-label-sm shrink-0 shadow-sm">
+          02
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Pay Tuition via Bank Transfer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Deposit to accredited academy accounts via BOC, Commercial Bank, or Sampath Bank CDM counter deposits.
+          </span>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="flex items-start gap-space-sm bg-surface-container rounded-lg p-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-label-sm font-label-sm shrink-0 shadow-sm">
+          03
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Instant Lesson &amp; Video Access</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Auto-unlock unlisted high-yield lecture archives and trigger doorstep tute courier dispatch with tracking.
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Partner Institutes (Horizontal Swipe Cards) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<h3 class="font-title-md text-title-md text-on-surface">Accredited A/L Academies</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Swipe horizontally</span>
+</div>
+<!-- Scroll Container -->
+<div class="flex overflow-x-auto gap-space-sm pb-space-xs no-scrollbar -mx-margin-mobile px-margin-mobile">
+<!-- Institute 1: Apex Maths -->
+<div class="w-[260px] shrink-0 bg-surface-container rounded-xl p-space-sm shadow-lg flex flex-col justify-between">
+<div>
+<div class="relative w-full h-28 rounded-lg overflow-hidden mb-space-xs bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="An engaging Sri Lankan Combined Mathematics physical classroom lecture showing complex whiteboard formulas with ambient blue lecture lights in Colombo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpDTjS-h1rhDxvrQdEi0QMH8AqH3v-l1RG74sUnApXzsIwUgTetqBvMZWvTGNFWCQyFdypU3pjZoy5MyYsTxI8H1bOCNQNCkazNA0dIdVYzfKmfAb72h8FQshNiFV3NbexagPFA8l4WrV6L-gnK4Ex4eGLIhxbBmZ_H2zPq4zGyiDyfWVzNPab4J7elZNmkMUbOek6Vqpu5A7xod3Y0Ke828GQUxyGppcwrtUe7uk"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">Maths</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold truncate">Apex Combined Maths</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Eng. Nalin Ranasinghe</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="font-label-lg text-label-lg font-bold text-secondary">Rs. 3,800</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month</span>
+</div>
+</div>
+<button class="w-full mt-space-sm py-2 px-3 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center gap-1" type="button">
+<span>Join Batch</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Institute 2: Sigma Physics -->
+<div class="w-[260px] shrink-0 bg-surface-container rounded-xl p-space-sm shadow-lg flex flex-col justify-between">
+<div>
+<div class="relative w-full h-28 rounded-lg overflow-hidden mb-space-xs bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="High school physics laboratory setting with lasers and modern optics experimental setup in a prestigious Colombo academic lecture center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz3DmpdWcsOgaT7wM_5shYffc8DHlSfnNjzs23i11imk3nzzLymXL-gqrGS3cgdZDfHYT1WFjxj19IJ0mYXWSBR89NK-hTATfUZ7Arn7m2lsg4PJiQF74cHFQdIOyIDAzI2VCX72QItaP6Zr72fKJXqRUinf8x5hQdq_2NwqdRujFTPk-z_TtVvI1WJGRnp9XYfi4nfls6qBC0TjmMfHv5yvAzUBRT-Nr0Errqsns"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold">Physics</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold truncate">Sigma Physics Institute</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Dr. Samantha Gunasekara</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="font-label-lg text-label-lg font-bold text-secondary">Rs. 3,500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month</span>
+</div>
+</div>
+<button class="w-full mt-space-sm py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center gap-1" type="button">
+<span>Join Batch</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Institute 3: Rotary Bambalapitiya -->
+<div class="w-[260px] shrink-0 bg-surface-container rounded-xl p-space-sm shadow-lg flex flex-col justify-between">
+<div>
+<div class="relative w-full h-28 rounded-lg overflow-hidden mb-space-xs bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Auditorium hall at Bambalapitiya filled with attentive students participating in an A Level revision masterclass with digital projector screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuL289WrtBJ5UahyP5rYe9xPUxs6WCqqm_FIb6K81OAZUEN9PulqKYQzsFt1zPEQcleRYLDCQOrZyYX6ZLegc6kzxJG80Swqqyg0rdce7_E8qAMi8Dds4Emb9T-i0UOpnZMxBbpqyhmTAqwQtQ_trA_0F6BwkDICzsu5USAH-t7jCrAOx4lB4UldXrgHL1NvVQzvpEoMInxC9YXrW0ORnOooppJy1ijrpcrGb0ivU"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-sm text-label-sm font-bold">Chemistry</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold truncate">Rotary Hall Bambalapitiya</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Prof. K. D. Jayasuriya</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="font-label-lg text-label-lg font-bold text-secondary">Rs. 3,600</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month</span>
+</div>
+</div>
+<button class="w-full mt-space-sm py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center gap-1" type="button">
+<span>Join Batch</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Quick Support & Deposit Slip Reconciliation Card -->
+<div class="flex flex-col bg-surface-container-high rounded-xl p-space-md shadow-xl gap-space-sm" id="bank-slip-audit">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Have you made an offline deposit?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Counter slips and CDM transfers are verified manually by institute accounting within 45 minutes.
+        </p>
+</div>
+</div>
+<!-- Action Bar for Slip & WhatsApp -->
+<div class="grid grid-cols-1 gap-space-xs mt-space-xs">
+<button class="w-full py-2.5 px-space-sm rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs shadow-sm" onclick="alert('Redirecting to Student Slip Reconciliation Upload Vault...')" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Upload or Track Deposit Slip Audit</span>
+</button>
+<a class="w-full py-2.5 px-space-sm rounded-lg bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs shadow-sm" href="https://wa.me/94719876543?text=Hi%20MindBridge%20Support,%20I%20am%20Kavindu%20Nirmal%20(ID:%20SL-2026-9041).%20Please%20assist%20with%20course%20enrollment." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Helpline (+94 71 987 6543)</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const openBtn = document.getElementById('open-invite-dialog');
+    const closeBtn = document.getElementById('close-invite-drawer');
+    const drawer = document.getElementById('invite-drawer');
+    const input = document.getElementById('voucher-code');
+
+    if (openBtn && drawer) {
+      openBtn.addEventListener('click', () => {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        input && input.focus();
+        drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
+
+    if (closeBtn && drawer) {
+      closeBtn.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+      });
+    }
+
+    window.handleRedeemCode = function() {
+      const val = input ? input.value.trim() : '';
+      if (!val) {
+        alert('Please enter your 8-digit Course Invite Code');
+        return;
+      }
+      alert('Validating invite voucher: ' + val.toUpperCase() + ' with Sri Lanka provincial registrar...');
+    };
+  })();
+</script></main></body></html>

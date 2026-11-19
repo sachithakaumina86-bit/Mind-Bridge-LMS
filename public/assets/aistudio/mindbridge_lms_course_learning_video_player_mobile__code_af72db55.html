@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;font-feature-settings:"cv02","cv03","cv04","cv11";}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#354575", "on-background": "#101b34", "surface-dim": "#cfd9fb", "on-tertiary": "#ffffff", "inverse-surface": "#25304a", "on-primary-container": "#fefcff", "tertiary-fixed": "#ffddb4", "surface-container-highest": "#d9e2ff", "on-secondary-fixed": "#041847", "on-tertiary-fixed-variant": "#633f00", "error-container": "#ffdad6", "background": "#faf8ff", "surface-container-low": "#f2f3ff", "surface-variant": "#d9e2ff", "outline-variant": "#c1c6d6", "on-secondary-container": "#405081", "on-primary-fixed-variant": "#00458f", "surface-tint": "#005cba", "inverse-on-surface": "#eef0ff", "on-surface": "#101b34", "secondary": "#4d5c8e", "primary-fixed-dim": "#abc7ff", "surface-bright": "#faf8ff", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb952", "surface": "#faf8ff", "secondary-fixed-dim": "#b5c5fd", "on-primary-fixed": "#001b3f", "on-secondary": "#ffffff", "secondary-container": "#b5c5fd", "outline": "#717785", "tertiary-container": "#a06900", "on-primary": "#ffffff", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#291800", "primary-container": "#0072e4", "primary": "#005ab6", "secondary-fixed": "#dbe1ff", "on-surface-variant": "#414754", "tertiary": "#7f5300", "on-tertiary-container": "#fffbff", "inverse-primary": "#abc7ff", "primary-fixed": "#d7e3ff", "error": "#ba1a1a", "surface-container-high": "#e1e7ff", "surface-container": "#eaedff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin": "2rem", "gutter": "1.5rem" }, fontFamily: { "label-md": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-sm": ["Inter"], "display": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "display": ["44px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "title": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(7,27,74,0.05)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1 cursor-pointer"><span class="font-title text-title text-on-surface truncate tracking-tight">Apex Combined Maths</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0">arrow_drop_down</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">A/L 2026 Batch</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECURE VIDEO PLAYER CONTAINER (16:9) -->
+<div class="relative w-full aspect-video bg-inverse-surface overflow-hidden shadow-lg select-none group" id="player-container">
+<!-- Video Canvas Mockup / Blackboard Environment -->
+<div class="absolute inset-0 bg-gradient-to-tr from-[#0b1329] via-[#101b34] to-[#16274e] flex items-center justify-center">
+<!-- Simulated Math Graph Background & Formula Overlay -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#abc7ff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<!-- Illustrated Lecture Content Preview on Canvas -->
+<div class="relative z-0 flex flex-col items-center justify-center text-center px-4 space-y-2 pointer-events-none">
+<span class="font-display text-[22px] tracking-wide text-primary-fixed font-bold">
+          [r(cos θ + i sin θ)]<sup>n</sup> = r<sup>n</sup>(cos nθ + i sin nθ)
+        </span>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest/20 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-surface-bright tracking-wider uppercase">Live DRM Stream Active</span>
+</div>
+</div>
+</div>
+<!-- DYNAMIC ANTI-PIRACY SECURITY WATERMARK OVERLAY -->
+<div aria-hidden="true" class="absolute inset-0 pointer-events-none z-20 flex flex-col justify-around overflow-hidden opacity-35 select-none">
+<div class="transform -rotate-12 translate-x-2 text-surface-bright/70 font-mono text-[10px] tracking-widest whitespace-nowrap drop-shadow">
+        Kavindu Nirmal Perera • SL-LRN-89401 • NIC: 200518902144 • IP: 175.157.82.14
+      </div>
+<div class="transform -rotate-12 -translate-x-6 text-surface-bright/60 font-mono text-[9px] tracking-widest whitespace-nowrap drop-shadow">
+        APEX-LMS-SECURE-STREAM • KAVINDU N. PERERA • TIME: 2025-05-18 16:42:01 IST
+      </div>
+<div class="transform -rotate-12 translate-x-8 text-surface-bright/65 font-mono text-[10px] tracking-widest whitespace-nowrap drop-shadow">
+        Kavindu Nirmal Perera • SL-LRN-89401 • NIC: 200518902144 • IP: 175.157.82.14
+      </div>
+</div>
+<!-- PLAYER HUD TOP BAR -->
+<div class="absolute top-0 inset-x-0 p-2.5 z-30 flex items-center justify-between bg-gradient-to-b from-inverse-surface/90 to-transparent">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold tracking-wider uppercase">DRM L3</span>
+<span class="text-surface-bright font-label-md text-label-md truncate max-w-[210px]">Lesson 14: De Moivre's Theorem</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-inverse-surface/70 text-surface-bright font-label-sm text-[11px] flex items-center gap-1 hover:bg-primary transition-colors" id="track-btn">
+<span class="material-symbols-outlined text-[14px]">language</span>
+<span>SIN (Primary)</span>
+</button>
+<button class="px-2 py-1 rounded bg-inverse-surface/70 text-surface-bright font-label-sm text-[11px] font-semibold hover:bg-primary transition-colors" id="speed-btn">
+          1.25x
+        </button>
+</div>
+</div>
+<!-- CENTER PLAY / PAUSE HUD BUTTON -->
+<div class="absolute inset-0 z-25 flex items-center justify-center">
+<button aria-label="Play/Pause" class="w-14 h-14 rounded-full bg-primary/90 text-on-primary shadow-xl flex items-center justify-center transform active:scale-90 transition-transform backdrop-blur-sm" id="toggle-play-btn">
+<span class="material-symbols-outlined text-[32px]" id="play-icon" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+</div>
+<!-- BOTTOM CONTROLS & PROGRESS BAR -->
+<div class="absolute bottom-0 inset-x-0 p-2.5 z-30 bg-gradient-to-t from-inverse-surface/95 via-inverse-surface/75 to-transparent flex flex-col gap-1.5">
+<!-- Scrub Bar & Chapter Markers -->
+<div class="relative w-full h-2 group/bar cursor-pointer flex items-center">
+<!-- Track Background -->
+<div class="w-full h-1 bg-surface-variant/30 rounded-full overflow-hidden relative">
+<!-- Buffered -->
+<div class="absolute left-0 top-0 bottom-0 bg-surface-variant/60 w-[62%]"></div>
+<!-- Played (34:12 / 105:00 = 32.5%) -->
+<div class="absolute left-0 top-0 bottom-0 bg-primary w-[32.5%]"></div>
+</div>
+<!-- Chapter Indicators -->
+<span class="absolute left-[12%] w-1 h-1.5 bg-surface-bright rounded-full pointer-events-none" title="Key Moment 1"></span>
+<span class="absolute left-[26.8%] w-1.5 h-1.5 bg-tertiary-fixed rounded-full pointer-events-none" title="High Yield Exam Pitfall"></span>
+<span class="absolute left-[43%] w-1 h-1.5 bg-surface-bright rounded-full pointer-events-none" title="Past Paper Derivation"></span>
+<span class="absolute left-[65%] w-1 h-1.5 bg-surface-bright rounded-full pointer-events-none" title="Roots of Unity"></span>
+<!-- Scrub Head -->
+<div class="absolute left-[32.5%] w-3 h-3 bg-on-primary rounded-full shadow-md -translate-x-1.5"></div>
+</div>
+<!-- Control Bar Items -->
+<div class="flex items-center justify-between text-surface-bright">
+<div class="flex items-center gap-2">
+<button aria-label="Rewind 10 seconds" class="p-1 hover:text-primary-fixed transition-colors active:scale-90" id="rewind-btn">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button aria-label="Forward 10 seconds" class="p-1 hover:text-primary-fixed transition-colors active:scale-90" id="forward-btn">
+<span class="material-symbols-outlined text-[20px]">forward_10</span>
+</button>
+<div class="text-surface-bright font-mono text-[11px] tracking-tight ml-1">
+<span class="text-on-primary-container font-semibold">34:12</span>
+<span class="text-surface-variant/70"> / 1:45:00</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Quality Selector -->
+<span class="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-surface-container-highest/20 text-surface-bright">
+            1080p 60fps
+          </span>
+<!-- Fullscreen Button -->
+<button aria-label="Fullscreen" class="p-1 hover:text-primary-fixed transition-colors active:scale-90" id="fullscreen-btn">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- LECTURE HEADER & CONTEXT BLOCK -->
+<div class="px-margin-mobile pt-3.5 pb-3 bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<!-- Category & Batch Tags -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+          Pure Maths • Module 03
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+          Verified Stream
+        </span>
+</div>
+<span class="font-mono text-label-sm text-on-surface-variant font-medium">Session #48</span>
+</div>
+<!-- Title -->
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-snug">
+      Lesson 14: Complex Numbers &amp; De Moivre's Theorem Application to Roots of Unity
+    </h1>
+<!-- Lecturer Info & Pedigree -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a distinguished Sri Lankan engineering lecturer wearing formal dark blazer, smiling with intellectual confidence, neutral studio gradient background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXJ7hI0PNCLDRo48xaWmCWE9QA34r0sCz7Ov8p9zcnKj9ukjc1s9AA73AdtB7fzt9GHNouCLBg19WZqsJ7IcAcqgrc7Gw4dZ32pmOT1EVR80qQZFtRDIECHobqM0Ze2F3Ynzi9Svfzer6_YYuBIgIuyaxq2NXUiX9ZFwfDLZF9ItRY0SEJsOQLNqfNvhAIWO7kMJ-AhFfvcYS0o0jkStaasPdu5hiMMY0vj_QCCGM"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-title text-on-surface truncate">Eng. Kusal Senaratne</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Head Master Tutor • Moratuwa Eng</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors flex items-center gap-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+        Follow
+      </button>
+</div>
+<!-- Attendance DRM Tracker Ribbon -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[17px]">security_update_good</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Attendance Logged (32%)</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Biometric lock verified • No fast-forward bypass</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex-shrink-0">Syncing</span>
+</div>
+<!-- Action Bar (Micro Pills) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 no-scrollbar">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap active:scale-95 transition-transform shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">download</span>
+<span>Lecture PDF</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors flex-shrink-0" id="action-bookmark">
+<span class="material-symbols-outlined text-[17px] text-tertiary">bookmark_add</span>
+<span>Mark 34:12</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[17px] text-primary">psychology</span>
+<span>Ask Gemini AI</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[17px] text-[#25D366]">forum</span>
+<span>WhatsApp Batch</span>
+</button>
+</div>
+</div>
+<!-- TABBED CONTENT NAVIGATION DRAWER -->
+<div class="sticky top-16 z-40 bg-surface-container-lowest/95 backdrop-blur-md px-margin-mobile pt-2 shadow-[0_2px_6px_rgba(7,27,74,0.03)]">
+<div class="flex items-center justify-between gap-1 overflow-x-auto no-scrollbar" role="tablist">
+<button aria-selected="true" class="tab-btn pb-2.5 px-2 font-label-md text-label-md font-bold text-primary border-b-2 border-primary whitespace-nowrap transition-colors flex items-center gap-1.5" data-tab-target="syllabus" role="tab">
+<span class="material-symbols-outlined text-[18px]">list_alt</span>
+<span>Syllabus (5)</span>
+</button>
+<button aria-selected="false" class="tab-btn pb-2.5 px-2 font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors flex items-center gap-1.5" data-tab-target="moments" role="tab">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+<span>Key Moments</span>
+</button>
+<button aria-selected="false" class="tab-btn pb-2.5 px-2 font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors flex items-center gap-1.5" data-tab-target="notes" role="tab">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Smart Notes</span>
+</button>
+<button aria-selected="false" class="tab-btn pb-2.5 px-2 font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors flex items-center gap-1.5" data-tab-target="resources" role="tab">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+<span>Tutes (2)</span>
+</button>
+</div>
+</div>
+<!-- TAB PANELS CONTENT AREA -->
+<div class="px-margin-mobile py-4 flex flex-col gap-4">
+<!-- TAB 1: SYLLABUS & MODULES PLAYLIST (ACTIVE) -->
+<div class="tab-panel flex flex-col gap-2.5" id="tab-syllabus">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Unit 04: Complex Numbers Sequence</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">2 / 5 Complete</span>
+</div>
+<!-- Module 01: Completed -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-start gap-3 transition-colors">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Module 01</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">45 mins</span>
+</div>
+<h4 class="font-title text-[14px] text-on-surface truncate">Argand Diagram Fundamentals &amp; Vectors</h4>
+<span class="inline-block mt-1 font-label-sm text-[11px] text-on-surface-variant">Completed on May 12 • Score: 96%</span>
+</div>
+</div>
+<!-- Module 02: Completed -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-start gap-3 transition-colors">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Module 02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">55 mins</span>
+</div>
+<h4 class="font-title text-[14px] text-on-surface truncate">Modulus-Argument Form &amp; Polar Coordinates</h4>
+<span class="inline-block mt-1 font-label-sm text-[11px] text-on-surface-variant">Completed on May 15 • Score: 88%</span>
+</div>
+</div>
+<!-- Module 03: NOW PLAYING -->
+<div class="p-3 rounded-lg bg-primary-fixed/30 shadow-sm flex items-start gap-3 transition-all relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Module 03</span>
+<span class="px-1.5 py-0.2 rounded bg-error text-on-error font-label-sm text-[10px] font-bold uppercase tracking-wider">Playing</span>
+</div>
+<span class="font-mono text-label-sm text-primary font-bold">1h 45m</span>
+</div>
+<h4 class="font-title text-[14px] text-on-surface font-bold truncate">De Moivre's Theorem &amp; Binomial Expansion</h4>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 32.5%;"></div>
+</div>
+</div>
+</div>
+<!-- Module 04: Locked -->
+<div class="p-3 rounded-lg bg-surface-container-low/70 flex items-start gap-3 opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Module 04</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1h 20m</span>
+</div>
+<h4 class="font-title text-[14px] text-on-surface-variant truncate">Roots of Complex Numbers &amp; Polynomials</h4>
+<span class="inline-flex items-center gap-1 mt-1 font-label-sm text-[11px] text-tertiary font-medium">
+<span class="material-symbols-outlined text-[13px]">info</span> Unlocks after completing Module 03 Quiz
+          </span>
+</div>
+</div>
+<!-- Module 05: Locked -->
+<div class="p-3 rounded-lg bg-surface-container-low/70 flex items-start gap-3 opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Module 05</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2h 10m</span>
+</div>
+<h4 class="font-title text-[14px] text-on-surface-variant truncate">Speed Drill 03 &amp; Past Paper Walkthrough</h4>
+<span class="inline-block mt-1 font-label-sm text-[11px] text-on-surface-variant">Final Revision Assessment</span>
+</div>
+</div>
+</div>
+<!-- TAB 2: INTERACTIVE TIMESTAMPED KEY MOMENTS / SMART BOOKMARKS -->
+<div class="tab-panel hidden flex flex-col gap-2.5" id="tab-moments">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Curated Lecture Milestones</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jump to exact point</span>
+</div>
+<!-- Moment 1 -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-start gap-3 active:bg-surface-container cursor-pointer transition-colors" onclick="seekVideo('12:40')">
+<button class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-mono text-label-sm font-bold flex-shrink-0 mt-0.5">
+          12:40
+        </button>
+<div class="flex-1 min-w-0">
+<h4 class="font-title text-[14px] text-on-surface">Proof of De Moivre's for Negative Integers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Formal mathematical induction &amp; index law continuity proof.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">play_circle</span>
+</div>
+<!-- Moment 2: High Yield Exam Pitfall -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-start gap-3 active:bg-surface-container cursor-pointer transition-colors relative overflow-hidden" onclick="seekVideo('28:15')">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-container"></div>
+<button class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-mono text-label-sm font-bold flex-shrink-0 mt-0.5">
+          28:15
+        </button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-title text-[14px] text-on-surface font-semibold">Exam Pitfall: Omitting Conjugate Pairs</h4>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-[10px] font-bold">★ High Yield</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Crucial marking scheme penalty in GCE A/L Combined Mathematics 2019-2023.</p>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px]">play_circle</span>
+</div>
+<!-- Moment 3 -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-start gap-3 active:bg-surface-container cursor-pointer transition-colors" onclick="seekVideo('45:10')">
+<button class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-mono text-label-sm font-bold flex-shrink-0 mt-0.5">
+          45:10
+        </button>
+<div class="flex-1 min-w-0">
+<h4 class="font-title text-[14px] text-on-surface">Past Paper 2021 Part B Question 05 Derivation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Step-by-step reduction formula to calculate cos<sup>5</sup> θ.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">play_circle</span>
+</div>
+</div>
+<!-- TAB 3: SMART NOTES -->
+<div class="tab-panel hidden flex flex-col gap-3" id="tab-notes">
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Personal Real-time Notes</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-saved to cloud</span>
+</div>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface resize-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Type quick observation or math note at 34:12..." rows="3"></textarea>
+<div class="flex justify-between items-center pt-1">
+<span class="font-mono text-label-sm text-on-surface-variant">Linked to timestamp 34:12</span>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold">Save Note</button>
+</div>
+</div>
+<!-- Saved Note Preview -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono text-label-sm text-primary font-bold">[15:20] Index law exception</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 days ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Remember to verify that r &gt; 0 before converting into Euler's exponential form e<sup>iθ</sup>.</p>
+</div>
+</div>
+<!-- TAB 4: RESOURCES & TUTES -->
+<div class="tab-panel hidden flex flex-col gap-3" id="tab-resources">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Downloadable Lecture Material</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Encrypted Watermarked PDFs</span>
+</div>
+<!-- Resource Item 1 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-[14px] text-on-surface truncate">Apex_Maths_L14_Theory_Tute.pdf</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">3.2 MB</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sinhala/Eng Dual Medium</span>
+</div>
+</div>
+</div>
+<button aria-label="Download File" class="w-9 h-9 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Resource Item 2 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">edit_document</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-[14px] text-on-surface truncate">Worked_Examples_Annotated.pdf</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">1.9 MB</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tutor Annotations</span>
+</div>
+</div>
+</div>
+<button aria-label="Download File" class="w-9 h-9 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Notice box -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0 mt-0.5">info</span>
+<span class="font-label-sm text-label-sm">All course tutorial sheets are stamped uniquely with your Student ID (SL-LRN-89401) and protected under Apex Intellectual Property regulations.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tab Switching Logic
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab-target');
+      
+      // Reset button styles
+      tabButtons.forEach(b => {
+        b.setAttribute('aria-selected', 'false');
+        b.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary');
+        b.classList.add('text-on-surface-variant', 'font-medium');
+      });
+
+      // Activate clicked button
+      btn.setAttribute('aria-selected', 'true');
+      btn.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary');
+      btn.classList.remove('text-on-surface-variant', 'font-medium');
+
+      // Toggle Panels
+      tabPanels.forEach(panel => {
+        if (panel.id === `tab-${targetId}`) {
+          panel.classList.remove('hidden');
+        } else {
+          panel.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Play/Pause Micro Interaction
+  const playBtn = document.getElementById('toggle-play-btn');
+  const playIcon = document.getElementById('play-icon');
+  let isPlaying = true;
+
+  if (playBtn && playIcon) {
+    playBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+    });
+  }
+
+  // Speed Toggler Micro Interaction
+  const speedBtn = document.getElementById('speed-btn');
+  const speeds = ['1.0x', '1.25x', '1.5x', '2.0x'];
+  let currentSpeedIdx = 1;
+
+  if (speedBtn) {
+    speedBtn.addEventListener('click', () => {
+      currentSpeedIdx = (currentSpeedIdx + 1) % speeds.length;
+      speedBtn.textContent = speeds[currentSpeedIdx];
+    });
+  }
+
+  // Global Timestamp Seeker function
+  window.seekVideo = function(timestamp) {
+    const bookmarkBtn = document.getElementById('action-bookmark');
+    if (bookmarkBtn) {
+      bookmarkBtn.classList.add('bg-primary-fixed');
+      setTimeout(() => bookmarkBtn.classList.remove('bg-primary-fixed'), 400);
+    }
+  };
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,27,74,0.06)]" data-active-classes="text-primary font-bold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="hub-overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Hub</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-primary font-bold" data-path="courses" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Courses</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="exams-quizzes" href="#"><span class="material-symbols-outlined text-[22px]">timer</span><span class="font-label-sm text-label-sm">Exams</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="assignments" href="#"><span class="material-symbols-outlined text-[22px]">assignment</span><span class="font-label-sm text-label-sm">Tasks</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="profile-gradebook" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm">Grades</span></a></div></nav></body></html>

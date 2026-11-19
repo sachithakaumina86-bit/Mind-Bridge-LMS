@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;font-feature-settings:"cv02","cv03","cv04","cv11";}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#354575", "on-background": "#101b34", "surface-dim": "#cfd9fb", "on-tertiary": "#ffffff", "inverse-surface": "#25304a", "on-primary-container": "#fefcff", "tertiary-fixed": "#ffddb4", "surface-container-highest": "#d9e2ff", "on-secondary-fixed": "#041847", "on-tertiary-fixed-variant": "#633f00", "error-container": "#ffdad6", "background": "#faf8ff", "surface-container-low": "#f2f3ff", "surface-variant": "#d9e2ff", "outline-variant": "#c1c6d6", "on-secondary-container": "#405081", "on-primary-fixed-variant": "#00458f", "surface-tint": "#005cba", "inverse-on-surface": "#eef0ff", "on-surface": "#101b34", "secondary": "#4d5c8e", "primary-fixed-dim": "#abc7ff", "surface-bright": "#faf8ff", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb952", "surface": "#faf8ff", "secondary-fixed-dim": "#b5c5fd", "on-primary-fixed": "#001b3f", "on-secondary": "#ffffff", "secondary-container": "#b5c5fd", "outline": "#717785", "tertiary-container": "#a06900", "on-primary": "#ffffff", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#291800", "primary-container": "#0072e4", "primary": "#005ab6", "secondary-fixed": "#dbe1ff", "on-surface-variant": "#414754", "tertiary": "#7f5300", "on-tertiary-container": "#fffbff", "inverse-primary": "#abc7ff", "primary-fixed": "#d7e3ff", "error": "#ba1a1a", "surface-container-high": "#e1e7ff", "surface-container": "#eaedff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin": "2rem", "gutter": "1.5rem" }, fontFamily: { "label-md": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-sm": ["Inter"], "display": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "display": ["44px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "title": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(7,27,74,0.05)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1 cursor-pointer"><span class="font-title text-title text-on-surface truncate tracking-tight">Apex Combined Maths</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0">arrow_drop_down</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">A/L 2026 Batch</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Dynamic Greeting & Student Identification -->
+<div class="px-margin-mobile pt-3 pb-2 flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-11 h-11 rounded-full object-cover shadow-sm" data-alt="Close up photographic portrait of a focused South Asian male high school student wearing a smart white collar shirt with soft natural library lighting and deep blue academic tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0OfKegpltEmPH-rs3WYQ7Pbz_V9W_T_ILmdAmOyWVlnzrCHvg6EAT4Ob7Ec4wYFljoke7c8pAmZGfxsYuIFp52Hgia98-dEwkabASG8sqOHkuZAZ27o4zIAk13x42MTCypXZtZFK0BSDpXdG_GKLzK1-Sa-gaV_WI8HaLUjEwbNfQAUYs_JfNqBbzmbd9SA65I_U5dXF4wkPCIrDaga4lSdf7f5Ij8H1pc2fkUzA"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title text-title text-on-surface truncate">Kavindu Nirmal Perera</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">INDEX #4029</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Faculty: Eng. Kusal Senaratne • Apex Institute</p>
+</div>
+</div>
+<button aria-label="Refresh assignment status" class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</button>
+</div>
+<!-- Academic Telemetry Bar / Horizontal Metrics Scroll -->
+<div class="w-full overflow-x-auto py-2 px-margin-mobile no-scrollbar">
+<div class="flex items-center gap-space-sm w-max">
+<!-- Total Assigned -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl px-3 py-2.5 flex items-center gap-2.5 min-w-[124px]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Assigned</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">18</span>
+</div>
+</div>
+<!-- Pending / Urgent Alert Metric -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl px-3 py-2.5 flex items-center gap-2.5 min-w-[140px] relative overflow-hidden">
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">alarm</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-semibold">Pending</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">2</span>
+<span class="font-label-sm text-label-sm text-error font-medium">(1 Urgent)</span>
+</div>
+</div>
+</div>
+<!-- Under Evaluation Metric -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl px-3 py-2.5 flex items-center gap-2.5 min-w-[136px]">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">In Review</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">3</span>
+</div>
+</div>
+<!-- Graded Metric -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl px-3 py-2.5 flex items-center gap-2.5 min-w-[152px]">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Graded (12)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">91.5% <span class="font-label-md text-label-md text-primary font-bold">A*</span></span>
+</div>
+</div>
+<!-- Resubmission Metric -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl px-3 py-2.5 flex items-center gap-2.5 min-w-[136px]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Revision</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Priority Alert: Resubmission Required Card (Flagged by Faculty) -->
+<div class="px-margin-mobile mt-2">
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-3.5 flex flex-col gap-2.5 relative overflow-hidden">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Action Required • Faculty Flag</span>
+<h3 class="font-title text-title text-on-surface leading-tight">Statics Drill 02: Lami's Theorem</h3>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex-shrink-0">
+          Resubmission
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant flex-shrink-0 mt-0.5">rate_review</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Tutor Note (Kusal Senaratne):</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">“Page 4 derivation of triangle forces is blurry and illegible. Please re-scan Page 4 under bright ambient lighting.”</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Window closes in 32 hrs
+        </span>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-label-lg px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Re-upload Page 4</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Urgent Coursework Card (Expanded Hero Submission Workspace) -->
+<div class="px-margin-mobile mt-4 flex flex-col gap-2">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Active Workspace</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Due Today • Batch A</span>
+</div>
+<!-- Main Card Body with Architectural Bridge Radius on Top Right -->
+<div class="bg-surface-container-lowest shadow-md rounded-xl rounded-tr-[28px] overflow-hidden flex flex-col">
+<!-- Card Header Banner -->
+<div class="bg-surface-container p-4 pb-3 flex flex-col gap-2">
+<div class="flex items-center justify-between gap-2">
+<span class="bg-surface-container-highest text-on-secondary-container font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-medium">
+            Pure Maths Paper I • 100 Marks
+          </span>
+<div class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 font-bold shadow-xs">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+<span>14h 22m remaining</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+          Assignment 04: Advanced Trigonometric Identities &amp; De Moivre's Expansions
+        </h2>
+<!-- Dual-Script Instructions Block (English & Sinhala) -->
+<div class="bg-surface-container-lowest rounded-lg p-3 flex flex-col gap-1.5 shadow-xs">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">translate</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Submission Guidance / ඉදිරිපත් කිරීමේ උපදෙස්</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            Solve complete derivations showing step-by-step angle bisections and complex roots. Write legibly in blue/black ink. Page orientation must be portrait.
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            සෑම පියවරක්ම පැහැදිලිව අංකනය කර De Moivre ප්‍රಮೇය භාවිතයෙන් ශේෂය සොයන්න. A4 තනි පිටු ලෙස පැහැදිලි ඡායාරූප ලබා දෙන්න.
+          </p>
+</div>
+<!-- Coursework Attachments Downloads -->
+<div class="flex flex-col gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium tracking-wider">Reference Handouts &amp; Formulae</span>
+<div class="grid grid-cols-1 gap-1.5">
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-error flex-shrink-0">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Trig_Assignment_04_Apex.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.8 MB • Problem Sheet</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0">menu_book</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Formula_Sheet_Paper1_2026.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">940 KB • Reference Index</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Touch File Upload Section -->
+<div class="p-4 flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Your Submissions</span>
+<!-- Tap to scan or upload action zone -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center gap-2 cursor-pointer active:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[26px]">document_scanner</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-title text-title text-on-surface">Tap to Scan Pages or Upload PDF</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Camera Auto-Cropper, PDF, or JPG (Up to 25 MB)</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Scan Camera
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">file_upload</span> Browse Device
+            </span>
+</div>
+</div>
+<!-- Uploaded Files List -->
+<div class="flex flex-col gap-2">
+<!-- File 1: Uploaded Successfully -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Kavindu_Trig_PartA.pdf</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.8 MB • 6 Pages Verified</span>
+</div>
+</div>
+<button aria-label="Remove Part A" class="w-7 h-7 rounded-full flex items-center justify-center text-on-surface-variant hover:text-error active:scale-95">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- File 2: Active Upload Progress Bar -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed flex-shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">PartB_DeMoivre_Proof.pdf</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">68% Uploading • 1.4 MB/s</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">2.2 / 3.4 MB</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+<!-- SHA-256 Plagiarism Integrity Badge -->
+<div class="bg-surface-container-low rounded-lg p-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container flex-shrink-0">shield</span>
+<div class="flex items-center justify-between w-full min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Hash Peered • 0% Similarity detected</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">SHA-256</span>
+</div>
+</div>
+<!-- Student Remarks / Work Note Input -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Student Note for Grader</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">edit_note</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none" placeholder="Add an optional comment for Eng. Kusal..." type="text" value="Submitted complete derivations for Q1-Q8 (with graph plots)"/>
+</div>
+</div>
+<!-- Master Submission CTA Button -->
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg h-12 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-all mt-1">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Assignment for Evaluation (Batch A)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Graded & Returned Assignments List (Collapsible Feed) -->
+<div class="px-margin-mobile mt-5 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">fact_check</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Returned &amp; Graded</h3>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold flex items-center gap-0.5">
+<span>View History</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Graded Card 1: Top Score with Rubric & Tutor Note -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-3.5 flex flex-col gap-2.5">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Assignment 03 • Algebra Series</span>
+<h4 class="font-title text-title text-on-surface truncate">Partial Fractions &amp; Binomial Roots</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Submitted Nov 12 • Evaluated by Eng. Kusal Senaratne</span>
+</div>
+<div class="bg-surface-container-high rounded-xl p-2 flex flex-col items-center justify-center min-w-[58px] flex-shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary font-extrabold leading-none">94</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 100</span>
+</div>
+</div>
+<!-- Rank & Achievement Pill Strip -->
+<div class="flex items-center gap-2 flex-wrap">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">stars</span> Grade A*
+        </span>
+<span class="bg-surface-container-highest text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-medium">
+          Rank #03 of 280
+        </span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+          Accuracy: 98%
+        </span>
+</div>
+<!-- Tutor Feedback Snippet -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2">
+<img class="w-6 h-6 rounded-full object-cover flex-shrink-0 mt-0.5" data-alt="Portrait photo of an experienced Sri Lankan engineering mathematics professor with glasses and confident warm smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4wgv6fdMXLDJhvQPmDqXDEu7lqbA9lOFKHvsV1IVxU0tGZVluhMI8pnUF52uazZrMVNVN_BgGPSG-TyVLoBjZ7nf7JkUSmpGX78zfKk61PfgIKk7ml47Y91TDJhCmKfAAGGPXAS9Fq_RMBdL5GrcNvPerYmIipNf7ruUypykNvahbqEdLNbyzQTs43GDLG4dCiuDa0aMr97loCS9U75pcoN_IahOK4CbukpGSnM0"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Faculty Feedback:</span>
+<p class="font-body-sm text-body-sm text-on-surface italic">“Exemplary neatness in partial fraction splitting. Excellent usage of limit substitution.”</p>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md py-2 rounded-lg flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Marked PDF (Rubric Attached)</span>
+</button>
+<button aria-label="Share marks" class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant active:scale-95">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Graded Card 2: Standard Graded Assignment -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-3.5 flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Assignment 02 • Algebra Fundamentals</span>
+<h4 class="font-title text-title text-on-surface truncate">Polynomials &amp; Remainder Theorem</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Submitted Oct 28 • Evaluated</span>
+</div>
+<div class="bg-surface-container-high rounded-xl p-2 flex flex-col items-center justify-center min-w-[58px] flex-shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-none">90</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 100</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-medium">
+          Grade A • Cohort Percentile 92%
+        </span>
+<button class="text-primary font-label-md text-label-md font-semibold flex items-center gap-1">
+<span>View Feedback</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Graded Card 3: Group Project Currently Under Review -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-3.5 flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-0.2 rounded-full">Group Colloquium</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Collaborators</span>
+</div>
+<h4 class="font-title text-title text-on-surface truncate mt-0.5">Colombo District Colloquium 2024</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Differential Calculus Real-World Modelling</span>
+</div>
+<div class="bg-tertiary-fixed rounded-xl px-2.5 py-1.5 flex items-center gap-1 flex-shrink-0 text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span>
+<span class="font-label-sm text-label-sm font-bold">Reviewing</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-6 w-6 rounded-full bg-primary text-on-primary text-[10px] flex items-center justify-center font-bold">KP</div>
+<div class="inline-block h-6 w-6 rounded-full bg-secondary text-on-secondary text-[10px] flex items-center justify-center font-bold">DT</div>
+<div class="inline-block h-6 w-6 rounded-full bg-surface-container-highest text-on-surface text-[10px] flex items-center justify-center font-bold">SA</div>
+<div class="inline-block h-6 w-6 rounded-full bg-tertiary text-on-tertiary text-[10px] flex items-center justify-center font-bold">+1</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">Team Apex Synergy</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated: Tomorrow</span>
+</div>
+</div>
+</div>
+<!-- Floating Quick Help / Academic Hotline Banner -->
+<div class="px-margin-mobile mt-5 mb-2">
+<div class="bg-surface-container-high rounded-xl p-3 flex items-center justify-between gap-3 shadow-xs">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Facing Upload Issues?</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Batch A TA Telegram Support Active</span>
+</div>
+</div>
+<button class="bg-surface-container-lowest text-primary font-label-sm text-label-sm px-3 py-1.5 rounded-lg font-semibold shadow-xs active:scale-95 transition-transform flex-shrink-0">
+        Chat TA
+      </button>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,27,74,0.06)]" data-active-classes="text-primary font-bold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="hub-overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Hub</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Courses</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="exams-quizzes" href="#"><span class="material-symbols-outlined text-[22px]">timer</span><span class="font-label-sm text-label-sm">Exams</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-primary font-bold" data-path="assignments" href="#"><span class="material-symbols-outlined text-[22px]">assignment</span><span class="font-label-sm text-label-sm">Tasks</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="profile-gradebook" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm">Grades</span></a></div></nav></body></html>
