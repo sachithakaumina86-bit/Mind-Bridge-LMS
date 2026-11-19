@@ -35,7 +35,7 @@ export const handler: Handler = async (event) => {
       return jsonResponse(403, { error: 'Account is not active.' }, origin);
     }
 
-    const { data: memberships, error: memError } = await supabase
+    const { data: rawMemberships, error: memError } = await supabase
       .from('tenant_memberships')
       .select('role, status, tenants(id, name, subdomain, status)')
       .eq('user_id', user.id)
@@ -44,6 +44,36 @@ export const handler: Handler = async (event) => {
     if (memError) {
       return jsonResponse(500, { error: 'Unable to resolve tenant memberships.' }, origin);
     }
+
+    type RawTenant = {
+      id?: string;
+      name?: string;
+      subdomain?: string;
+      status?: string;
+    };
+
+    const flattenedMemberships = (rawMemberships ?? [])
+      .map((row) => {
+        const tenantRel = (row as { tenants?: RawTenant | RawTenant[] | null }).tenants;
+        const tenant = Array.isArray(tenantRel) ? tenantRel[0] : tenantRel;
+        if (
+          !tenant ||
+          !tenant.id ||
+          !tenant.name ||
+          !tenant.subdomain ||
+          tenant.status !== 'active'
+        ) {
+          return null;
+        }
+        return {
+          tenantId: tenant.id,
+          tenantName: tenant.name,
+          subdomain: tenant.subdomain,
+          role: row.role,
+          status: row.status,
+        };
+      })
+      .filter((item): item is NonNullable<typeof item> => item !== null);
 
     return jsonResponse(
       200,
@@ -55,7 +85,7 @@ export const handler: Handler = async (event) => {
           fullName: user.full_name,
           role: user.role,
           status: user.status,
-          memberships: memberships ?? [],
+          memberships: flattenedMemberships,
         },
       },
       origin

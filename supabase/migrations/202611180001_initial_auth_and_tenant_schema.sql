@@ -53,9 +53,11 @@ $$;
 CREATE OR REPLACE FUNCTION public.set_updated_at()
 RETURNS TRIGGER
 LANGUAGE plpgsql
+SECURITY INVOKER
+SET search_path = ''
 AS $$
 BEGIN
-  NEW.updated_at = NOW();
+  NEW.updated_at = pg_catalog.now();
   RETURN NEW;
 END;
 $$;
