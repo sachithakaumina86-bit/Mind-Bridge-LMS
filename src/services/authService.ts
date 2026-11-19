@@ -145,6 +145,10 @@ export function logBackendRequestDiagnostics(details: {
   status?: number;
   error?: unknown;
 }): void {
+  if (typeof process === 'undefined' || process.env.NODE_ENV !== 'development') {
+    return;
+  }
+
   const sanitizedHeaders = {
     ...details.headers,
     ...(details.headers.Authorization

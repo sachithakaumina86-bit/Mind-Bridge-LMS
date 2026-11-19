@@ -52,7 +52,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, []);
 
-  const logVerifySessionDiagnostics = useCallback(
+  const logApiRequest = useCallback(
     (details: {
       viteApiBaseUrl: string | undefined;
       endpoint: string | null;
@@ -63,6 +63,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       status?: number;
       error?: unknown;
     }) => {
+      if (typeof process === 'undefined' || process.env.NODE_ENV !== 'development') {
+        return;
+      }
+
       const sanitizedHeaders = {
         ...details.headers,
         ...(details.headers.Authorization
@@ -106,7 +110,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     if (!endpoint) {
-      logVerifySessionDiagnostics({
+      logApiRequest({
         viteApiBaseUrl,
         endpoint,
         origin,
@@ -119,7 +123,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
 
     try {
-      logVerifySessionDiagnostics({
+      logApiRequest({
         viteApiBaseUrl,
         endpoint,
         origin,
@@ -135,7 +139,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       if (response.status === 401) {
         // Expired or revoked session: clear verified profile
-        logVerifySessionDiagnostics({
+        logApiRequest({
           viteApiBaseUrl,
           endpoint,
           origin,
@@ -150,7 +154,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
 
       if (!response.ok) {
-        logVerifySessionDiagnostics({
+        logApiRequest({
           viteApiBaseUrl,
           endpoint,
           origin,
@@ -169,7 +173,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setSessionError(null);
       return profile;
     } catch (error) {
-      logVerifySessionDiagnostics({
+      logApiRequest({
         viteApiBaseUrl,
         endpoint,
         origin,
@@ -184,7 +188,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       );
       return null;
     }
-  }, [getIdToken, logVerifySessionDiagnostics]);
+  }, [getIdToken, logApiRequest]);
 
   const signOut = useCallback(async () => {
     const auth = getFirebaseAuth();
